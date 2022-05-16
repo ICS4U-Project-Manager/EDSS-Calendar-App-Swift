@@ -15,5 +15,5 @@ class SigninViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func signOutUnwind(_ sender: UIStoryboardSegue) {}
+    @IBAction func LogOutUnwind(_ sender: UIStoryboardSegue) {}
 }

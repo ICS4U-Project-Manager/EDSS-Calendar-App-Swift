@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoginViewController-->
+        <!--Log In-->
         <scene sceneID="OL0-cc-a8r">
             <objects>
-                <viewController title="LoginViewController" id="Ec4-Bf-71u" customClass="SigninViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Log In" id="Ec4-Bf-71u" customClass="SigninViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pCv-Eu-P5W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-lc-oez">
-                                <rect key="frame" x="142" y="136" width="88" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-lc-oez">
+                                <rect key="frame" x="142" y="136" width="79" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -44,7 +44,7 @@
         <!--Settings-->
         <scene sceneID="wnB-GO-qK0">
             <objects>
-                <viewController title="Settings" id="yQZ-qL-6V1" sceneMemberID="viewController">
+                <viewController title="Settings" id="yQZ-qL-6V1" customClass="SettingsViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SPW-4v-BzZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SIGN OUT"/>
                                 <connections>
-                                    <segue destination="JGv-0x-75V" kind="unwind" unwindAction="signOutUnwind:" id="3ij-Ns-rh8"/>
+                                    <segue destination="JGv-0x-75V" kind="unwind" unwindAction="LogOutUnwind:" id="QEQ-O0-xxv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,7 +79,7 @@
         <!--Calendar-->
         <scene sceneID="BjY-SR-bS3">
             <objects>
-                <viewController title="Calendar" id="iX7-fe-VHM" sceneMemberID="viewController">
+                <viewController title="Calendar" id="iX7-fe-VHM" customClass="CalendarViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBj-75-AOJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="190" y="1235"/>
         </scene>
-        <!--View Controller-->
+        <!--Day -->
         <scene sceneID="Ll2-5D-YIJ">
             <objects>
-                <viewController id="zgT-GE-pP5" sceneMemberID="viewController">
+                <viewController title="Day " id="zgT-GE-pP5" customClass="DayViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHn-cz-WKU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,6 +136,13 @@
                                     <segue destination="nhi-oA-hEl" kind="show" id="tgS-ev-vxL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-VR-4PP">
+                                <rect key="frame" x="161" y="44" width="52" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rsp-0I-SbD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,13 +153,22 @@
             </objects>
             <point key="canvasLocation" x="189.59999999999999" y="1953.3733133433284"/>
         </scene>
-        <!--View Controller-->
+        <!--Event-->
         <scene sceneID="8Vg-Za-ZPX">
             <objects>
-                <viewController id="nhi-oA-hEl" sceneMemberID="viewController">
+                <viewController title="Event" id="nhi-oA-hEl" customClass="EventViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3de-J9-Jgs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy8-MP-9Jt">
+                                <rect key="frame" x="151" y="44" width="73" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mTG-ct-lJI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -160,12 +176,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="py0-2k-fFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897" y="1953"/>
+            <point key="canvasLocation" x="190" y="2678"/>
         </scene>
         <!--Home-->
         <scene sceneID="ipq-NZ-1Yt">
             <objects>
-                <viewController title="Home" id="YV5-Vr-Ag2" sceneMemberID="viewController">
+                <viewController title="Home" id="YV5-Vr-Ag2" customClass="HomeScreenViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0b3-A9-yn9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="-646" y="494"/>
         </scene>
-        <!--Event-->
+        <!--Add Event-->
         <scene sceneID="dls-pI-gMM">
             <objects>
-                <viewController title="Event" id="ab7-6i-4ps" sceneMemberID="viewController">
+                <viewController title="Add Event" id="ab7-6i-4ps" customClass="AddEventViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Wf-Dx-V3X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="134" y="-277"/>
         </scene>
-        <!--Calendar-->
+        <!--Calendar Navigation-->
         <scene sceneID="H1m-6D-j0v">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IK3-cm-Jc1" sceneMemberID="viewController">
+                <navigationController title="Calendar Navigation" automaticallyAdjustsScrollViewInsets="NO" id="IK3-cm-Jc1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="76b-6u-DQd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mcK-rO-Fsf">

@@ -9,14 +9,19 @@
 /* Begin PBXBuildFile section */
 		74AFADB9282951DA0055C71A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AFADB8282951DA0055C71A /* AppDelegate.swift */; };
 		74AFADBB282951DA0055C71A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AFADBA282951DA0055C71A /* SceneDelegate.swift */; };
-		74AFADBD282951DA0055C71A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AFADBC282951DA0055C71A /* ViewController.swift */; };
 		74AFADC0282951DA0055C71A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74AFADBE282951DA0055C71A /* Main.storyboard */; };
 		74AFADC2282951DD0055C71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74AFADC1282951DD0055C71A /* Assets.xcassets */; };
 		74AFADC5282951DD0055C71A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74AFADC3282951DD0055C71A /* LaunchScreen.storyboard */; };
 		74AFADD0282951DD0055C71A /* Calendar_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AFADCF282951DD0055C71A /* Calendar_AppTests.swift */; };
 		74AFADDA282951DD0055C71A /* Calendar_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AFADD9282951DD0055C71A /* Calendar_AppUITests.swift */; };
 		74AFADDC282951DD0055C71A /* Calendar_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AFADDB282951DD0055C71A /* Calendar_AppUITestsLaunchTests.swift */; };
-		74D31BAD282EA5DA001F24DF /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BAC282EA5DA001F24DF /* SigninViewController.swift */; };
+		74D31BAD282EA5DA001F24DF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BAC282EA5DA001F24DF /* LogInViewController.swift */; };
+		74D31BAF28328D42001F24DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BAE28328D41001F24DF /* HomeViewController.swift */; };
+		74D31BB128328D7C001F24DF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB028328D7C001F24DF /* SettingsViewController.swift */; };
+		74D31BB328328DB2001F24DF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB228328DB2001F24DF /* CalendarViewController.swift */; };
+		74D31BB528328DCD001F24DF /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB428328DCD001F24DF /* DayViewController.swift */; };
+		74D31BB728328DF0001F24DF /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB628328DF0001F24DF /* EventViewController.swift */; };
+		74D31BB928328E08001F24DF /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB828328E08001F24DF /* AddEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +45,6 @@
 		74AFADB5282951DA0055C71A /* Calendar App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calendar App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AFADB8282951DA0055C71A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74AFADBA282951DA0055C71A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		74AFADBC282951DA0055C71A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74AFADBF282951DA0055C71A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74AFADC1282951DD0055C71A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74AFADC4282951DD0055C71A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +54,13 @@
 		74AFADD5282951DD0055C71A /* Calendar AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calendar AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AFADD9282951DD0055C71A /* Calendar_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_AppUITests.swift; sourceTree = "<group>"; };
 		74AFADDB282951DD0055C71A /* Calendar_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		74D31BAC282EA5DA001F24DF /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		74D31BAC282EA5DA001F24DF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		74D31BAE28328D41001F24DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		74D31BB028328D7C001F24DF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		74D31BB228328DB2001F24DF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		74D31BB428328DCD001F24DF /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		74D31BB628328DF0001F24DF /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		74D31BB828328E08001F24DF /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +113,14 @@
 			children = (
 				74AFADB8282951DA0055C71A /* AppDelegate.swift */,
 				74AFADBA282951DA0055C71A /* SceneDelegate.swift */,
-				74AFADBC282951DA0055C71A /* ViewController.swift */,
 				74AFADBE282951DA0055C71A /* Main.storyboard */,
-				74D31BAC282EA5DA001F24DF /* SigninViewController.swift */,
+				74D31BB828328E08001F24DF /* AddEventViewController.swift */,
+				74D31BB628328DF0001F24DF /* EventViewController.swift */,
+				74D31BB428328DCD001F24DF /* DayViewController.swift */,
+				74D31BB028328D7C001F24DF /* SettingsViewController.swift */,
+				74D31BAE28328D41001F24DF /* HomeViewController.swift */,
+				74D31BAC282EA5DA001F24DF /* LogInViewController.swift */,
+				74D31BB228328DB2001F24DF /* CalendarViewController.swift */,
 				74AFADC1282951DD0055C71A /* Assets.xcassets */,
 				74AFADC3282951DD0055C71A /* LaunchScreen.storyboard */,
 				74AFADC6282951DD0055C71A /* Info.plist */,
@@ -261,10 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D31BAD282EA5DA001F24DF /* SigninViewController.swift in Sources */,
-				74AFADBD282951DA0055C71A /* ViewController.swift in Sources */,
+				74D31BAD282EA5DA001F24DF /* LogInViewController.swift in Sources */,
+				74D31BB928328E08001F24DF /* AddEventViewController.swift in Sources */,
 				74AFADB9282951DA0055C71A /* AppDelegate.swift in Sources */,
 				74AFADBB282951DA0055C71A /* SceneDelegate.swift in Sources */,
+				74D31BAF28328D42001F24DF /* HomeViewController.swift in Sources */,
+				74D31BB728328DF0001F24DF /* EventViewController.swift in Sources */,
+				74D31BB328328DB2001F24DF /* CalendarViewController.swift in Sources */,
+				74D31BB128328D7C001F24DF /* SettingsViewController.swift in Sources */,
+				74D31BB528328DCD001F24DF /* DayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
