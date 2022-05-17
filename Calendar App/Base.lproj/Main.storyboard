@@ -158,7 +158,7 @@
                     <navigationItem key="navigationItem" id="dby-HO-jb2">
                         <rightBarButtonItems>
                             <barButtonItem style="plain" id="CGv-j7-u0q">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nur-fW-2vC">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nur-fW-2vC">
                                     <rect key="frame" x="242.5" y="0.0" width="116.5" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
@@ -170,7 +170,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="EHo-IU-AGM">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
-                                    <rect key="frame" x="180" y="44" width="85" height="68"/>
+                                    <rect key="frame" x="149.5" y="0.0" width="85" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="FILTER"/>
