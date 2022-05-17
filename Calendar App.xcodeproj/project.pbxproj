@@ -22,6 +22,7 @@
 		74D31BB528328DCD001F24DF /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB428328DCD001F24DF /* DayViewController.swift */; };
 		74D31BB728328DF0001F24DF /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB628328DF0001F24DF /* EventViewController.swift */; };
 		74D31BB928328E08001F24DF /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB828328E08001F24DF /* AddEventViewController.swift */; };
+		74D31BBB28329768001F24DF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BBA28329768001F24DF /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		74D31BB428328DCD001F24DF /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		74D31BB628328DF0001F24DF /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		74D31BB828328E08001F24DF /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		74D31BBA28329768001F24DF /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				74AFADB8282951DA0055C71A /* AppDelegate.swift */,
 				74AFADBA282951DA0055C71A /* SceneDelegate.swift */,
 				74AFADBE282951DA0055C71A /* Main.storyboard */,
+				74D31BBA28329768001F24DF /* FilterViewController.swift */,
 				74D31BB828328E08001F24DF /* AddEventViewController.swift */,
 				74D31BB628328DF0001F24DF /* EventViewController.swift */,
 				74D31BB428328DCD001F24DF /* DayViewController.swift */,
@@ -280,6 +283,7 @@
 				74D31BB928328E08001F24DF /* AddEventViewController.swift in Sources */,
 				74AFADB9282951DA0055C71A /* AppDelegate.swift in Sources */,
 				74AFADBB282951DA0055C71A /* SceneDelegate.swift in Sources */,
+				74D31BBB28329768001F24DF /* FilterViewController.swift in Sources */,
 				74D31BAF28328D42001F24DF /* HomeViewController.swift in Sources */,
 				74D31BB728328DF0001F24DF /* EventViewController.swift in Sources */,
 				74D31BB328328DB2001F24DF /* CalendarViewController.swift in Sources */,
