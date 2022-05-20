@@ -19,14 +19,14 @@ struct HomeViewSwiftUI: View {
             ScrollView {
                 VStack(alignment: .center, spacing: 5) {
                     NavigationLink(
-                        destination: ContentView(),
+                        destination: HomeViewSwiftUI(),
                         label: {
                             Title()
                             
                         }
                     )
                     NavigationLink(
-                        destination: ContentView(),
+                        destination: HomeViewSwiftUI(),
                         label: {
                             Center()
                             
@@ -42,7 +42,7 @@ struct HomeViewSwiftUI: View {
             ScrollView {
                 VStack(alignment: .center, spacing: 5) {
                     NavigationLink(
-                        destination: ContentView(),
+                        destination: HomeViewSwiftUI(),
                         label: {
                             Title()
                             
@@ -51,7 +51,7 @@ struct HomeViewSwiftUI: View {
                     
                     
                     NavigationLink(
-                        destination: ContentView(),
+                        destination: HomeViewSwiftUI(),
                         label: {
                             Center()
                             
@@ -59,7 +59,7 @@ struct HomeViewSwiftUI: View {
                     )
                     
                     NavigationLink(
-                        destination: ContentView(),
+                        destination: HomeViewSwiftUI(),
                         label: {
                             Title()
                             
@@ -68,7 +68,7 @@ struct HomeViewSwiftUI: View {
                     
                     
                     NavigationLink(
-                        destination: ContentView(),
+                        destination: HomeViewSwiftUI(),
                         label: {
                             Center()
                             
@@ -76,7 +76,7 @@ struct HomeViewSwiftUI: View {
                     )
                     
                     NavigationLink(
-                        destination: ContentView(),
+                        destination: HomeViewSwiftUI(),
                         label: {
                             Title()
                             
@@ -85,7 +85,7 @@ struct HomeViewSwiftUI: View {
                     
                     
                     NavigationLink(
-                        destination: ContentView(),
+                        destination: HomeViewSwiftUI(),
                         label: {
                             Center()
                             
