@@ -6,15 +6,18 @@
 //
 
 import UIKit
+import SwiftUI
 
-class HomeScreenViewController: UIViewController {
+class HomeViewController: UIViewController {
+    @IBOutlet weak var theContainer: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let childView = UIHostingController(rootView: HomeViewSwiftUI())
+        addChild(childView)
+        childView.view.frame = theContainer.bounds
+        theContainer.addSubview(childView.view)
+        childView.didMove(toParent: self)
     }
-    
-
-
 }
