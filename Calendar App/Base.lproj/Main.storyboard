@@ -169,7 +169,7 @@
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="plain" id="EHo-IU-AGM">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
                                     <rect key="frame" x="149.5" y="0.0" width="85" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvS-wt-MfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="494"/>
+            <point key="canvasLocation" x="-647.20000000000005" y="493.40329835082463"/>
         </scene>
         <!--Add Event-->
         <scene sceneID="dls-pI-gMM">
@@ -325,7 +325,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ZJV-yn-sKZ">
             <objects>
-                <tabBarController id="vxN-FD-LaW" sceneMemberID="viewController">
+                <tabBarController id="vxN-FD-LaW" customClass="TabBarController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="OrM-zw-SGx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9kt-lP-y6y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
