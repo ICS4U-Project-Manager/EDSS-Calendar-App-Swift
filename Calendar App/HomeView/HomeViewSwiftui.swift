@@ -8,124 +8,140 @@
 import SwiftUI
 
 struct HomeViewSwiftUI: View {
+    @ObservedObject public var viewModel = Announcements()
     var body: some View {
-        VStack{
-            Text("Welcome!")
-                .position(x: 200, y: 25)
-                .font(.system(size: 30))
+        VStack {
+            Text("Today")
+                .fontWeight(.bold)
+                .position(x: 100, y: 15)
+                .font(.system(size: 60))
                 .font(.title)
-                .foregroundColor(Color.black)
+                .foregroundColor(Color("Off white"))
             
+            Rectangle()
+                .frame(width: 350, height: 5)
+                .position(x: 187, y: -35)
+            
+            Text("Announcements")
+                .fontWeight(.black)
+                .foregroundColor(Color("Off white"))
+                .font(.title2)
+                .position(x: 100, y: -95)
             ScrollView {
                 VStack(alignment: .center, spacing: 5) {
-                    NavigationLink(
-                        destination: HomeViewSwiftUI(),
-                        label: {
-                            Title()
-                            
-                        }
-                    )
-                    NavigationLink(
-                        destination: HomeViewSwiftUI(),
-                        label: {
-                            Center()
-                            
-                        }
-                    )
+                    if Announcements().Nothing == false {
+                        NavigationLink(
+                            destination: HomeViewSwiftUI(),
+                            label: {
+                                Title()
+                                
+                            }
+                        )
+                    }
+                    else if Announcements().Nothing == true {
+                        Text("Come Back Some Time Else. Nothing Yet.")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("Dark green"))
+                            .font(.largeTitle)
+                            .frame(alignment: .center)
+                    }
                     
                 }
             }
+            .background(Color("Off white"))
+            .cornerRadius(25)
+            .frame(width: 365, height: 175, alignment: .center)
+            .position(x: 187, y: -80)
             
-            .frame(width: /*@START_MENU_TOKEN@*/200.0/*@END_MENU_TOKEN@*/, height: 250)
-            .position(x: 200, y: 250)
+            Text("Clubs & Groups")
+                .fontWeight(.black)
+                .foregroundColor(Color("Off white"))
+                .font(.title2)
+                .position(x: 100, y: -60)
+            
             
             ScrollView {
                 VStack(alignment: .center, spacing: 5) {
-                    NavigationLink(
-                        destination: HomeViewSwiftUI(),
-                        label: {
-                            Title()
-                            
-                        }
-                    )
-                    
-                    
-                    NavigationLink(
-                        destination: HomeViewSwiftUI(),
-                        label: {
-                            Center()
-                            
-                        }
-                    )
-                    
-                    NavigationLink(
-                        destination: HomeViewSwiftUI(),
-                        label: {
-                            Title()
-                            
-                        }
-                    )
-                    
-                    
-                    NavigationLink(
-                        destination: HomeViewSwiftUI(),
-                        label: {
-                            Center()
-                            
-                        }
-                    )
-                    
-                    NavigationLink(
-                        destination: HomeViewSwiftUI(),
-                        label: {
-                            Title()
-                            
-                        }
-                    )
-                    
-                    
-                    NavigationLink(
-                        destination: HomeViewSwiftUI(),
-                        label: {
-                            Center()
-                            
-                        }
-                    )
+                    if Announcements().Nothing == false {
+                        NavigationLink(
+                            destination: HomeViewSwiftUI(),
+                            label: {
+                                Title()
+                                
+                            }
+                        )
+                    }
+                    else{
+                        Text("Come Back Some Time Else. Nothing Yet.")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("Dark green"))
+                            .font(.largeTitle)
+                            .frame(alignment: .center)
+                    }
                 }
             }
-                    .frame(width: 200.0, height: 250)
-                    .position(x: 200, y: -250)
-                    
+            .background(Color("Off white"))
+            .cornerRadius(25)
+            .frame(width: 365, height: 175, alignment: .center)
+            .position(x: 187, y: -45)
+            
+            Link("🔗EDSS Instagram",
+                 destination: URL(string: "https://www.instagram.com/elmira_lancers/")!)
+            .frame(width: 250, height: 25)
+            .background(Color("Off white"))
+            .cornerRadius(20)
+            .foregroundColor(Color("Dark green"))
+            .position(x: 187, y:-15)
+        }
+        .onAppear(){self.viewModel.fetchAnnouncements()}
+        .background(Color("Dark green"))
+    }
+}
+
+
+
+
+struct Center: View {
+    @ObservedObject public var viewModel = Announcements()
+    var body: some View {
+        VStack {
+            List(viewModel.books) { book in
+                Text(book.body!)
+                    .foregroundColor(Color("Dark green"))
+                    .font(.title2)
+                    .frame(alignment: .top)
+            }
+            Spacer()
+            Spacer()
+            
+            Rectangle()
+                .frame(width: 350, height: 5)
+            
+            Spacer()
         }
     }
 }
-    
-    struct Center: View {
-        var body: some View {
-            Text("Test Test Test Test Test Test v Tesb jg ugvh g h giy fy cyt ty 6ty f7tvt f7tgiv 7tvygvtvtvyvtv t7v7tvv tvygvgvygvugvgvgvgvgvgt Test Test Test Test Test Test Test Test Test Test Test Test Test bhjvhbgcvh gvh gvh ugvj gjb f h yf  kgh kygvjg gv j")
-                .foregroundColor(.black)
-                .font(.title2)
-                .frame(width: 350, height: 150, alignment: .top)
-        }
-    }
-    
-    struct Title: View {
-        var body: some View {
-            Text("Test")
+
+struct Title: View {
+    @ObservedObject public var viewModel = Announcements()
+    var body: some View {
+        List(viewModel.books) { book in
+            Text(book.Title!)
                 .fontWeight(.bold)
-                .foregroundColor(.black)
+                .foregroundColor(Color("Dark green"))
                 .font(.largeTitle)
-                .frame(width: 350, height: 150, alignment: .leading)
+                .frame(alignment: .center)
         }
     }
-    
-    struct HomeViewSwiftUI_Previews: PreviewProvider {
-        static var previews: some View {
-            Group {
-                HomeViewSwiftUI()
-                    .previewDevice("iPhone SE (3rd generation)")
-                    .previewInterfaceOrientation(.portrait)
-            }
+}
+
+struct HomeViewSwiftUI_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            HomeViewSwiftUI()
+                .previewDevice("iPhone SE (3rd generation)")
+                .previewInterfaceOrientation(.portrait)
         }
     }
+}
 
