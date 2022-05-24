@@ -40,8 +40,8 @@
 		CE4EEE3D2839DEF00087EEA5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEE3C2839DEF00087EEA5 /* FirebaseStorageCombine-Community */; };
 		CE4EEE402839E5750087EEA5 /* Firestore Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EEE3F2839E5750087EEA5 /* Firestore Get.swift */; };
 		CE4EEE422839EA450087EEA5 /* Firestore set.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EEE412839EA450087EEA5 /* Firestore set.swift */; };
-		CE4EEE442839EC4B0087EEA5 /* Firestore List.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EEE432839EC4B0087EEA5 /* Firestore List.swift */; };
 		CE4EEE46283A0EFC0087EEA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE4EEE45283A0EFC0087EEA5 /* GoogleService-Info.plist */; };
+		CE62AC0F283D1BB900474068 /* Firestore List.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62AC0E283D1BB900474068 /* Firestore List.swift */; };
 		CEB9C3AB2837D8ED003EFC7F /* HomeViewSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9C3AA2837D8ED003EFC7F /* HomeViewSwiftui.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +86,8 @@
 		74D31BC02837D39D001F24DF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE4EEE3F2839E5750087EEA5 /* Firestore Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore Get.swift"; sourceTree = "<group>"; };
 		CE4EEE412839EA450087EEA5 /* Firestore set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore set.swift"; sourceTree = "<group>"; };
-		CE4EEE432839EC4B0087EEA5 /* Firestore List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore List.swift"; sourceTree = "<group>"; };
 		CE4EEE45283A0EFC0087EEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE62AC0E283D1BB900474068 /* Firestore List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore List.swift"; sourceTree = "<group>"; };
 		CEB9C3AA2837D8ED003EFC7F /* HomeViewSwiftui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSwiftui.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,8 +203,8 @@
 			children = (
 				CE4EEE45283A0EFC0087EEA5 /* GoogleService-Info.plist */,
 				CE4EEE3F2839E5750087EEA5 /* Firestore Get.swift */,
-				CE4EEE432839EC4B0087EEA5 /* Firestore List.swift */,
 				CE4EEE412839EA450087EEA5 /* Firestore set.swift */,
+				CE62AC0E283D1BB900474068 /* Firestore List.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -382,8 +382,8 @@
 				74D31BB728328DF0001F24DF /* EventViewController.swift in Sources */,
 				74D31BB328328DB2001F24DF /* CalendarViewController.swift in Sources */,
 				74D31BB128328D7C001F24DF /* SettingsViewController.swift in Sources */,
-				CE4EEE442839EC4B0087EEA5 /* Firestore List.swift in Sources */,
 				74D31BB528328DCD001F24DF /* DayViewController.swift in Sources */,
+				CE62AC0F283D1BB900474068 /* Firestore List.swift in Sources */,
 				CEB9C3AB2837D8ED003EFC7F /* HomeViewSwiftui.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
