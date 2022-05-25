@@ -13,31 +13,27 @@ import FirebaseFirestoreSwift
 import Firebase
 import SwiftUI
 
-class SearchResultViewModel: ObservableObject {
-
-var db = Firestore.firestore()
-var testData = [Any]()
-
-
-func fetchData() {
-    db.collection("books").whereField("website", isEqualTo: 0).getDocuments() { (snap, err) in
-        DispatchQueue.main.async { [self] in
-            if err != nil {
-                print((err?.localizedDescription)!)
+class userViewModel: ObservableObject {
+    
+    @Published var users = [User]()
+    var num : Int = 0
+    private var db = Firestore.firestore()
+    
+    func fetchData() {
+        db.collection("users").whereField("idd", isEqualTo: num).addSnapshotListener { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
                 return
-            } else {
-                for i in snap!.documentChanges{
-                    
-                    let id = i.document.documentID
-                    let title = i.document.get("title") as? String ?? ""
-                    let author = i.document.get("author") as? String ?? ""
-                    let numberOfPages = i.document.get("numberOfPages") as? Int ?? 0
-
-                    self.testData = [id, title, author, numberOfPages]
-                    print(numberOfPages)
-                    
-                    }
-                }
+            }
+            
+            self.users = documents.map { (queryDocumentSnapshot) -> User in
+                let data = queryDocumentSnapshot.data()
+                let Title = data["Title"] as? String ?? ""
+                let Body = data["Body"] as? String ?? ""
+                let Lines = data["Lines"] as? String ?? ""
+                let idd = data["idd"] as? Int ?? 0
+                print (Title)
+                return User(Title: Title, Body: Body, Lines: Lines, idd: idd)
             }
         }
     }

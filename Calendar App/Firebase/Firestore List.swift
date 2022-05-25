@@ -12,10 +12,10 @@ import FirebaseFirestoreSwift
 import Firebase
 import SwiftUI
 
-struct testData {
-    var id = UUID()
-    var title : String
-    var author: String
-    var numberOfPages = Int.self
+struct User: Identifiable {
+    var id: String = UUID().uuidString
+    var Title: String
+    var Body: String
+    var Lines: String
+    var idd: Int
 }
-
