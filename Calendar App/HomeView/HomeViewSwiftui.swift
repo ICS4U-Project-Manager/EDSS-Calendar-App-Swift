@@ -4,6 +4,7 @@
 //
 //  Created by Kyle Stirbet on 2022-05-16.
 //
+
 import SwiftUI
 
 struct HomeViewSwiftUI: View {
@@ -11,6 +12,7 @@ struct HomeViewSwiftUI: View {
     var body: some View {
         VStack {
             ForEach(viewModel.users) { user in
+                
                 Text("Today")
                     .fontWeight(.bold)
                     .position(x: 100, y: 15)
@@ -18,18 +20,15 @@ struct HomeViewSwiftUI: View {
                     .font(.title)
                     .foregroundColor(Color("Off white"))
                 
-                
                 Rectangle()
                     .frame(width: 350, height: 5)
                     .position(x: 187, y: -35)
-                
                 
                 Text("Announcements")
                     .fontWeight(.black)
                     .foregroundColor(Color("Off white"))
                     .font(.title2)
                     .position(x: 100, y: -95)
-                
                 
                 VStack{
                 Text(user.Title)
@@ -57,13 +56,11 @@ struct HomeViewSwiftUI: View {
                         }
                     )
                 
-                
                 Text("Clubs & Groups")
                     .fontWeight(.black)
                     .foregroundColor(Color("Off white"))
                     .font(.title2)
                     .position(x: 100, y: -60)
-                
                 
                 Text("Come Back Some Time Else. Nothing Yet.")
                     .fontWeight(.bold)
@@ -82,6 +79,11 @@ struct HomeViewSwiftUI: View {
                 .cornerRadius(20)
                 .foregroundColor(Color("Dark green"))
                 .position(x: 187, y:-15)
+                
+                Image("Text Boxes")
+                    .resizable()
+                    .frame(width: 311, height: 136)
+                
             }
         }
         .onAppear(){self.viewModel.fetchData()
@@ -90,7 +92,6 @@ struct HomeViewSwiftUI: View {
         .background(Color("Dark green"))
     }
 }
-
 
 
 struct HomeViewSwiftUI_Previews: PreviewProvider {
@@ -102,4 +103,3 @@ struct HomeViewSwiftUI_Previews: PreviewProvider {
         }
     }
 }
-
