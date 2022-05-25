@@ -14,29 +14,17 @@ import FirebaseFirestoreSwift
 import Firebase
 import SwiftUI
 
-var coun = 0
-
 func add(){
-    var id : String?
-    var name = "String"
-    var first = "String"
-    
-    coun += 2
-var person = [
-                "first": first,
-                "name": name,
-                "website": coun
-] as [String : Any]
-
-
-var db = Firestore.firestore()
-
-func addBook() {
-    do {
-        let _ = try db.collection("books").addDocument(data: person)
+    let db = Firestore.firestore()
+db.collection("cities").document("LA").setData([
+    "name": "Los Angeles",
+    "state": "CA",
+    "country": "USA"
+]) { err in
+    if let err = err {
+        print("Error writing document: \(err)")
+    } else {
+        print("Document successfully written!")
     }
-    catch {
-      print(error)
-    }
-  }
+}
 }
