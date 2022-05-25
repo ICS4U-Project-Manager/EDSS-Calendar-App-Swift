@@ -22,6 +22,7 @@ class userViewModel: ObservableObject {
     func fetchData() {
         db.collection("users").whereField("idd", isEqualTo: num).addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
+                self.num = 0
                 print("No documents")
                 return
             }
