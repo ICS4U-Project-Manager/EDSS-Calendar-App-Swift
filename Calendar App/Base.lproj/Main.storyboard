@@ -238,7 +238,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mTG-ct-lJI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Off white"/>
                     </view>
                     <navigationItem key="navigationItem" id="uYs-xc-kXh"/>
                 </viewController>
@@ -311,7 +311,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="Off white"/>
+                                <color key="backgroundColor" name="Dark green"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AE2-K7-QEO"/>
