@@ -136,21 +136,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Feb 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfG-uZ-Ghu">
-                                <rect key="frame" x="27" y="72" width="110" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="February 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfG-uZ-Ghu">
+                                <rect key="frame" x="16" y="72" width="209" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="CNZ-rO-LoG"/>
+                                    <constraint firstAttribute="width" constant="134" id="WmZ-m1-JhO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgP-cN-tXG">
-                                <rect key="frame" x="169" y="72" width="86.5" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="previousMonth:" destination="iX7-fe-VHM" eventType="touchUpInside" id="zQb-Jz-26E"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3CR-HW-nhR">
                                 <rect key="frame" x="0.0" y="123" width="375" height="24"/>
                                 <subviews>
@@ -237,60 +232,64 @@
                                     <outlet property="delegate" destination="iX7-fe-VHM" id="Jeu-RV-aab"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmo-Iu-hkV">
-                                <rect key="frame" x="272" y="72" width="86.5" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmo-Iu-hkV">
+                                <rect key="frame" x="303" y="72" width="72" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.fill" catalog="system">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="nextMonth:" destination="iX7-fe-VHM" eventType="touchUpInside" id="So2-dp-aB8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgP-cN-tXG">
+                                <rect key="frame" x="222" y="72" width="46.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left.fill" catalog="system">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="previousMonth:" destination="iX7-fe-VHM" eventType="touchUpInside" id="zQb-Jz-26E"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rlg-Xe-5XC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Cmo-Iu-hkV" firstAttribute="leading" secondItem="dgP-cN-tXG" secondAttribute="trailing" id="2Kv-oL-h0L"/>
+                            <constraint firstItem="3CR-HW-nhR" firstAttribute="top" secondItem="Cmo-Iu-hkV" secondAttribute="bottom" constant="20" id="3ZB-G4-n4m"/>
                             <constraint firstItem="Rlg-Xe-5XC" firstAttribute="bottom" secondItem="THD-ha-44b" secondAttribute="bottom" id="3oV-JZ-iNH"/>
-                            <constraint firstItem="Cmo-Iu-hkV" firstAttribute="centerY" secondItem="LfG-uZ-Ghu" secondAttribute="centerY" id="6cE-eV-afw"/>
+                            <constraint firstItem="LfG-uZ-Ghu" firstAttribute="top" secondItem="Rlg-Xe-5XC" secondAttribute="top" constant="28" id="6pn-vj-FIZ"/>
                             <constraint firstItem="Rlg-Xe-5XC" firstAttribute="trailing" secondItem="3CR-HW-nhR" secondAttribute="trailing" id="ABo-b2-BqI"/>
-                            <constraint firstItem="Cmo-Iu-hkV" firstAttribute="height" secondItem="LfG-uZ-Ghu" secondAttribute="height" multiplier="0.984127" id="JBA-qZ-ila"/>
-                            <constraint firstItem="3CR-HW-nhR" firstAttribute="top" secondItem="LfG-uZ-Ghu" secondAttribute="bottom" constant="7.5" id="QBQ-3z-fIU"/>
-                            <constraint firstItem="LfG-uZ-Ghu" firstAttribute="top" secondItem="Rlg-Xe-5XC" secondAttribute="top" constant="40" id="Uwv-2C-5cN"/>
+                            <constraint firstItem="dgP-cN-tXG" firstAttribute="top" secondItem="Rlg-Xe-5XC" secondAttribute="top" constant="28" id="B3b-5a-tbX"/>
+                            <constraint firstItem="3CR-HW-nhR" firstAttribute="top" secondItem="LfG-uZ-Ghu" secondAttribute="bottom" constant="19" id="URL-Ox-QnJ"/>
+                            <constraint firstItem="dgP-cN-tXG" firstAttribute="leading" secondItem="LfG-uZ-Ghu" secondAttribute="trailing" constant="10" id="V9q-9U-qSS"/>
+                            <constraint firstItem="LfG-uZ-Ghu" firstAttribute="leading" secondItem="Rlg-Xe-5XC" secondAttribute="leading" constant="27" id="cGF-Mk-HC7"/>
                             <constraint firstItem="THD-ha-44b" firstAttribute="top" secondItem="3CR-HW-nhR" secondAttribute="bottom" id="kF3-bz-32E"/>
                             <constraint firstItem="THD-ha-44b" firstAttribute="leading" secondItem="Rlg-Xe-5XC" secondAttribute="leading" id="kIs-5O-fAW"/>
-                            <constraint firstItem="Rlg-Xe-5XC" firstAttribute="trailing" secondItem="Cmo-Iu-hkV" secondAttribute="trailing" constant="154" id="lCF-4N-KJ5"/>
+                            <constraint firstItem="3CR-HW-nhR" firstAttribute="top" secondItem="dgP-cN-tXG" secondAttribute="bottom" constant="20" id="kmh-8j-fnB"/>
+                            <constraint firstItem="Rlg-Xe-5XC" firstAttribute="trailing" secondItem="Cmo-Iu-hkV" secondAttribute="trailing" constant="20" id="lCF-4N-KJ5"/>
                             <constraint firstItem="3CR-HW-nhR" firstAttribute="leading" secondItem="Rlg-Xe-5XC" secondAttribute="leading" id="mJM-cD-RfH"/>
-                            <constraint firstItem="LfG-uZ-Ghu" firstAttribute="leading" secondItem="Rlg-Xe-5XC" secondAttribute="leading" constant="58" id="nXS-jF-bh5"/>
-                            <constraint firstItem="Cmo-Iu-hkV" firstAttribute="leading" secondItem="LfG-uZ-Ghu" secondAttribute="trailing" id="tPr-kd-Irz"/>
+                            <constraint firstItem="Cmo-Iu-hkV" firstAttribute="top" secondItem="Rlg-Xe-5XC" secondAttribute="top" constant="28" id="pEh-op-tDX"/>
                             <constraint firstItem="Rlg-Xe-5XC" firstAttribute="trailing" secondItem="THD-ha-44b" secondAttribute="trailing" id="xRl-mi-P5y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dby-HO-jb2">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Ciw-QG-aqv">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Qru-28-0qS">
-                                <rect key="frame" x="16" y="0.0" width="102" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="DAY"/>
-                                <connections>
-                                    <segue destination="zgT-GE-pP5" kind="show" id="Sy2-cP-TQU"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="CGv-j7-u0q">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nur-fW-2vC">
-                                    <rect key="frame" x="242.5" y="0.0" width="116.5" height="44"/>
+                        <leftBarButtonItems>
+                            <barButtonItem style="plain" id="Ciw-QG-aqv">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Qru-28-0qS">
+                                    <rect key="frame" x="16" y="0.0" width="135.5" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="ADD EVENT"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="DAY"/>
                                     <connections>
-                                        <segue destination="WQ2-xl-2ym" kind="show" id="cnf-yA-Vxn"/>
+                                        <segue destination="zgT-GE-pP5" kind="show" id="Sy2-cP-TQU"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="plain" id="EHo-IU-AGM">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
-                                    <rect key="frame" x="149.5" y="0.0" width="85" height="44"/>
+                                    <rect key="frame" x="151.5" y="0.0" width="85" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="FILTER"/>
@@ -299,7 +298,18 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                        </rightBarButtonItems>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="CGv-j7-u0q">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nur-fW-2vC">
+                                <rect key="frame" x="242.5" y="0.0" width="116.5" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ADD EVENT"/>
+                                <connections>
+                                    <segue destination="WQ2-xl-2ym" kind="show" id="cnf-yA-Vxn"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="THD-ha-44b" id="FD6-ei-JDj"/>
