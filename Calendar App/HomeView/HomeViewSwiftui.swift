@@ -12,33 +12,34 @@ struct HomeViewSwiftUI: View {
     var body: some View {
         VStack {
             ForEach(viewModel.users) { user in
-                
+
                 Text("Today")
                     .fontWeight(.bold)
-                    .position(x: 100, y: 15)
+                    .position(x: 110, y: 50)
                     .font(.system(size: 70))
                     .foregroundColor(Color("Off white"))
                 
                 Rectangle()
-                    .background(Color.red)
                     .frame(width: 350, height: 5)
-                    .position(x: 187, y: -35)
+                    .foregroundColor(Color("Off white"))
+                    .position(x: 187, y: 7)
                 
                 Text("Announcements")
                     .fontWeight(.black)
+                    .font(.system(size: 20))
                     .foregroundColor(Color("Off white"))
                     .font(.title2)
-                    .position(x: 100, y: -95)
+                    .position(x: 115, y: -60)
                 
                 VStack{
                     Text(user.Title)
                         .fontWeight(.bold)
                         .font(.system(size: 30))
                         .font(.title)
+                        .frame(alignment: .top)
                     Text(user.Lines)
-                        .fontWeight(.bold)
-                        .font(.system(size: 30))
-                        .font(.title)
+                        .font(.system(size: 15))
+                        .font(.body)
                 }
                 .background(
                     Image("Text Boxes")
@@ -46,7 +47,7 @@ struct HomeViewSwiftUI: View {
                         .frame(width: 311, height: 136))
                 .frame(width: 311, height: 136)
                 .foregroundColor(Color("Dark green"))
-                .position(x: 187, y: -100)
+                .position(x: 187, y: -60)
                 .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
                     .onEnded { value in
                         print(value.translation)
@@ -60,31 +61,39 @@ struct HomeViewSwiftUI: View {
                 
                 Text("Clubs & Groups")
                     .fontWeight(.black)
+                    .font(.system(size: 20))
                     .foregroundColor(Color("Off white"))
                     .font(.title2)
-                    .position(x: 100, y: -60)
+                    .position(x: 115, y: -60)
                 
-                Text("nothing to see here")
+            
+            VStack{
+                Text("test")
                     .fontWeight(.bold)
                     .font(.system(size: 30))
                     .font(.title)
-                    .background(
-                        Image("Text Boxes")
-                            .resizable()
-                            .frame(width: 311, height: 136))
-                    .frame(width: 311, height: 136)
-                    .foregroundColor(Color("Dark green"))
-                    .position(x: 187, y: -80)
-                    .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
-                        .onEnded { value in
-                            print(value.translation)
-                            switch(value.translation.width, value.translation.height) {
-                            case (-100...100, ...0):  print("up swipe")
-                            case (-100...100, 0...):  print("down swipe")
-                            default:  print("no clue")
-                            }
-                        }
-                    )
+                Text("test")
+                    .fontWeight(.bold)
+                    .font(.system(size: 30))
+                    .font(.title)
+            }
+            .background(
+                Image("Text Boxes")
+                    .resizable()
+                    .frame(width: 311, height: 136))
+            .frame(width: 311, height: 136)
+            .foregroundColor(Color("Dark green"))
+            .position(x: 180, y: -60)
+            .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
+                .onEnded { value in
+                    print(value.translation)
+                    switch(value.translation.width, value.translation.height) {
+                    case (-100...100, ...0):  print("up swipe")
+                    case (-100...100, 0...):  print("down swipe")
+                    default:  print("no clue")
+                    }
+                }
+            )
                 
                 Link("🔗EDSS Instagram",
                      destination: URL(string: "https://www.instagram.com/elmira_lancers/")!)
@@ -92,8 +101,7 @@ struct HomeViewSwiftUI: View {
                 .background(Color("Off white"))
                 .cornerRadius(20)
                 .foregroundColor(Color("Dark green"))
-                .position(x: 187, y:-15)
-                
+                .position(x: 187, y: -40)
                 
             }
         }
@@ -104,7 +112,6 @@ struct HomeViewSwiftUI: View {
     }
 }
 
-
 struct HomeViewSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -114,3 +121,4 @@ struct HomeViewSwiftUI_Previews: PreviewProvider {
         }
     }
 }
+
