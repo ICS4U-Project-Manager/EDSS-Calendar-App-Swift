@@ -21,13 +21,13 @@ class CalendarHelper
     func minusMonth(date: Date) -> Date
     {
         
-        return calendar.date(byAdding: .month, value: 1, to: date)!
+        return calendar.date(byAdding: .month, value: -1, to: date)!
     }
     
     func monthString(date: Date) -> String
     {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "LLLL"
+        dateFormatter.dateFormat = "LLL"
         return dateFormatter.string(from: date)
         
     }
