@@ -18,24 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-lc-oez">
-                                <rect key="frame" x="47" y="192" width="112" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-lc-oez">
+                                <rect key="frame" x="71" y="228" width="132" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="bBU-qr-ITx"/>
+                                    <constraint firstAttribute="height" constant="61" id="q3S-ry-o1v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="51"/>
+                                <color key="textColor" name="Off white"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
-                                <rect key="frame" x="124" y="468" width="126" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
+                                <rect key="frame" x="73" y="354" width="229" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="229" id="1Ae-iT-62o"/>
+                                    <constraint firstAttribute="height" constant="54" id="ix3-Yo-ai4"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="filled" title="Login With Google">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="Off white"/>
+                                    <color key="baseBackgroundColor" name="Dark green"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="vxN-FD-LaW" kind="presentation" modalPresentationStyle="fullScreen" id="W7a-r7-UP3"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GND-Br-6G4"/>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <color key="backgroundColor" name="Dark purple"/>
+                        <constraints>
+                            <constraint firstItem="Epx-t5-2el" firstAttribute="top" secondItem="nd4-lc-oez" secondAttribute="bottom" constant="65" id="BFN-Xo-7qL"/>
+                            <constraint firstItem="GND-Br-6G4" firstAttribute="trailing" secondItem="Epx-t5-2el" secondAttribute="trailing" constant="73" id="EEU-Ox-Dxd"/>
+                            <constraint firstItem="nd4-lc-oez" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="71" id="FXb-fI-0Uj"/>
+                            <constraint firstItem="Epx-t5-2el" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="73" id="IDf-0L-BgG"/>
+                            <constraint firstItem="nd4-lc-oez" firstAttribute="top" secondItem="GND-Br-6G4" secondAttribute="top" constant="228" id="geB-k0-aKf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G87-VZ-GlC"/>
                 </viewController>
@@ -554,14 +571,14 @@
         <namedColor name="Dark green">
             <color red="0.32499998807907104" green="0.40799999237060547" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Dark purple">
+            <color red="0.086000002920627594" green="0.024000000208616257" blue="0.10199999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Off white">
             <color red="0.97600001096725464" green="1" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
