@@ -16,6 +16,14 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     
         //Preparing keyboard exit
         self.titleTextField.delegate = self
+        
+        //Preparing view visuals
+        backgroundView.layer.cornerRadius = 10
+        //Preparing button visuals
+        createEventButton.layer.borderWidth = 2
+        createEventButton.layer.borderColor = CGColor(red: 113/255, green: 92/255, blue: 131/255, alpha: 1)
+        cancelButton.layer.borderWidth = 2
+        cancelButton.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     }
     
     //Keyboard Dissapear Functions
@@ -39,6 +47,10 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var createEventButton: UIButton!
+    
     
     var whichTextBox : Int = 0
     var eventTitle : String = ""
