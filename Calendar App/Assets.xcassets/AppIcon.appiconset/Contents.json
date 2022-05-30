@@ -11,31 +11,37 @@
       "size" : "20x20"
     },
     {
+      "filename" : "EDSS-Icon-58.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "EDSS-Icon-87.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "EDSS-Icon-80.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "EDSS-Icon-120.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "EDSS-Icon-121.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "EDSS-Icon-180.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -56,6 +62,7 @@
       "size" : "29x29"
     },
     {
+      "filename" : "EDSS-Icon-59.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
@@ -66,11 +73,13 @@
       "size" : "40x40"
     },
     {
+      "filename" : "EDSS-Icon-81.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "EDSS-Icon-76.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
@@ -86,6 +95,7 @@
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "EDSS-Icon-1024.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
