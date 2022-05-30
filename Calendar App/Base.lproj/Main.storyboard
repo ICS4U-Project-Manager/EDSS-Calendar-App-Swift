@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
-                                <rect key="frame" x="71" y="351" width="230" height="54"/>
+                                <rect key="frame" x="71" y="351" width="233" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="JxF-46-e5a"/>
                                     <constraint firstAttribute="width" constant="230" id="Ri6-sU-4k1"/>

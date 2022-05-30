@@ -44,7 +44,7 @@ class userViewModel: ObservableObject {
                 let Body = data["Body"] as? String ?? ""
                 let Lines = data["Lines"] as? String ?? ""
                 let idd = data["idd"] as? Int ?? 0
-                print (Title)
+
                 return User(Title: Title, Body: Body, Lines: Lines, idd: idd)
                 }
             }
