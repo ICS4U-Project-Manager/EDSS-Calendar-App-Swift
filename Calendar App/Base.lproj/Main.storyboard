@@ -467,12 +467,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBh-OZ-iVd">
-                                        <rect key="frame" x="115" y="592" width="145" height="31"/>
+                                        <rect key="frame" x="115" y="580" width="145" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" name="Purple"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Create Event"/>
                                         <connections>
+                                            <action selector="createClass:" destination="ab7-6i-4ps" eventType="touchUpInside" id="eb3-Hw-B0g"/>
                                             <segue destination="igK-v4-gdY" kind="unwind" unwindAction="PopUpDismiss:" id="C0p-fQ-qT1"/>
                                         </connections>
                                     </button>
@@ -487,7 +488,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-th-YIE">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-th-YIE">
                                                 <rect key="frame" x="71" y="37" width="237" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" name="Off white"/>
@@ -504,7 +505,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fag-2r-tof">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fag-2r-tof">
                                                 <rect key="frame" x="108" y="267" width="215" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" name="Off white"/>
@@ -521,7 +522,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1yo-yF-CpF">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Description/Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1yo-yF-CpF">
                                                 <rect key="frame" x="133" y="324" width="190" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" name="Off white"/>
@@ -559,6 +560,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gYt-Wk-gs0">
+                                                <rect key="frame" x="133" y="98" width="49" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="onTintColor" name="Dark green"/>
+                                                <color key="thumbTintColor" name="Off white"/>
+                                                <connections>
+                                                    <action selector="allDayEventCreated:" destination="ab7-6i-4ps" eventType="valueChanged" id="cWt-kz-azz"/>
+                                                </connections>
+                                            </switch>
                                         </subviews>
                                         <color key="backgroundColor" name="Off white"/>
                                     </view>
@@ -571,6 +581,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="n4M-nJ-umd"/>
                     <connections>
+                        <outlet property="allDaySwitch" destination="gYt-Wk-gs0" id="8I3-kJ-qfO"/>
                         <outlet property="backgroundView" destination="ZuG-vf-KVA" id="OrB-Dj-4Xy"/>
                         <outlet property="cancelButton" destination="uGF-6A-Xgi" id="qro-Ph-llv"/>
                         <outlet property="createEventButton" destination="tBh-OZ-iVd" id="wOX-ff-hga"/>

@@ -24,6 +24,10 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         createEventButton.layer.borderColor = CGColor(red: 113/255, green: 92/255, blue: 131/255, alpha: 1)
         cancelButton.layer.borderWidth = 2
         cancelButton.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        cancelButton.layer.cornerRadius = 10
+        createEventButton.layer.cornerRadius = 10
+    //preparing switch design
+        
     }
     
     //Keyboard Dissapear Functions
@@ -50,14 +54,16 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var createEventButton: UIButton!
-    
+    @IBOutlet weak var allDaySwitch: UISwitch!
     
     var whichTextBox : Int = 0
     var eventTitle : String = ""
+    var allDayEvent : Bool = false
     var eventLocation : String = ""
     var eventDescription : String = ""
     
-    //functions
+    //FUNCTIONS
+    //reading text boxes
     @IBAction func assignEventTitle(_ sender: Any) {
         eventTitle = titleTextField.text!
         whichTextBox = 1
@@ -69,6 +75,24 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBAction func assignEventDescription(_ sender: Any) {
         eventDescription = descriptionTextField.text!
         whichTextBox = 3
+    }
+    
+    //all day switch
+    var switchState : Bool = false
+    @IBAction func allDayEventCreated(_ sender: Any) {
+        if switchState == false {
+            allDayEvent = true
+            switchState = true
+        }
+        else if switchState == true{
+            allDayEvent = false
+            switchState = false
+        }
+    }
+    
+    //creating instance of class
+    @IBAction func createClass(_ sender: Any) {
+        
     }
     
     
