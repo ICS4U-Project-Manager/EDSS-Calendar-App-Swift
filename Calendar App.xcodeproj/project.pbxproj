@@ -24,6 +24,7 @@
 		74D31BB928328E08001F24DF /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB828328E08001F24DF /* AddEventViewController.swift */; };
 		74D31BBB28329768001F24DF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BBA28329768001F24DF /* FilterViewController.swift */; };
 		74D31BC12837D39D001F24DF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BC02837D39D001F24DF /* TabBarController.swift */; };
+		CE4ABB0B2846549C008DB4FB /* LoginViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ABB0A2846549C008DB4FB /* LoginViewSwiftUI.swift */; };
 		CE4EEDEC2839DD670087EEA5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEDEB2839DD670087EEA5 /* GoogleSignIn */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CE4EEDEE2839DD670087EEA5 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEDED2839DD670087EEA5 /* GoogleSignInSwift */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CE4EEE272839DEF00087EEA5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEE262839DEF00087EEA5 /* FirebaseAuth */; };
@@ -76,7 +77,7 @@
 		74AFADD5282951DD0055C71A /* Calendar AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calendar AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AFADD9282951DD0055C71A /* Calendar_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_AppUITests.swift; sourceTree = "<group>"; };
 		74AFADDB282951DD0055C71A /* Calendar_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		74D31BAC282EA5DA001F24DF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		74D31BAC282EA5DA001F24DF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = "Calendar App/LogInViewController.swift"; sourceTree = SOURCE_ROOT; };
 		74D31BAE28328D41001F24DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "Calendar App/HomeViewController.swift"; sourceTree = SOURCE_ROOT; };
 		74D31BB028328D7C001F24DF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		74D31BB228328DB2001F24DF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		74D31BB828328E08001F24DF /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		74D31BBA28329768001F24DF /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		74D31BC02837D39D001F24DF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CE4ABB0A2846549C008DB4FB /* LoginViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewSwiftUI.swift; sourceTree = "<group>"; };
 		CE4EEE3F2839E5750087EEA5 /* Firestore Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore Get.swift"; sourceTree = "<group>"; };
 		CE4EEE412839EA450087EEA5 /* Firestore set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore set.swift"; sourceTree = "<group>"; };
 		CE4EEE45283A0EFC0087EEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -168,7 +170,7 @@
 				74D31BB428328DCD001F24DF /* DayViewController.swift */,
 				74D31BB028328D7C001F24DF /* SettingsViewController.swift */,
 				CEB9C3A92837D8C8003EFC7F /* HomeView */,
-				74D31BAC282EA5DA001F24DF /* LogInViewController.swift */,
+				CE4ABB0728465451008DB4FB /* LogInView */,
 				74D31BB228328DB2001F24DF /* CalendarViewController.swift */,
 				74AFADC1282951DD0055C71A /* Assets.xcassets */,
 				74AFADC3282951DD0055C71A /* LaunchScreen.storyboard */,
@@ -199,6 +201,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4ABB0728465451008DB4FB /* LogInView */ = {
+			isa = PBXGroup;
+			children = (
+				74D31BAC282EA5DA001F24DF /* LogInViewController.swift */,
+				CE4ABB0A2846549C008DB4FB /* LoginViewSwiftUI.swift */,
+			);
+			path = LogInView;
 			sourceTree = "<group>";
 		};
 		CE4EEE3E2839E5520087EEA5 /* Firebase */ = {
@@ -389,6 +400,7 @@
 				74D31BB528328DCD001F24DF /* DayViewController.swift in Sources */,
 				CE62AC0F283D1BB900474068 /* Firestore List.swift in Sources */,
 				CEB9C3AB2837D8ED003EFC7F /* HomeViewSwiftui.swift in Sources */,
+				CE4ABB0B2846549C008DB4FB /* LoginViewSwiftUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

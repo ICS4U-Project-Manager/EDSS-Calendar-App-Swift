@@ -12,8 +12,14 @@ class SigninViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+     
     }
+
+    @IBOutlet weak var Firestore: UILabel!
+    func someFunction() {
+            self.Firestore.text = "text"
+        }
     
     @IBAction func LogOutUnwind(_ sender: UIStoryboardSegue) {}
+    
 }

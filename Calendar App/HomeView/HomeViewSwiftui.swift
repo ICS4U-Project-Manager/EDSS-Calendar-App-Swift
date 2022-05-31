@@ -47,8 +47,6 @@ struct HomeViewSwiftUI: View {
                                 .font(.system(size: 12))
                                 .font(.body)
                                 .frame(width: 300)
-
- 
                             
                             }
                         }
