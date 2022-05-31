@@ -569,6 +569,13 @@
                                                     <action selector="allDayEventCreated:" destination="ab7-6i-4ps" eventType="valueChanged" id="cWt-kz-azz"/>
                                                 </connections>
                                             </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2o-k0-lzm">
+                                                <rect key="frame" x="108" y="137" width="200" height="105"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" name="Off white"/>
                                     </view>
@@ -586,6 +593,7 @@
                         <outlet property="cancelButton" destination="uGF-6A-Xgi" id="qro-Ph-llv"/>
                         <outlet property="createEventButton" destination="tBh-OZ-iVd" id="wOX-ff-hga"/>
                         <outlet property="descriptionTextField" destination="1yo-yF-CpF" id="oCN-lJ-ofP"/>
+                        <outlet property="label" destination="n2o-k0-lzm" id="WQf-G6-GCV"/>
                         <outlet property="locationTextField" destination="Fag-2r-tof" id="ZRh-r2-ir9"/>
                         <outlet property="titleTextField" destination="R8U-th-YIE" id="Fxr-It-Vix"/>
                     </connections>

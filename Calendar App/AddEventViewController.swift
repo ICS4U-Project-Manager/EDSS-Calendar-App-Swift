@@ -7,6 +7,8 @@
 
 import UIKit
 
+var eventIdentification : Int = 1
+
 class AddEventViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
@@ -91,8 +93,10 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     }
     
     //creating instance of class
+    @IBOutlet weak var label: UILabel!
     @IBAction func createClass(_ sender: Any) {
-        
+        let event = Event(name: titleTextField.text!, description: descriptionTextField.text!, location: locationTextField.text!, start: 1, end: 1, group: "placeholder")
+        label.text = "\(event.getName()) and \(event.getLocation()) and \(event.getDescription())"
     }
     
     
