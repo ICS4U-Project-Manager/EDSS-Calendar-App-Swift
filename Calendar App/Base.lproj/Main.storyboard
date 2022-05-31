@@ -19,21 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-lc-oez">
-                                <rect key="frame" x="71" y="228" width="132" height="61"/>
+                                <rect key="frame" x="72.5" y="221" width="132" height="61"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="bBU-qr-ITx"/>
-                                    <constraint firstAttribute="height" constant="61" id="q3S-ry-o1v"/>
+                                    <constraint firstAttribute="height" constant="61" id="lAj-6J-EKQ"/>
+                                    <constraint firstAttribute="width" constant="132" id="v2F-Z8-Rit"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="51"/>
                                 <color key="textColor" name="Off white"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
-                                <rect key="frame" x="71" y="351" width="230" height="54"/>
+                                <rect key="frame" x="72.5" y="306.5" width="230" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="JxF-46-e5a"/>
-                                    <constraint firstAttribute="width" constant="230" id="Ri6-sU-4k1"/>
-                                    <constraint firstAttribute="height" constant="54" id="ix3-Yo-ai4"/>
+                                    <constraint firstAttribute="height" constant="54" id="DQe-Qe-NuV"/>
+                                    <constraint firstAttribute="width" constant="230" id="vdd-oj-j8j"/>
                                 </constraints>
                                 <buttonConfiguration key="configuration" style="filled" title="Login With Google">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
@@ -48,12 +47,10 @@
                         <viewLayoutGuide key="safeArea" id="GND-Br-6G4"/>
                         <color key="backgroundColor" name="Dark purple"/>
                         <constraints>
-                            <constraint firstItem="Epx-t5-2el" firstAttribute="top" secondItem="nd4-lc-oez" secondAttribute="bottom" constant="62" id="BFN-Xo-7qL"/>
-                            <constraint firstItem="nd4-lc-oez" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="71" id="CSg-X6-VIe"/>
-                            <constraint firstItem="Epx-t5-2el" firstAttribute="centerX" secondItem="pCv-Eu-P5W" secondAttribute="centerX" id="Q47-nG-nfh"/>
-                            <constraint firstItem="Epx-t5-2el" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="71" id="fBI-Pp-JOT"/>
-                            <constraint firstItem="nd4-lc-oez" firstAttribute="top" secondItem="GND-Br-6G4" secondAttribute="top" constant="228" id="geB-k0-aKf"/>
-                            <constraint firstItem="GND-Br-6G4" firstAttribute="trailing" secondItem="Epx-t5-2el" secondAttribute="trailing" constant="71" id="vxo-ad-zSG"/>
+                            <constraint firstItem="Epx-t5-2el" firstAttribute="centerY" secondItem="pCv-Eu-P5W" secondAttribute="centerY" id="5vt-VT-oId"/>
+                            <constraint firstItem="Epx-t5-2el" firstAttribute="top" secondItem="nd4-lc-oez" secondAttribute="bottom" constant="24.5" id="G3Q-xp-aVn"/>
+                            <constraint firstItem="nd4-lc-oez" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="72.5" id="jQR-Wg-g4e"/>
+                            <constraint firstItem="Epx-t5-2el" firstAttribute="centerX" secondItem="pCv-Eu-P5W" secondAttribute="centerX" id="ryR-rv-p5e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G87-VZ-GlC"/>
