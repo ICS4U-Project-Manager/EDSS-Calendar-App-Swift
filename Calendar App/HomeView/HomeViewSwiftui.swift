@@ -21,8 +21,8 @@ struct HomeViewSwiftUI: View {
                     .foregroundColor(Color("Off white"))
                 
                 Rectangle()
-                    .frame(width: 350, height: 5)
-                    .foregroundColor(Color("Off white"))
+                    .frame(width: 340, height: 3)
+                    .foregroundColor(Color("Dark purple"))
                     .position(x: 187, y: 7)
                 
                 Text("Announcements")
@@ -86,7 +86,7 @@ struct HomeViewSwiftUI: View {
                             .frame(width: 311, height: 136))
                     .frame(width: 311, height: 136)
                     .foregroundColor(Color("Dark green"))
-                    .position(x: 180, y: -60)
+                    .position(x: 187, y: -60)
                     .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
                         .onEnded { value in
                             print(value.translation)
@@ -100,7 +100,7 @@ struct HomeViewSwiftUI: View {
                     
                     Link("🔗EDSS Instagram",
                          destination: URL(string: "https://www.instagram.com/elmira_lancers/")!)
-                    .frame(width: 250, height: 25)
+                    .frame(width: 311, height: 25)
                     .background(Color("Off white"))
                     .cornerRadius(20)
                     .foregroundColor(Color("Dark green"))
