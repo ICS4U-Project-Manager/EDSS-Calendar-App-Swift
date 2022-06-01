@@ -68,8 +68,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-95-28F">
-                                <rect key="frame" x="40" y="35" width="335" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <rect key="frame" x="22" y="35" width="178" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="fNH-Nn-faC"/>
+                                    <constraint firstAttribute="width" constant="178" id="qQF-uP-9to"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -93,16 +97,11 @@
                         <viewLayoutGuide key="safeArea" id="MgY-9p-qQX"/>
                         <color key="backgroundColor" name="Off white"/>
                         <constraints>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="100" id="5T6-is-Q1D"/>
-                            <constraint firstItem="MgY-9p-qQX" firstAttribute="trailing" secondItem="bTk-95-28F" secondAttribute="trailing" id="E06-mU-mvf"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="40" id="M2X-c6-k6i"/>
+                            <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="35" id="Bb8-79-bAV"/>
                             <constraint firstItem="pAe-fg-gpR" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="89" id="TGH-KO-TWv"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="40" id="U5B-fn-kbI"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="30" id="Z7Y-DM-RmZ"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="40" id="Zyq-Xo-CkI"/>
                             <constraint firstItem="MgY-9p-qQX" firstAttribute="bottom" secondItem="pAe-fg-gpR" secondAttribute="bottom" constant="70" id="gLR-uD-UIJ"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="35" id="lLg-yb-iNv"/>
                             <constraint firstItem="MgY-9p-qQX" firstAttribute="trailing" secondItem="pAe-fg-gpR" secondAttribute="trailing" constant="89" id="tyV-Pb-zZz"/>
+                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="was-zE-hKx"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="eyL-1G-2Bv"/>
