@@ -8,6 +8,8 @@
 import UIKit
 import Foundation
 
+var selectedDate = Date()
+
 class CalendarHelper
 {
     let calendar = Calendar.current
@@ -65,6 +67,7 @@ class CalendarHelper
 class CalendarCell: UICollectionViewCell
 {
     @IBOutlet weak var dayOfMonth: UILabel!
+    @IBOutlet weak var dayButton: UIButton!
 }
 
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
@@ -72,7 +75,7 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var selectedDate = Date()
+    
     var totalSquares = [String]()
     
     override func viewDidLoad()
@@ -146,7 +149,9 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         return false
     }
     
-    @IBAction func PopUpDismiss(_ sender: UIStoryboardSegue) {}
+    @IBAction func PopUpDismiss(_ sender: UIStoryboardSegue) {
+        
+    }
 
 
 }

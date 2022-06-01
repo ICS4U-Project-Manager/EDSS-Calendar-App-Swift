@@ -251,13 +251,26 @@
                                                     <color key="textColor" name="Off white"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pD-0d-QTu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <segue destination="zgT-GE-pP5" kind="show" id="J2M-0T-xDR"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ASQ-c1-OrX" firstAttribute="centerX" secondItem="F87-X7-XZQ" secondAttribute="centerX" id="1WF-fh-Gc7"/>
                                                 <constraint firstItem="ASQ-c1-OrX" firstAttribute="centerY" secondItem="F87-X7-XZQ" secondAttribute="centerY" multiplier="0.5" id="L1y-Fx-XGs"/>
+                                                <constraint firstItem="7pD-0d-QTu" firstAttribute="leading" secondItem="F87-X7-XZQ" secondAttribute="leading" id="MUx-6U-SLH"/>
+                                                <constraint firstItem="7pD-0d-QTu" firstAttribute="top" secondItem="F87-X7-XZQ" secondAttribute="top" id="P41-qB-PzU"/>
+                                                <constraint firstAttribute="trailing" secondItem="7pD-0d-QTu" secondAttribute="trailing" id="fnM-fu-ceJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="7pD-0d-QTu" secondAttribute="bottom" id="rGR-CZ-knF"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="dayButton" destination="7pD-0d-QTu" id="8AN-WD-z3L"/>
                                             <outlet property="dayOfMonth" destination="ASQ-c1-OrX" id="ptu-fl-4jx"/>
                                         </connections>
                                     </collectionViewCell>
@@ -316,32 +329,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dby-HO-jb2">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Day" style="plain" id="Ciw-QG-aqv">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Qru-28-0qS">
-                                    <rect key="frame" x="16" y="0.0" width="135.5" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="DAY"/>
-                                    <connections>
-                                        <segue destination="zgT-GE-pP5" kind="show" id="Sy2-cP-TQU"/>
-                                    </connections>
-                                </button>
-                                <color key="tintColor" name="Off white"/>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="EHo-IU-AGM">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
-                                    <rect key="frame" x="151.5" y="0.0" width="85" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="FILTER"/>
-                                    <connections>
-                                        <segue destination="E4P-7C-Ke3" kind="show" id="cIf-BP-OFZ"/>
-                                    </connections>
-                                </button>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="EHo-IU-AGM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
+                                <rect key="frame" x="16" y="0.0" width="85" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="FILTER"/>
+                                <connections>
+                                    <segue destination="E4P-7C-Ke3" kind="show" id="cIf-BP-OFZ"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="CGv-j7-u0q">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nur-fW-2vC">
                                 <rect key="frame" x="242.5" y="0.0" width="116.5" height="44"/>
