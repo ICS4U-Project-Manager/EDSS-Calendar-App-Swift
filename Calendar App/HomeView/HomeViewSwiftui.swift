@@ -23,14 +23,14 @@ struct HomeViewSwiftUI: View {
                 Rectangle()
                     .frame(width: 340, height: 3)
                     .foregroundColor(Color("Dark purple"))
-                    .position(x: 187, y: 7)
+                    .position(x: 187, y: 12)
                 
                 Text("Announcements")
                     .fontWeight(.black)
                     .font(.system(size: 20))
                     .foregroundColor(Color("Off white"))
                     .font(.title2)
-                    .position(x: 115, y: -60)
+                    .position(x: 120, y: -45)
                 
                 ScrollView {
                     VStack{
@@ -56,17 +56,17 @@ struct HomeViewSwiftUI: View {
                     .background(
                         Image("Text Boxes")
                             .resizable()
-                            .frame(width: 311, height: 136))
-                    .frame(width: 311, height: 136)
+                            .frame(width: 311, height: 160))
+                    .frame(width: 311, height: 160)
                     .foregroundColor(Color("Dark green"))
-                    .position(x: 187, y: -60)
+                    .position(x: 187, y: -35)
                     
                     Text("Clubs & Groups")
                         .fontWeight(.black)
                         .font(.system(size: 20))
                         .foregroundColor(Color("Off white"))
                         .font(.title2)
-                        .position(x: 115, y: -60)
+                        .position(x: 115, y: -15)
                     
                     
                     VStack{
@@ -83,10 +83,10 @@ struct HomeViewSwiftUI: View {
                     .background(
                         Image("Text Boxes")
                             .resizable()
-                            .frame(width: 311, height: 136))
-                    .frame(width: 311, height: 136)
+                            .frame(width: 311, height: 160))
+                    .frame(width: 311, height: 160)
                     .foregroundColor(Color("Dark green"))
-                    .position(x: 187, y: -60)
+                    .position(x: 187, y: -5)
                     .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
                         .onEnded { value in
                             print(value.translation)
@@ -100,11 +100,11 @@ struct HomeViewSwiftUI: View {
                     
                     Link("🔗EDSS Instagram",
                          destination: URL(string: "https://www.instagram.com/elmira_lancers/")!)
-                    .frame(width: 311, height: 25)
+                    .frame(width: 311, height: 30)
                     .background(Color("Off white"))
                     .cornerRadius(20)
                     .foregroundColor(Color("Dark green"))
-                    .position(x: 187, y: -40)
+                    .position(x: 187, y: 30)
                     
                 }
             }
