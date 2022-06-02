@@ -68,8 +68,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-95-28F">
-                                <rect key="frame" x="40" y="35" width="335" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <rect key="frame" x="22" y="35" width="178" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="fNH-Nn-faC"/>
+                                    <constraint firstAttribute="width" constant="178" id="qQF-uP-9to"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -93,16 +97,11 @@
                         <viewLayoutGuide key="safeArea" id="MgY-9p-qQX"/>
                         <color key="backgroundColor" name="Off white"/>
                         <constraints>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="100" id="5T6-is-Q1D"/>
-                            <constraint firstItem="MgY-9p-qQX" firstAttribute="trailing" secondItem="bTk-95-28F" secondAttribute="trailing" id="E06-mU-mvf"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="40" id="M2X-c6-k6i"/>
+                            <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="35" id="Bb8-79-bAV"/>
                             <constraint firstItem="pAe-fg-gpR" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="89" id="TGH-KO-TWv"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="40" id="U5B-fn-kbI"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="30" id="Z7Y-DM-RmZ"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="40" id="Zyq-Xo-CkI"/>
                             <constraint firstItem="MgY-9p-qQX" firstAttribute="bottom" secondItem="pAe-fg-gpR" secondAttribute="bottom" constant="70" id="gLR-uD-UIJ"/>
-                            <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="35" id="lLg-yb-iNv"/>
                             <constraint firstItem="MgY-9p-qQX" firstAttribute="trailing" secondItem="pAe-fg-gpR" secondAttribute="trailing" constant="89" id="tyV-Pb-zZz"/>
+                            <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="was-zE-hKx"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="eyL-1G-2Bv"/>
@@ -124,41 +123,33 @@
                                 <rect key="frame" x="0.0" y="15" width="375" height="652"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8C-Hr-Vr4">
-                                        <rect key="frame" x="158" y="37" width="64" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FILTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8C-Hr-Vr4">
+                                        <rect key="frame" x="145" y="37" width="90" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" name="Dark purple"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0h-g3-66Z">
-                                        <rect key="frame" x="285" y="24" width="69" height="31"/>
+                                        <rect key="frame" x="282" y="24" width="80" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="exit">
-                                            <color key="baseForegroundColor" name="Medium purple"/>
-                                            <color key="baseBackgroundColor" name="Off white"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="filled" title="DISMISS"/>
                                         <connections>
                                             <segue destination="ogd-6r-Hb6" kind="unwind" unwindAction="PopUpDismiss:" id="6u0-Et-21B"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duH-YG-FBZ">
-                                        <rect key="frame" x="51" y="357" width="86" height="31"/>
+                                        <rect key="frame" x="154" y="289" width="67" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="APPLY">
-                                            <color key="baseForegroundColor" name="Off white"/>
-                                            <color key="baseBackgroundColor" name="Purple"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="filled" title="APPLY"/>
                                         <connections>
                                             <segue destination="ogd-6r-Hb6" kind="unwind" unwindAction="PopUpDismiss:" id="aBy-x6-OMA"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="Off white"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lLg-LC-bwk"/>
@@ -259,13 +250,26 @@
                                                     <color key="textColor" name="Off white"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pD-0d-QTu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <segue destination="zgT-GE-pP5" kind="show" id="J2M-0T-xDR"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ASQ-c1-OrX" firstAttribute="centerX" secondItem="F87-X7-XZQ" secondAttribute="centerX" id="1WF-fh-Gc7"/>
                                                 <constraint firstItem="ASQ-c1-OrX" firstAttribute="centerY" secondItem="F87-X7-XZQ" secondAttribute="centerY" multiplier="0.5" id="L1y-Fx-XGs"/>
+                                                <constraint firstItem="7pD-0d-QTu" firstAttribute="leading" secondItem="F87-X7-XZQ" secondAttribute="leading" id="MUx-6U-SLH"/>
+                                                <constraint firstItem="7pD-0d-QTu" firstAttribute="top" secondItem="F87-X7-XZQ" secondAttribute="top" id="P41-qB-PzU"/>
+                                                <constraint firstAttribute="trailing" secondItem="7pD-0d-QTu" secondAttribute="trailing" id="fnM-fu-ceJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="7pD-0d-QTu" secondAttribute="bottom" id="rGR-CZ-knF"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="dayButton" destination="7pD-0d-QTu" id="8AN-WD-z3L"/>
                                             <outlet property="dayOfMonth" destination="ASQ-c1-OrX" id="ptu-fl-4jx"/>
                                         </connections>
                                     </collectionViewCell>
@@ -324,32 +328,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dby-HO-jb2">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Day" style="plain" id="Ciw-QG-aqv">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Qru-28-0qS">
-                                    <rect key="frame" x="16" y="0.0" width="135.5" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="DAY"/>
-                                    <connections>
-                                        <segue destination="zgT-GE-pP5" kind="show" id="Sy2-cP-TQU"/>
-                                    </connections>
-                                </button>
-                                <color key="tintColor" name="Off white"/>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="EHo-IU-AGM">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
-                                    <rect key="frame" x="151.5" y="0.0" width="85" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="FILTER"/>
-                                    <connections>
-                                        <segue destination="E4P-7C-Ke3" kind="show" id="cIf-BP-OFZ"/>
-                                    </connections>
-                                </button>
-                                <color key="tintColor" name="Off white"/>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="EHo-IU-AGM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
+                                <rect key="frame" x="16" y="0.0" width="85" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="FILTER"/>
+                                <connections>
+                                    <segue destination="E4P-7C-Ke3" kind="show" id="cIf-BP-OFZ"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="CGv-j7-u0q">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nur-fW-2vC">
                                 <rect key="frame" x="242.5" y="0.0" width="116.5" height="44"/>
@@ -360,7 +350,7 @@
                                     <segue destination="WQ2-xl-2ym" kind="show" id="cnf-yA-Vxn"/>
                                 </connections>
                             </button>
-                            <color key="tintColor" name="Off white"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -474,7 +464,7 @@
                                         <rect key="frame" x="128" y="23" width="133" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" name="Off white"/>
+                                        <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGF-6A-Xgi">
@@ -712,14 +702,14 @@
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Dark green">
             <color red="0.32499998807907104" green="0.40799999237060547" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Dark purple">
             <color red="0.086000002920627594" green="0.024000000208616257" blue="0.10199999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Medium purple">
-            <color red="0.44299998879432678" green="0.36100000143051147" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Off white">
             <color red="0.97600001096725464" green="1" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
