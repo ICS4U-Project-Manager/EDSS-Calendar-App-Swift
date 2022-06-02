@@ -18,7 +18,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     
         //Preparing keyboard exit
         self.titleTextField.delegate = self
-        
+        self.locationTextField.delegate = self
+        self.descriptionTextField.delegate = self
         //Preparing view visuals
         backgroundView.layer.cornerRadius = 10
         //Preparing button visuals
@@ -57,6 +58,10 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var createEventButton: UIButton!
     @IBOutlet weak var allDaySwitch: UISwitch!
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+    @IBOutlet weak var startTimePicker: UIDatePicker!
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    @IBOutlet weak var endTimePicker: UIDatePicker!
     
     var whichTextBox : Int = 0
     var eventTitle : String = ""
@@ -92,11 +97,44 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //getting start time and date
+    //REDO START TIME AND DATE FUNCTION BECAUSE OUTLET WAS CHANGED
+    /*@IBAction func getStartDate(_ sender: Any) {
+        let getDate = startDatePicker.date
+        var placeholderDate : String = ""
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        placeholderDate = formatter.string(from: getDate)
+    }
+    
+    @IBAction func getStartTime(_ sender: Any) {
+        let getTime = startTimePicker.date
+        var placeholderTime : String = ""
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        placeholderTime = formatter.string(from: getTime)
+    }
+    
+    //getting end time and date
+    @IBAction func getEndDate(_ sender: Any) {
+        let getDate = endDatePicker.date
+        var placeholderDate : String = ""
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        placeholderDate = formatter.string(from: getDate)
+    }
+    
+    @IBAction func getEndTime(_ sender: Any) {
+        let getTime = endTimePicker.date
+        var placeholderTime : String = ""
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        placeholderTime = formatter.string(from: getTime)
+    }*/
+    
     //creating instance of class
-    @IBOutlet weak var label: UILabel!
     @IBAction func createClass(_ sender: Any) {
-        let event = Event(name: titleTextField.text!, description: descriptionTextField.text!, location: locationTextField.text!, start: 1, end: 1, group: "placeholder")
-        label.text = "\(event.getName()) and \(event.getLocation()) and \(event.getDescription())"
+        //let event = Event(name: titleTextField.text!, description: descriptionTextField.text!, location: locationTextField.text!, start: 1, end: 1, group: "placeholder")
     }
     
     
