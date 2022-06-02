@@ -16,7 +16,7 @@ struct HomeViewSwiftUI: View {
                 
                 Text("Today")
                     .fontWeight(.bold)
-                    .position(x: 110, y: 50)
+                    .position(x: 128, y: 50)
                     .font(.system(size: 70))
                     .foregroundColor(Color("Off white"))
                 
@@ -100,11 +100,11 @@ struct HomeViewSwiftUI: View {
                     
                     Link("🔗EDSS Instagram",
                          destination: URL(string: "https://www.instagram.com/elmira_lancers/")!)
-                    .frame(width: 311, height: 30)
+                    .frame(width: 309, height: 30)
                     .background(Color("Off white"))
                     .cornerRadius(20)
                     .foregroundColor(Color("Dark green"))
-                    .position(x: 187, y: 30)
+                    .position(x: 188, y: 30)
                     
                 }
             }
