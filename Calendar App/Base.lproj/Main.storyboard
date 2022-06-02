@@ -228,7 +228,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="THD-ha-44b">
-                                <rect key="frame" x="0.0" y="198" width="375" height="420"/>
+                                <rect key="frame" x="0.0" y="198" width="375" height="371"/>
                                 <color key="backgroundColor" name="Dark green"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="tzY-BD-FEb">
                                     <size key="itemSize" width="128" height="128"/>
@@ -306,6 +306,24 @@
                                     <action selector="previousMonth:" destination="iX7-fe-VHM" eventType="touchUpInside" id="zQb-Jz-26E"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gc-Ad-fyg">
+                                <rect key="frame" x="252" y="57" width="107" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Addevent"/>
+                                <connections>
+                                    <segue destination="WQ2-xl-2ym" kind="show" id="zMq-P9-gp7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHM-C1-lAP">
+                                <rect key="frame" x="137" y="57" width="101" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="filter"/>
+                                <connections>
+                                    <segue destination="E4P-7C-Ke3" kind="show" id="Dpb-y0-9fs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rlg-Xe-5XC"/>
                         <color key="backgroundColor" name="Dark green"/>
@@ -327,32 +345,9 @@
                             <constraint firstItem="Rlg-Xe-5XC" firstAttribute="trailing" secondItem="THD-ha-44b" secondAttribute="trailing" id="xRl-mi-P5y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dby-HO-jb2">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="EHo-IU-AGM">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOa-zN-ZSa">
-                                <rect key="frame" x="16" y="0.0" width="85" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="FILTER"/>
-                                <connections>
-                                    <segue destination="E4P-7C-Ke3" kind="show" id="cIf-BP-OFZ"/>
-                                </connections>
-                            </button>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="CGv-j7-u0q">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nur-fW-2vC">
-                                <rect key="frame" x="242.5" y="0.0" width="116.5" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ADD EVENT"/>
-                                <connections>
-                                    <segue destination="WQ2-xl-2ym" kind="show" id="cnf-yA-Vxn"/>
-                                </connections>
-                            </button>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dby-HO-jb2"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="THD-ha-44b" id="FD6-ei-JDj"/>
                         <outlet property="monthLabel" destination="LfG-uZ-Ghu" id="cym-ge-2Mp"/>
@@ -373,6 +368,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBP-FW-NPx">
                                 <rect key="frame" x="153" y="175" width="69" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="EVENT"/>
                                 <connections>
@@ -467,18 +463,6 @@
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGF-6A-Xgi">
-                                        <rect key="frame" x="269" y="25" width="98" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
-                                        <connections>
-                                            <action selector="cancelButton:" destination="ab7-6i-4ps" eventType="touchUpInside" id="O27-Os-7CX"/>
-                                            <segue destination="igK-v4-gdY" kind="unwind" unwindAction="PopUpDismiss:" id="Pqg-il-GDu"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBh-OZ-iVd">
                                         <rect key="frame" x="115" y="580" width="145" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -592,6 +576,20 @@
                                         </subviews>
                                         <color key="backgroundColor" name="Off white"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDj-HW-5fZ">
+                                        <rect key="frame" x="278" y="28" width="81" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cancel">
+                                            <color key="baseForegroundColor" name="Off white"/>
+                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="igK-v4-gdY" kind="unwind" unwindAction="PopUpDismiss:" id="zaL-zO-AJx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Dark green"/>
                             </view>
@@ -603,7 +601,7 @@
                     <connections>
                         <outlet property="allDaySwitch" destination="gYt-Wk-gs0" id="8I3-kJ-qfO"/>
                         <outlet property="backgroundView" destination="ZuG-vf-KVA" id="OrB-Dj-4Xy"/>
-                        <outlet property="cancelButton" destination="uGF-6A-Xgi" id="qro-Ph-llv"/>
+                        <outlet property="cancelButton" destination="JDj-HW-5fZ" id="jKH-gx-Ldn"/>
                         <outlet property="createEventButton" destination="tBh-OZ-iVd" id="wOX-ff-hga"/>
                         <outlet property="descriptionTextField" destination="1yo-yF-CpF" id="oCN-lJ-ofP"/>
                         <outlet property="label" destination="n2o-k0-lzm" id="WQf-G6-GCV"/>
@@ -703,7 +701,7 @@
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
         <namedColor name="Dark green">
             <color red="0.32499998807907104" green="0.40799999237060547" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -720,6 +718,9 @@
         <namedColor name="Vibrant purple">
             <color red="0.72899997234344482" green="0.39599999785423279" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
