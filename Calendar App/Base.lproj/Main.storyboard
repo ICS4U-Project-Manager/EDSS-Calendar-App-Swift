@@ -130,15 +130,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0h-g3-66Z">
-                                        <rect key="frame" x="282" y="24" width="80" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="DISMISS"/>
-                                        <connections>
-                                            <segue destination="ogd-6r-Hb6" kind="unwind" unwindAction="PopUpDismiss:" id="6u0-Et-21B"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duH-YG-FBZ">
                                         <rect key="frame" x="154" y="289" width="67" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,6 +137,15 @@
                                         <buttonConfiguration key="configuration" style="filled" title="APPLY"/>
                                         <connections>
                                             <segue destination="ogd-6r-Hb6" kind="unwind" unwindAction="PopUpDismiss:" id="aBy-x6-OMA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0h-g3-66Z">
+                                        <rect key="frame" x="258" y="52" width="98" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="DISMISS"/>
+                                        <connections>
+                                            <segue destination="ogd-6r-Hb6" kind="unwind" unwindAction="PopUpDismiss:" id="6u0-Et-21B"/>
                                         </connections>
                                     </button>
                                 </subviews>
