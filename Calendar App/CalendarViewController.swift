@@ -10,6 +10,7 @@ import Foundation
 
 var selectedDate = Date()
 
+
 class CalendarHelper
 {
     let calendar = Calendar.current
@@ -68,6 +69,7 @@ class CalendarCell: UICollectionViewCell
 {
     @IBOutlet weak var dayOfMonth: UILabel!
     @IBOutlet weak var dayButton: UIButton!
+    
 }
 
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
@@ -122,7 +124,8 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        totalSquares.count
+        return totalSquares.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell

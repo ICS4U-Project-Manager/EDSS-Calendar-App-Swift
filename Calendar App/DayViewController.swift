@@ -8,10 +8,12 @@
 import UIKit
 
 class DayViewController: UIViewController {
-
+    
+    @IBOutlet weak var dayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dayLabel.text = CalendarHelper().monthString(date: selectedDate)
     }
     
 
