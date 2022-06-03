@@ -8,26 +8,34 @@ class Event {
     private var description:String
     private var location:String
     private var group:String?
-    private var start:Int
-    private var end:Int
-    private var duration:Int { return end-start}
+    private var date:Date
+    private var start:Time
+    private var end:Time
+    private var duration:Time {
+        return Time(time:end.getRaw()-start.getRaw(),isCyclic:false)
+    }
+    private var id:Int=0
 
-    init(name:String, description:String, location:String, start:Int, end:Int, group:String) {
+    init(name:String, description:String, location:String, group:String, date:Date, start:Time, end:Time, id:Int) {
         self.group=group
         self.name=name
         self.description=description
         self.location=location
+        self.date=date
         self.start=start
         self.end=end
+        self.id=id
     }
 
-    init(name:String, description:String, location:String, start:Int, end:Int) {
+    init(name:String, description:String, location:String, date:Date, start:Time, end:Time, id:Int) {
         self.group=nil
         self.name=name
         self.description=description
         self.location=location
+        self.date=date
         self.start=start
         self.end=end
+        self.id=id
     }
 
     func getName() -> String {
@@ -67,23 +75,37 @@ class Event {
         self.group=group
     }
 
-    func getStart() -> Int {
+    func getDate() -> Date {
+        return self.date
+    }
+
+    func setDate(_ date:Date) {
+        self.date=date
+    }
+
+    func getStart() -> Time {
         return self.start
     }
 
-    func setStart(_ start:Int) {
+    func setStart(_ start:Time) {
         self.start=start
     }
 
-    func getEnd() -> Int {
+    func getEnd() -> Time {
         return self.end
     }
 
-    func setEnd(_ end:Int) {
+    func setEnd(_ end:Time) {
         self.end=end
     }
 
-    func getDuration() -> Int {
+    func getDuration() -> Time {
         return self.duration
+    }
+    func getId() -> Int {
+        return self.id
+    }
+    func setId(_ id:Int) {
+        self.id=id
     }
 }
