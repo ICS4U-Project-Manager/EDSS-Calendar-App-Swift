@@ -44,10 +44,8 @@
 		CE5F4F602847A8890007DC3A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F4F5E2847A8890007DC3A /* AuthenticationViewModel.swift */; };
 		CE5F4F622847AB430007DC3A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F4F612847AB430007DC3A /* LogInViewController.swift */; };
 		CE5F4F642847B04C0007DC3A /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F4F632847B04C0007DC3A /* GoogleSignInButton.swift */; };
-		CE5F4F68284A4E000007DC3A /* time class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F4F67284A4E000007DC3A /* time class.swift */; };
-		CE5F4F6A284A4E0E0007DC3A /* event class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F4F69284A4E0E0007DC3A /* event class.swift */; };
-		CE5F4F6C284A4E140007DC3A /* date class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F4F6B284A4E140007DC3A /* date class.swift */; };
 		CE62AC0F283D1BB900474068 /* Firestore List.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62AC0E283D1BB900474068 /* Firestore List.swift */; };
+		CE62AC11283E6B2900474068 /* Event Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62AC10283E6B2800474068 /* Event Class.swift */; };
 		CEB9C3AB2837D8ED003EFC7F /* HomeViewSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9C3AA2837D8ED003EFC7F /* HomeViewSwiftui.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,10 +94,8 @@
 		CE5F4F5E2847A8890007DC3A /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		CE5F4F612847AB430007DC3A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CE5F4F632847B04C0007DC3A /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
-		CE5F4F67284A4E000007DC3A /* time class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "time class.swift"; sourceTree = "<group>"; };
-		CE5F4F69284A4E0E0007DC3A /* event class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "event class.swift"; sourceTree = "<group>"; };
-		CE5F4F6B284A4E140007DC3A /* date class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "date class.swift"; sourceTree = "<group>"; };
 		CE62AC0E283D1BB900474068 /* Firestore List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore List.swift"; sourceTree = "<group>"; };
+		CE62AC10283E6B2800474068 /* Event Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event Class.swift"; sourceTree = "<group>"; };
 		CEB9C3AA2837D8ED003EFC7F /* HomeViewSwiftui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSwiftui.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,9 +169,7 @@
 				74D31BBA28329768001F24DF /* FilterViewController.swift */,
 				74D31BB828328E08001F24DF /* AddEventViewController.swift */,
 				74D31BB628328DF0001F24DF /* EventViewController.swift */,
-				CE5F4F67284A4E000007DC3A /* time class.swift */,
-				CE5F4F6B284A4E140007DC3A /* date class.swift */,
-				CE5F4F69284A4E0E0007DC3A /* event class.swift */,
+				CE62AC10283E6B2800474068 /* Event Class.swift */,
 				CE4EEE3E2839E5520087EEA5 /* Firebase */,
 				74D31BB428328DCD001F24DF /* DayViewController.swift */,
 				74D31BB028328D7C001F24DF /* SettingsViewController.swift */,
@@ -400,19 +394,17 @@
 				74D31BB928328E08001F24DF /* AddEventViewController.swift in Sources */,
 				CE5F4F622847AB430007DC3A /* LogInViewController.swift in Sources */,
 				74D31BC12837D39D001F24DF /* TabBarController.swift in Sources */,
-				CE5F4F68284A4E000007DC3A /* time class.swift in Sources */,
 				CE4EEE402839E5750087EEA5 /* Firestore Get.swift in Sources */,
 				CE5F4F642847B04C0007DC3A /* GoogleSignInButton.swift in Sources */,
 				74AFADB9282951DA0055C71A /* AppDelegate.swift in Sources */,
-				CE5F4F6A284A4E0E0007DC3A /* event class.swift in Sources */,
 				CE5F4F602847A8890007DC3A /* AuthenticationViewModel.swift in Sources */,
 				74AFADBB282951DA0055C71A /* SceneDelegate.swift in Sources */,
 				74D31BBB28329768001F24DF /* FilterViewController.swift in Sources */,
+				CE62AC11283E6B2900474068 /* Event Class.swift in Sources */,
 				74D31BAF28328D42001F24DF /* HomeViewController.swift in Sources */,
 				74D31BB728328DF0001F24DF /* EventViewController.swift in Sources */,
 				74D31BB328328DB2001F24DF /* CalendarViewController.swift in Sources */,
 				74D31BB128328D7C001F24DF /* SettingsViewController.swift in Sources */,
-				CE5F4F6C284A4E140007DC3A /* date class.swift in Sources */,
 				74D31BB528328DCD001F24DF /* DayViewController.swift in Sources */,
 				CE62AC0F283D1BB900474068 /* Firestore List.swift in Sources */,
 				CEB9C3AB2837D8ED003EFC7F /* HomeViewSwiftui.swift in Sources */,
