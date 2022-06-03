@@ -29,7 +29,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         cancelButton.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         cancelButton.layer.cornerRadius = 10
         createEventButton.layer.cornerRadius = 10
-    //preparing switch design
+    //preparing date picker design
         
     }
     
@@ -63,9 +63,22 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var endTimePicker: UIDatePicker!
     
+    
     var whichTextBox : Int = 0
     var eventTitle : String = ""
     var allDayEvent : Bool = false
+    var startEventYear : Int = 0
+    var startEventMonth : Int = 0
+    var startEventDay : Int = 0
+    var startEventHour : Int = 0
+    var startEventMinute : Int = 0
+    var startEventPeriod : Int = -1
+    var endEventYear : Int = 0
+    var endEventMonth : Int = 0
+    var endEventDay : Int = 0
+    var endEventHour : Int = 0
+    var endEventMinute : Int = 0
+    var endEventPeriod : Int = -1
     var eventLocation : String = ""
     var eventDescription : String = ""
     
@@ -99,7 +112,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     
     //getting start time and date
     //REDO START TIME AND DATE FUNCTION BECAUSE OUTLET WAS CHANGED
-    /*@IBAction func getStartDate(_ sender: Any) {
+    @IBAction func getStartDate(_ sender: Any) {
         let getDate = startDatePicker.date
         var placeholderDate : String = ""
         let formatter = DateFormatter()
@@ -130,7 +143,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         placeholderTime = formatter.string(from: getTime)
-    }*/
+    }
     
     //creating instance of class
     @IBAction func createClass(_ sender: Any) {
