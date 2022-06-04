@@ -13,7 +13,7 @@ class SigninViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let childView = UIHostingController(rootView: LoginViewSwiftUI())
+        let childView = UIHostingController(rootView: LoginViewSwiftUI() )
         addChild(childView)
         childView.view.frame = theContainer2.bounds
         theContainer2.addSubview(childView.view)
