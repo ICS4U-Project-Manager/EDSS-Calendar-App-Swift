@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct LoginViewSwiftUI: View {
-    @EnvironmentObject var viewModel: AuthenticationViewModel
     @State private var isShowingDetailView = false
+    var type = SigninViewController()
       var body: some View {
-
+          VStack{
               GoogleSignInButton()
+                  .frame(width: 230, height: 50)
+                  .background(Color("Dark purple"))
                   .padding()
                   .onTapGesture {
-                      viewModel.signIn()
+                      AuthenticationViewModel().signIn()
+                      type.showscreen()
+            }
         }
+          .background(Color("Dark purple"))
+          .onAppear(){
+              type.showscreen()
+          }
+          
     }
 }
 

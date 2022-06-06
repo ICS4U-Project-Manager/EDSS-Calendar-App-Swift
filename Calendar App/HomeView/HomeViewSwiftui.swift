@@ -47,9 +47,6 @@ struct HomeViewSwiftUI: View {
                                 .font(.system(size: 12))
                                 .font(.body)
                                 .frame(width: 300)
-
- 
-                            
                             }
                         }
                     }
@@ -60,6 +57,7 @@ struct HomeViewSwiftUI: View {
                     .frame(width: 311, height: 160)
                     .foregroundColor(Color("Dark green"))
                     .position(x: 187, y: -35)
+
                     
                     Text("Clubs & Groups")
                         .fontWeight(.black)
@@ -113,6 +111,12 @@ struct HomeViewSwiftUI: View {
             }
             .background(Color("Dark green"))
         }
+   
+    struct HomeViewSwiftUI2: PreviewProvider {
+        static var previews: some View {
+         Text("this is a test")
+        }
+    }
 
     struct HomeViewSwiftUI_Previews: PreviewProvider {
         static var previews: some View {

@@ -46,6 +46,7 @@
 		CE5F4F642847B04C0007DC3A /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F4F632847B04C0007DC3A /* GoogleSignInButton.swift */; };
 		CE62AC0F283D1BB900474068 /* Firestore List.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62AC0E283D1BB900474068 /* Firestore List.swift */; };
 		CE62AC11283E6B2900474068 /* Event Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62AC10283E6B2800474068 /* Event Class.swift */; };
+		CE959C69284BADB20057CA51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959C68284BADB10057CA51 /* ContentView.swift */; };
 		CEB9C3AB2837D8ED003EFC7F /* HomeViewSwiftui.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9C3AA2837D8ED003EFC7F /* HomeViewSwiftui.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		CE5F4F632847B04C0007DC3A /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		CE62AC0E283D1BB900474068 /* Firestore List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore List.swift"; sourceTree = "<group>"; };
 		CE62AC10283E6B2800474068 /* Event Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event Class.swift"; sourceTree = "<group>"; };
+		CE959C68284BADB10057CA51 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEB9C3AA2837D8ED003EFC7F /* HomeViewSwiftui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSwiftui.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +223,7 @@
 		CE5F4F5C2847A8890007DC3A /* LogInView */ = {
 			isa = PBXGroup;
 			children = (
+				CE959C68284BADB10057CA51 /* ContentView.swift */,
 				CE5F4F5D2847A8890007DC3A /* LoginViewSwiftUI.swift */,
 				CE5F4F5E2847A8890007DC3A /* AuthenticationViewModel.swift */,
 				CE5F4F612847AB430007DC3A /* LogInViewController.swift */,
@@ -396,6 +399,7 @@
 				74D31BC12837D39D001F24DF /* TabBarController.swift in Sources */,
 				CE4EEE402839E5750087EEA5 /* Firestore Get.swift in Sources */,
 				CE5F4F642847B04C0007DC3A /* GoogleSignInButton.swift in Sources */,
+				CE959C69284BADB20057CA51 /* ContentView.swift in Sources */,
 				74AFADB9282951DA0055C71A /* AppDelegate.swift in Sources */,
 				CE5F4F602847A8890007DC3A /* AuthenticationViewModel.swift in Sources */,
 				74AFADBB282951DA0055C71A /* SceneDelegate.swift in Sources */,
@@ -591,6 +595,7 @@
 				DEVELOPMENT_TEAM = QG58WJH3QS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Calendar App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Calender App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -625,6 +630,7 @@
 				DEVELOPMENT_TEAM = QG58WJH3QS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Calendar App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Calender App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

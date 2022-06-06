@@ -14,16 +14,11 @@
         <scene sceneID="OL0-cc-a8r">
             <objects>
                 <viewController title="Log In" id="Ec4-Bf-71u" customClass="SigninViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pCv-Eu-P5W">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="pCv-Eu-P5W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Und-u5-sPe">
-                                <rect key="frame" x="72" y="472" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Dark purple"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-lc-oez">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-lc-oez">
                                 <rect key="frame" x="72.5" y="221" width="132" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="lAj-6J-EKQ"/>
@@ -33,7 +28,7 @@
                                 <color key="textColor" name="Off white"/>
                                 <color key="highlightedColor" name="Dark purple"/>
                             </label>
-                            <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
+                            <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
                                 <rect key="frame" x="72.5" y="306.5" width="230" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="DQe-Qe-NuV"/>
@@ -48,13 +43,25 @@
                                     <segue destination="vxN-FD-LaW" kind="presentation" modalPresentationStyle="fullScreen" id="W7a-r7-UP3"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Und-u5-sPe">
+                                <rect key="frame" x="72" y="376" width="231" height="50"/>
+                                <color key="backgroundColor" name="Dark purple"/>
+                                <color key="tintColor" name="Dark purple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cDO-xm-CBr"/>
+                                    <constraint firstAttribute="width" constant="231" id="y2Z-f2-xpc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GND-Br-6G4"/>
                         <color key="backgroundColor" name="Dark purple"/>
                         <constraints>
                             <constraint firstItem="Epx-t5-2el" firstAttribute="centerY" secondItem="pCv-Eu-P5W" secondAttribute="centerY" id="5vt-VT-oId"/>
                             <constraint firstItem="Epx-t5-2el" firstAttribute="top" secondItem="nd4-lc-oez" secondAttribute="bottom" constant="24.5" id="G3Q-xp-aVn"/>
-                            <constraint firstItem="nd4-lc-oez" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="72.5" id="jQR-Wg-g4e"/>
+                            <constraint firstItem="Und-u5-sPe" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="86" id="KXI-lO-qyk"/>
+                            <constraint firstItem="GND-Br-6G4" firstAttribute="trailing" secondItem="Und-u5-sPe" secondAttribute="trailing" constant="58" id="V2x-o1-wZa"/>
+                            <constraint firstItem="Und-u5-sPe" firstAttribute="top" secondItem="Epx-t5-2el" secondAttribute="bottom" constant="15.5" id="XqD-Rx-hZo"/>
+                            <constraint firstItem="GND-Br-6G4" firstAttribute="trailing" secondItem="Und-u5-sPe" secondAttribute="trailing" constant="72" id="gG0-TY-Ndd"/>
                             <constraint firstItem="Epx-t5-2el" firstAttribute="centerX" secondItem="pCv-Eu-P5W" secondAttribute="centerX" id="ryR-rv-p5e"/>
                         </constraints>
                     </view>
@@ -592,7 +599,7 @@
         <!--Home-->
         <scene sceneID="ipq-NZ-1Yt">
             <objects>
-                <viewController title="Home" id="YV5-Vr-Ag2" customClass="HomeViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YV5-Vr-Ag2" userLabel="Home" customClass="HomeViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0b3-A9-yn9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -619,7 +626,7 @@
         <!--Add Event-->
         <scene sceneID="dls-pI-gMM">
             <objects>
-                <viewController title="Add Event" id="ab7-6i-4ps" customClass="AddEventViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="event" title="Add Event" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ab7-6i-4ps" customClass="AddEventViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Wf-Dx-V3X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -899,7 +906,7 @@
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <namedColor name="AccentColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Dark green">
             <color red="0.32499998807907104" green="0.40799999237060547" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
