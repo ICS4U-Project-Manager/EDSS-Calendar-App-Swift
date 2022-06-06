@@ -92,8 +92,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-ry-Va5">
+                                <rect key="frame" x="22" y="129" width="167" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="F8H-bf-tWb"/>
+                                    <constraint firstAttribute="width" constant="167" id="nq2-9g-9H7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gml-6n-Eey">
+                                <rect key="frame" x="22" y="188" width="101" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="E3O-dt-TM7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="NJv-I9-rMU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tactile Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-79-BnZ">
+                                <rect key="frame" x="22" y="247" width="167" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="d8Q-R9-VsR"/>
+                                    <constraint firstAttribute="width" constant="167" id="rLU-OC-mpk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAe-fg-gpR">
-                                <rect key="frame" x="106" y="484" width="163" height="64"/>
+                                <rect key="frame" x="106" y="442" width="163" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="163" id="JMy-9o-OPw"/>
                                     <constraint firstAttribute="height" constant="64" id="pyI-vX-V1N"/>
@@ -108,77 +138,20 @@
                                     <segue destination="JGv-0x-75V" kind="unwind" unwindAction="LogOutUnwind:" id="QEQ-O0-xxv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOc-al-OAu">
-                                <rect key="frame" x="22" y="136" width="102" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="dUF-cj-EV0"/>
-                                    <constraint firstAttribute="width" constant="102" id="iHU-LO-JhY"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Notifications">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" name="Dark purple"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAE-eG-i0T">
-                                <rect key="frame" x="22" y="211" width="96" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="9q5-mb-QyI"/>
-                                    <constraint firstAttribute="height" constant="31" id="yiO-rl-lRr"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Volume">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" name="Dark purple"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRD-qx-Xyu">
-                                <rect key="frame" x="22" y="286" width="107" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="Qe6-JS-P78"/>
-                                    <constraint firstAttribute="width" constant="107" id="u1k-a4-gvL"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Tactile Strength">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" name="Dark purple"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MgY-9p-qQX"/>
                         <color key="backgroundColor" name="Off white"/>
                         <constraints>
-                            <constraint firstItem="YRD-qx-Xyu" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="2dH-DB-Q6Z"/>
-                            <constraint firstItem="GAE-eG-i0T" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="5nF-Rk-elW"/>
-                            <constraint firstItem="ZOc-al-OAu" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="8Da-ls-nbZ"/>
+                            <constraint firstItem="gml-6n-Eey" firstAttribute="top" secondItem="JX7-ry-Va5" secondAttribute="bottom" constant="30" id="8by-bA-ola"/>
                             <constraint firstItem="pAe-fg-gpR" firstAttribute="centerX" secondItem="SPW-4v-BzZ" secondAttribute="centerX" id="AGh-tC-cAY"/>
                             <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="35" id="Bb8-79-bAV"/>
-                            <constraint firstItem="GAE-eG-i0T" firstAttribute="top" secondItem="ZOc-al-OAu" secondAttribute="bottom" constant="44" id="NJS-7K-Gv1"/>
-                            <constraint firstItem="MgY-9p-qQX" firstAttribute="bottom" secondItem="pAe-fg-gpR" secondAttribute="bottom" constant="70" id="Z1T-1M-z9j"/>
-                            <constraint firstItem="ZOc-al-OAu" firstAttribute="top" secondItem="bTk-95-28F" secondAttribute="bottom" constant="44" id="akp-0D-xgP"/>
+                            <constraint firstItem="JX7-ry-Va5" firstAttribute="top" secondItem="bTk-95-28F" secondAttribute="bottom" constant="37" id="Bqu-pb-3Az"/>
+                            <constraint firstItem="rEp-79-BnZ" firstAttribute="top" secondItem="gml-6n-Eey" secondAttribute="bottom" constant="30" id="QUB-Zp-y95"/>
+                            <constraint firstItem="MgY-9p-qQX" firstAttribute="bottom" secondItem="pAe-fg-gpR" secondAttribute="bottom" constant="112" id="Z1T-1M-z9j"/>
+                            <constraint firstItem="JX7-ry-Va5" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="j8G-Fg-Nxf"/>
+                            <constraint firstItem="gml-6n-Eey" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="m95-3G-DOi"/>
+                            <constraint firstItem="rEp-79-BnZ" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="sl4-lz-0JC"/>
                             <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="was-zE-hKx"/>
-                            <constraint firstItem="YRD-qx-Xyu" firstAttribute="top" secondItem="GAE-eG-i0T" secondAttribute="bottom" constant="44" id="ytd-Qv-Xee"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="eyL-1G-2Bv"/>
