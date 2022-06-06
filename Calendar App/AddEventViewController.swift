@@ -49,7 +49,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
+    //Start haptic engine
+    let hapticsNotification = UINotificationFeedbackGenerator()
     //OUTLETS and VARIABLES
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
@@ -113,11 +114,41 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     //getting start time and date
     //REDO START TIME AND DATE FUNCTION BECAUSE OUTLET WAS CHANGED
     @IBAction func getStartDate(_ sender: Any) {
+        //initializing date format
         let getDate = startDatePicker.date
         var placeholderDate : String = ""
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         placeholderDate = formatter.string(from: getDate)
+        //reading date formatted string
+        var month : String = ""
+        var day : String = ""
+        var year : String = ""
+        var index = 0
+        for element in placeholderDate {
+            if index < 2 {
+                month+=String(element)
+            }
+            else if 3 <= index && index < 5 {
+                day+=String(element)
+            }
+            else if 6 <= index && index <= 7 {
+                year+=String(element)
+            }
+            else {
+                //it will be the slash so skip
+            }
+            index+=1
+        }
+        //startEventMonth = Int(month)!
+        //startEventDay = Int(day)!
+        //startEventYear = Int(year)!
+        print(month)
+        print(day)
+        print(year)
+        //print(startEventMonth)
+        //print(startEventDay)
+        //print(startEventYear)
     }
     
     @IBAction func getStartTime(_ sender: Any) {
@@ -126,15 +157,43 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         placeholderTime = formatter.string(from: getTime)
+        print(placeholderTime)
     }
     
     //getting end time and date
     @IBAction func getEndDate(_ sender: Any) {
+        //get date formatted
         let getDate = endDatePicker.date
         var placeholderDate : String = ""
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         placeholderDate = formatter.string(from: getDate)
+        //reading date formatted string
+        var month : String = ""
+        var day : String = ""
+        var year : String = ""
+        var index = 0
+        for element in placeholderDate {
+            if index < 2 {
+                month+=String(element)
+            }
+            else if 3 <= index && index < 5 {
+                day+=String(element)
+            }
+            else if 6 <= index && index <= 7 {
+                year+=String(element)
+            }
+            else {
+                //it will be the slash so skip
+            }
+            index+=1
+        }
+        endEventMonth = Int(month)!
+        endEventDay = Int(day)!
+        endEventYear = Int(year)!
+        print(endEventMonth)
+        print(endEventDay)
+        print(endEventYear)
     }
     
     @IBAction func getEndTime(_ sender: Any) {
@@ -143,14 +202,13 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         placeholderTime = formatter.string(from: getTime)
+        print(placeholderTime)
     }
     
     //creating instance of class
     @IBAction func createClass(_ sender: Any) {
         //let event = Event(name: titleTextField.text!, description: descriptionTextField.text!, location: locationTextField.text!, start: 1, end: 1, group: "placeholder")
     }
-    
-    
 }
 
 
