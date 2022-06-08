@@ -23,6 +23,9 @@
 		74D31BB928328E08001F24DF /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BB828328E08001F24DF /* AddEventViewController.swift */; };
 		74D31BBB28329768001F24DF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BBA28329768001F24DF /* FilterViewController.swift */; };
 		74D31BC12837D39D001F24DF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D31BC02837D39D001F24DF /* TabBarController.swift */; };
+		C3C60D752850E1A8000D7A3C /* Date Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C60D742850E1A8000D7A3C /* Date Class.swift */; };
+		C3C60D772850E1FC000D7A3C /* Time Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C60D762850E1FC000D7A3C /* Time Class.swift */; };
+		C3C60D792850E2C6000D7A3C /* Calendar App Classes Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C60D782850E2C6000D7A3C /* Calendar App Classes Documentation.swift */; };
 		CE4EEDEC2839DD670087EEA5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEDEB2839DD670087EEA5 /* GoogleSignIn */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CE4EEDEE2839DD670087EEA5 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEDED2839DD670087EEA5 /* GoogleSignInSwift */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CE4EEE272839DEF00087EEA5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEE262839DEF00087EEA5 /* FirebaseAuth */; };
@@ -88,6 +91,9 @@
 		74D31BB828328E08001F24DF /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		74D31BBA28329768001F24DF /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		74D31BC02837D39D001F24DF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C3C60D742850E1A8000D7A3C /* Date Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Class.swift"; sourceTree = "<group>"; };
+		C3C60D762850E1FC000D7A3C /* Time Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Time Class.swift"; sourceTree = "<group>"; };
+		C3C60D782850E2C6000D7A3C /* Calendar App Classes Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar App Classes Documentation.swift"; sourceTree = "<group>"; };
 		CE4EEE3F2839E5750087EEA5 /* Firestore Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore Get.swift"; sourceTree = "<group>"; };
 		CE4EEE412839EA450087EEA5 /* Firestore set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore set.swift"; sourceTree = "<group>"; };
 		CE4EEE45283A0EFC0087EEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -171,13 +177,16 @@
 				74D31BBA28329768001F24DF /* FilterViewController.swift */,
 				74D31BB828328E08001F24DF /* AddEventViewController.swift */,
 				74D31BB628328DF0001F24DF /* EventViewController.swift */,
-				CE62AC10283E6B2800474068 /* Event Class.swift */,
-				CE4EEE3E2839E5520087EEA5 /* Firebase */,
+				74D31BB228328DB2001F24DF /* CalendarViewController.swift */,
 				74D31BB428328DCD001F24DF /* DayViewController.swift */,
 				74D31BB028328D7C001F24DF /* SettingsViewController.swift */,
+				CE62AC10283E6B2800474068 /* Event Class.swift */,
+				C3C60D742850E1A8000D7A3C /* Date Class.swift */,
+				C3C60D762850E1FC000D7A3C /* Time Class.swift */,
+				C3C60D782850E2C6000D7A3C /* Calendar App Classes Documentation.swift */,
+				CE4EEE3E2839E5520087EEA5 /* Firebase */,
 				CEB9C3A92837D8C8003EFC7F /* HomeView */,
 				CE5F4F5C2847A8890007DC3A /* LogInView */,
-				74D31BB228328DB2001F24DF /* CalendarViewController.swift */,
 				74AFADC1282951DD0055C71A /* Assets.xcassets */,
 				74AFADC3282951DD0055C71A /* LaunchScreen.storyboard */,
 				74AFADC6282951DD0055C71A /* Info.plist */,
@@ -393,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C60D752850E1A8000D7A3C /* Date Class.swift in Sources */,
 				CE4EEE422839EA450087EEA5 /* Firestore set.swift in Sources */,
 				74D31BB928328E08001F24DF /* AddEventViewController.swift in Sources */,
 				CE5F4F622847AB430007DC3A /* LogInViewController.swift in Sources */,
@@ -410,9 +420,11 @@
 				74D31BB328328DB2001F24DF /* CalendarViewController.swift in Sources */,
 				74D31BB128328D7C001F24DF /* SettingsViewController.swift in Sources */,
 				74D31BB528328DCD001F24DF /* DayViewController.swift in Sources */,
+				C3C60D772850E1FC000D7A3C /* Time Class.swift in Sources */,
 				CE62AC0F283D1BB900474068 /* Firestore List.swift in Sources */,
 				CEB9C3AB2837D8ED003EFC7F /* HomeViewSwiftui.swift in Sources */,
 				CE5F4F5F2847A8890007DC3A /* LoginViewSwiftUI.swift in Sources */,
+				C3C60D792850E2C6000D7A3C /* Calendar App Classes Documentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
