@@ -16,7 +16,5 @@ class DayViewController: UIViewController {
         dayLabel.text = CalendarHelper().monthString(date: selectedDate)
     }
     
-    @IBAction func EventDismiss(_ sender: UIStoryboardSegue) {
-        
-    }
+
 }
