@@ -9,7 +9,6 @@ import UIKit
 
 class DayViewController: UIViewController {
     
-    @IBOutlet weak var eventTitleButton: UIButton!
     @IBOutlet weak var dayLabel: UILabel!
     
     override func viewDidLoad() {

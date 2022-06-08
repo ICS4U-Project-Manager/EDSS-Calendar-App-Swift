@@ -14,7 +14,7 @@
         <scene sceneID="OL0-cc-a8r">
             <objects>
                 <viewController title="Log In" id="Ec4-Bf-71u" customClass="SigninViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="pCv-Eu-P5W">
+                    <view key="view" contentMode="scaleToFill" id="pCv-Eu-P5W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -28,7 +28,7 @@
                                 <color key="textColor" name="Off white"/>
                                 <color key="highlightedColor" name="Dark purple"/>
                             </label>
-                            <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
+                            <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
                                 <rect key="frame" x="72.5" y="306.5" width="230" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="DQe-Qe-NuV"/>
@@ -43,7 +43,7 @@
                                     <segue destination="vxN-FD-LaW" kind="presentation" modalPresentationStyle="fullScreen" id="W7a-r7-UP3"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Und-u5-sPe">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Und-u5-sPe">
                                 <rect key="frame" x="86" y="376" width="217" height="50"/>
                                 <color key="backgroundColor" name="Dark purple"/>
                                 <color key="tintColor" name="Dark purple"/>
@@ -515,86 +515,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-VR-4PP">
-                                <rect key="frame" x="22" y="38" width="204" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="204" id="x2r-05-f9g"/>
-                                    <constraint firstAttribute="height" constant="46" id="yg8-c7-ZuZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start time - End time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2n-8K-3xV">
-                                <rect key="frame" x="22" y="104" width="132" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="Ets-E3-zSb"/>
-                                    <constraint firstAttribute="height" constant="61" id="JVQ-fF-bia"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBC-7n-hJK">
-                                <rect key="frame" x="208" y="135" width="106" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Today Underline (311 long)" translatesAutoresizingMaskIntoConstraints="NO" id="C5c-fe-OZk">
-                                <rect key="frame" x="13" y="166" width="346" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="XJ0-8r-9Db"/>
-                                    <constraint firstAttribute="width" constant="346" id="wOO-od-umd"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 - 10:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnk-B8-vYZ">
-                                <rect key="frame" x="22" y="207" width="153" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="OVO-y1-Vea"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="vD8-jm-kAz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg8-FP-dwj">
-                                <rect key="frame" x="196" y="207" width="125.5" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBP-FW-NPx">
+                                <rect key="frame" x="153" y="175" width="69" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="hockey game">
-                                            <attributes>
-                                                <font key="NSFont" size="17" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="EVENT"/>
+                                <connections>
+                                    <segue destination="nhi-oA-hEl" kind="show" id="tgS-ev-vxL"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-VR-4PP">
+                                <rect key="frame" x="88" y="44" width="204" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rsp-0I-SbD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="C5c-fe-OZk" firstAttribute="top" secondItem="LBC-7n-hJK" secondAttribute="bottom" constant="1" id="1v9-LZ-TE9"/>
-                            <constraint firstItem="Fnk-B8-vYZ" firstAttribute="leading" secondItem="rsp-0I-SbD" secondAttribute="leading" constant="22" id="7T8-db-Ih9"/>
-                            <constraint firstItem="t2n-8K-3xV" firstAttribute="top" secondItem="r2j-VR-4PP" secondAttribute="bottom" constant="20" id="MnD-vy-hGz"/>
-                            <constraint firstItem="C5c-fe-OZk" firstAttribute="leading" secondItem="rsp-0I-SbD" secondAttribute="leading" constant="13" id="MwI-9N-RDP"/>
-                            <constraint firstItem="rsp-0I-SbD" firstAttribute="bottom" secondItem="Fnk-B8-vYZ" secondAttribute="bottom" constant="328" id="N73-4Z-rqW"/>
-                            <constraint firstItem="r2j-VR-4PP" firstAttribute="leading" secondItem="rsp-0I-SbD" secondAttribute="leading" constant="22" id="QjS-jY-TQk"/>
-                            <constraint firstItem="LBC-7n-hJK" firstAttribute="leading" secondItem="t2n-8K-3xV" secondAttribute="trailing" constant="54" id="V2U-ZT-Qrx"/>
-                            <constraint firstItem="pg8-FP-dwj" firstAttribute="leading" secondItem="Fnk-B8-vYZ" secondAttribute="trailing" constant="21" id="VIF-dz-DDW"/>
-                            <constraint firstItem="t2n-8K-3xV" firstAttribute="leading" secondItem="rsp-0I-SbD" secondAttribute="leading" constant="22" id="nO9-1n-zOp"/>
-                            <constraint firstItem="pg8-FP-dwj" firstAttribute="top" secondItem="C5c-fe-OZk" secondAttribute="bottom" constant="2" id="sCJ-O0-wYn"/>
-                            <constraint firstItem="Fnk-B8-vYZ" firstAttribute="top" secondItem="C5c-fe-OZk" secondAttribute="bottom" constant="2" id="uq9-TN-tun"/>
-                            <constraint firstItem="C5c-fe-OZk" firstAttribute="top" secondItem="t2n-8K-3xV" secondAttribute="bottom" constant="1" id="zGf-v6-aHQ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AZw-YI-4FS" colorLabel="IBBuiltInLabel-Purple"/>
                     <connections>
                         <outlet property="dayLabel" destination="r2j-VR-4PP" id="Ig7-KW-VpP"/>
-                        <outlet property="eventTitleButton" destination="pg8-FP-dwj" id="r0G-sq-Ve7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-y2-LIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1052,7 +996,6 @@
         <image name="Arrow(Left)-4" width="100" height="100"/>
         <image name="Arrow(Right)" width="100" height="100"/>
         <image name="Filter" width="684" height="680"/>
-        <image name="Today Underline (311 long)" width="956" height="99"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
@@ -1074,6 +1017,9 @@
         <namedColor name="Vibrant purple">
             <color red="0.72899997234344482" green="0.39599999785423279" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
