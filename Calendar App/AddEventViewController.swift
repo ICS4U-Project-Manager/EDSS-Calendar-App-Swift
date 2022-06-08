@@ -23,12 +23,12 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         //Preparing view visuals
         backgroundView.layer.cornerRadius = 10
         //Preparing button visuals
-        createEventButton.layer.borderWidth = 2
+        createEventButton.layer.borderWidth = 4
         createEventButton.layer.borderColor = CGColor(red: 113/255, green: 92/255, blue: 131/255, alpha: 1)
+        createEventButton.layer.cornerRadius = 10
         cancelButton.layer.borderWidth = 2
         cancelButton.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         cancelButton.layer.cornerRadius = 10
-        createEventButton.layer.cornerRadius = 10
     //preparing date picker design
         
     }
@@ -188,12 +188,12 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
             }
             index+=1
         }
-        endEventMonth = Int(month)!
+        /*endEventMonth = Int(month)!
         endEventDay = Int(day)!
         endEventYear = Int(year)!
         print(endEventMonth)
         print(endEventDay)
-        print(endEventYear)
+        print(endEventYear)*/
     }
     
     @IBAction func getEndTime(_ sender: Any) {
