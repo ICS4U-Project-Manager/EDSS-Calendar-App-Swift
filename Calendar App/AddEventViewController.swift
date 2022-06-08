@@ -112,7 +112,6 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     }
     
     //getting start time and date
-    //REDO START TIME AND DATE FUNCTION BECAUSE OUTLET WAS CHANGED
     @IBAction func getStartDate(_ sender: Any) {
         //initializing date format
         let getDate = startDatePicker.date
@@ -124,31 +123,27 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         var month : String = ""
         var day : String = ""
         var year : String = ""
-        var index = 0
+        var datePart = 1
         for element in placeholderDate {
-            if index < 2 {
+            if datePart == 1 && element != "/" {
                 month+=String(element)
             }
-            else if 3 <= index && index < 5 {
+            else if datePart == 2 && element != "/" {
                 day+=String(element)
             }
-            else if 6 <= index && index <= 7 {
+            else if datePart == 3 && element != "/" {
                 year+=String(element)
             }
-            else {
-                //it will be the slash so skip
+            else if element == "/" && datePart > 0 {
+                datePart+=1
             }
-            index+=1
         }
-        //startEventMonth = Int(month)!
-        //startEventDay = Int(day)!
-        //startEventYear = Int(year)!
-        print(month)
-        print(day)
-        print(year)
-        //print(startEventMonth)
-        //print(startEventDay)
-        //print(startEventYear)
+        startEventMonth = Int(month)!
+        startEventDay = Int(day)!
+        startEventYear = 2000 + Int(year)!
+        print(startEventMonth)
+        print(startEventDay)
+        print(startEventYear)
     }
     
     @IBAction func getStartTime(_ sender: Any) {
@@ -158,6 +153,29 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         formatter.timeStyle = .short
         placeholderTime = formatter.string(from: getTime)
         print(placeholderTime)
+        var hours : String = ""
+        var minutes : String = ""
+        var period : String = ""
+        var timePart = 1
+        print(placeholderTime)
+        for element in placeholderTime {
+            if timePart == 1 && (element != ":" || element != " ") {
+                hours+=String(element)
+            }
+            else if timePart == 2 && (element != ":" || element != " ") {
+                minutes+=String(element)
+            }
+            else if timePart == 3 && (element != ":" || element != " ") {
+                //do something with am and pm - format 11:39 AM
+            }
+            else if element == ":" && timePart > 0 {
+                timePart+=1
+            }
+        }
+        startEventHour = Int(hours)!
+        startEventMinute = Int(minutes)!
+        print(startEventHour)
+        print(startEventMinute)
     }
     
     //getting end time and date
@@ -172,28 +190,24 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         var month : String = ""
         var day : String = ""
         var year : String = ""
-        var index = 0
+        var datePart = 1
         for element in placeholderDate {
-            if index < 2 {
+            if datePart == 1 && element != "/" {
                 month+=String(element)
             }
-            else if 3 <= index && index < 5 {
+            else if datePart == 2 && element != "/" {
                 day+=String(element)
             }
-            else if 6 <= index && index <= 7 {
+            else if datePart == 3 && element != "/" {
                 year+=String(element)
             }
-            else {
-                //it will be the slash so skip
+            else if element == "/" && datePart > 0 {
+                datePart+=1
             }
-            index+=1
         }
-        /*endEventMonth = Int(month)!
+        endEventMonth = Int(month)!
         endEventDay = Int(day)!
-        endEventYear = Int(year)!
-        print(endEventMonth)
-        print(endEventDay)
-        print(endEventYear)*/
+        endEventYear = 2000 + Int(year)!
     }
     
     @IBAction func getEndTime(_ sender: Any) {
