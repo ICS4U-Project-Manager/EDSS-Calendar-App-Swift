@@ -19,3 +19,8 @@ struct User: Identifiable {
     var Lines: String
     var idd: Int
 }
+
+struct AddDate: Identifiable {
+    var id: String = UUID().uuidString
+    var date: String
+}
