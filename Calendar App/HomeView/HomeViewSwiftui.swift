@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeViewSwiftUI: View {
     @ObservedObject private var viewModel = userViewModel()
+    @ObservedObject private var viewModel2 = userViewModel()
     var num2 = 0
     var body: some View {
         VStack {

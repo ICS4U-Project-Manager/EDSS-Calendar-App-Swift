@@ -15,6 +15,4 @@ class DayViewController: UIViewController {
         super.viewDidLoad()
         dayLabel.text = CalendarHelper().monthString(date: selectedDate)
     }
-    
-
 }
