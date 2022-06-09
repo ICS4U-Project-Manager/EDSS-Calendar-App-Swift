@@ -141,9 +141,6 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         startEventMonth = Int(month)!
         startEventDay = Int(day)!
         startEventYear = 2000 + Int(year)!
-        print(startEventMonth)
-        print(startEventDay)
-        print(startEventYear)
     }
     
     @IBAction func getStartTime(_ sender: Any) {
@@ -152,30 +149,42 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         placeholderTime = formatter.string(from: getTime)
-        print(placeholderTime)
         var hours : String = ""
         var minutes : String = ""
-        var period : String = ""
+        var minutesAndPeriod = ""
+        var period : Int = -1
         var timePart = 1
-        print(placeholderTime)
         for element in placeholderTime {
-            if timePart == 1 && (element != ":" || element != " ") {
+            if timePart == 1 && element != ":" {
                 hours+=String(element)
             }
-            else if timePart == 2 && (element != ":" || element != " ") {
-                minutes+=String(element)
-            }
-            else if timePart == 3 && (element != ":" || element != " ") {
-                //do something with am and pm - format 11:39 AM
+            else if timePart == 2 && element != ":" {
+                minutesAndPeriod+=String(element)
             }
             else if element == ":" && timePart > 0 {
                 timePart+=1
             }
         }
+        var index : Int = 0
+        for element in minutesAndPeriod {
+            if index < 2 {
+                minutes+=String(element)
+            }
+            else if index > 2 {
+                if element == "A" {
+                    period = 0
+                    break
+                }
+                else {
+                    period = 1
+                    break
+                }
+            }
+            index+=1
+        }
         startEventHour = Int(hours)!
         startEventMinute = Int(minutes)!
-        print(startEventHour)
-        print(startEventMinute)
+        startEventPeriod = period
     }
     
     //getting end time and date
@@ -214,14 +223,57 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let getTime = endTimePicker.date
         var placeholderTime : String = ""
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
+        formatter.timeStyle = .short
         placeholderTime = formatter.string(from: getTime)
-        print(placeholderTime)
+        var hours : String = ""
+        var minutes : String = ""
+        var minutesAndPeriod = ""
+        var period : Int = -1
+        var timePart = 1
+        for element in placeholderTime {
+            if timePart == 1 && element != ":" {
+                hours+=String(element)
+            }
+            else if timePart == 2 && element != ":" {
+                minutesAndPeriod+=String(element)
+            }
+            else if element == ":" && timePart > 0 {
+                timePart+=1
+            }
+        }
+        var index : Int = 0
+        for element in minutesAndPeriod {
+            if index < 2 {
+                minutes+=String(element)
+            }
+            else if index > 2 {
+                if element == "A" {
+                    period = 0
+                    break
+                }
+                else {
+                    period = 1
+                    break
+                }
+            }
+            index+=1
+        }
+        endEventHour = Int(hours)!
+        endEventMinute = Int(minutes)!
+        endEventPeriod = period
     }
-    
+
     //creating instance of class
     @IBAction func createClass(_ sender: Any) {
-        //let event = Event(name: titleTextField.text!, description: descriptionTextField.text!, location: locationTextField.text!, start: 1, end: 1, group: "placeholder")
+        //these variables need to be var instead of let when event editing is implemented
+        let startEventDate = ICSDate (year : startEventYear , month : startEventMonth , day : startEventDay)
+        let startEventTime = ICSTime (hour: startEventHour, minute: startEventMinute, period: startEventPeriod)
+        let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
+        let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
+        let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
+        
+        //at end of loop
+        //eventIdentification+=1
     }
 }
 
