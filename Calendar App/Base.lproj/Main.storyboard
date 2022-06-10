@@ -201,17 +201,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0h-g3-66Z">
-                                        <rect key="frame" x="292" y="22" width="61" height="37"/>
+                                        <rect key="frame" x="283" y="22" width="70" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="1ig-Hi-r22"/>
-                                            <constraint firstAttribute="width" constant="61" id="ZJq-LS-qRC"/>
+                                            <constraint firstAttribute="width" constant="70" id="ZJq-LS-qRC"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="exit">
+                                                <fragment content="close">
                                                     <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <font key="NSFont" size="18" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
