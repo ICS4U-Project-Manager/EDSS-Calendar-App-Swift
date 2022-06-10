@@ -14,7 +14,7 @@
         <scene sceneID="OL0-cc-a8r">
             <objects>
                 <viewController title="Log In" id="Ec4-Bf-71u" customClass="SigninViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="pCv-Eu-P5W">
+                    <view key="view" contentMode="scaleToFill" id="pCv-Eu-P5W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -28,42 +28,45 @@
                                 <color key="textColor" name="Off white"/>
                                 <color key="highlightedColor" name="Dark purple"/>
                             </label>
-                            <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
-                                <rect key="frame" x="72.5" y="306.5" width="230" height="54"/>
+                            <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
+                                <rect key="frame" x="68.5" y="372" width="238" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="DQe-Qe-NuV"/>
-                                    <constraint firstAttribute="width" constant="230" id="vdd-oj-j8j"/>
+                                    <constraint firstAttribute="width" constant="238" id="OQ4-LH-UNL"/>
+                                    <constraint firstAttribute="height" constant="40" id="uel-xb-5eg"/>
                                 </constraints>
-                                <buttonConfiguration key="configuration" style="filled" title="Login With Google">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
-                                    <color key="baseForegroundColor" name="Off white"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Bypass Google">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="baseBackgroundColor" name="Dark green"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="vxN-FD-LaW" kind="presentation" modalPresentationStyle="fullScreen" id="W7a-r7-UP3"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Und-u5-sPe">
-                                <rect key="frame" x="86" y="376" width="217" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Und-u5-sPe">
+                                <rect key="frame" x="83" y="318" width="209" height="30"/>
                                 <color key="backgroundColor" name="Dark purple"/>
                                 <color key="tintColor" name="Dark purple"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cDO-xm-CBr"/>
-                                    <constraint firstAttribute="width" constant="231" id="y2Z-f2-xpc"/>
+                                    <constraint firstAttribute="width" constant="209" id="C7h-Zd-IPK"/>
+                                    <constraint firstAttribute="height" constant="30" id="fcI-NN-wst"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GND-Br-6G4"/>
                         <color key="backgroundColor" name="Dark purple"/>
                         <constraints>
-                            <constraint firstItem="Epx-t5-2el" firstAttribute="centerY" secondItem="pCv-Eu-P5W" secondAttribute="centerY" id="5vt-VT-oId"/>
-                            <constraint firstItem="Epx-t5-2el" firstAttribute="top" secondItem="nd4-lc-oez" secondAttribute="bottom" constant="24.5" id="G3Q-xp-aVn"/>
-                            <constraint firstItem="Und-u5-sPe" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="86" id="KXI-lO-qyk"/>
-                            <constraint firstItem="GND-Br-6G4" firstAttribute="trailing" secondItem="Und-u5-sPe" secondAttribute="trailing" constant="58" id="V2x-o1-wZa"/>
-                            <constraint firstItem="Und-u5-sPe" firstAttribute="top" secondItem="Epx-t5-2el" secondAttribute="bottom" constant="15.5" id="XqD-Rx-hZo"/>
+                            <constraint firstItem="Und-u5-sPe" firstAttribute="top" secondItem="nd4-lc-oez" secondAttribute="bottom" constant="36" id="9CO-vm-laC"/>
+                            <constraint firstItem="Epx-t5-2el" firstAttribute="centerX" secondItem="pCv-Eu-P5W" secondAttribute="centerX" id="GHH-tF-fio"/>
+                            <constraint firstItem="nd4-lc-oez" firstAttribute="top" secondItem="GND-Br-6G4" secondAttribute="top" constant="221" id="ZEv-YA-vRL"/>
                             <constraint firstItem="nd4-lc-oez" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="72.5" id="ZUB-SA-YFd"/>
-                            <constraint firstItem="GND-Br-6G4" firstAttribute="trailing" secondItem="Und-u5-sPe" secondAttribute="trailing" constant="72" id="gG0-TY-Ndd"/>
-                            <constraint firstItem="Epx-t5-2el" firstAttribute="centerX" secondItem="pCv-Eu-P5W" secondAttribute="centerX" id="ryR-rv-p5e"/>
+                            <constraint firstItem="Epx-t5-2el" firstAttribute="top" secondItem="Und-u5-sPe" secondAttribute="bottom" constant="24" id="hqj-De-c97"/>
+                            <constraint firstItem="Und-u5-sPe" firstAttribute="leading" secondItem="GND-Br-6G4" secondAttribute="leading" constant="83" id="uEj-ok-fi0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G87-VZ-GlC"/>
