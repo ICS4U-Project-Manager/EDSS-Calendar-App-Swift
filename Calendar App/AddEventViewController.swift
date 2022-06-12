@@ -275,12 +275,6 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         //eventIdentification+=1
         performSegue(withIdentifier: "GenerateSegue", sender: event)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let event = sender as? ICSEvent, let destination = segue.destination as? EventViewController {
-            destination.event = event
-        }
-    }
 }
 
 
