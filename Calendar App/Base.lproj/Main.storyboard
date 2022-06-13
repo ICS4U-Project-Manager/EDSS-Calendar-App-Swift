@@ -158,7 +158,7 @@
                             <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="was-zE-hKx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="eyL-1G-2Bv"/>
+                    <tabBarItem key="tabBarItem" title="" image="gearshape" catalog="system" id="eyL-1G-2Bv"/>
                     <connections>
                         <outlet property="logoutButton" destination="pAe-fg-gpR" id="CQl-ll-NMN"/>
                     </connections>
@@ -604,7 +604,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" red="0.58466583490000001" green="0.78444093469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="PHq-HO-Buu"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="PHq-HO-Buu"/>
                     <connections>
                         <outlet property="theContainer" destination="u3M-DW-XaM" id="AEb-4q-bWs"/>
                     </connections>
@@ -953,7 +953,7 @@
         <scene sceneID="H1m-6D-j0v">
             <objects>
                 <navigationController title="Calendar Navigation" automaticallyAdjustsScrollViewInsets="NO" id="IK3-cm-Jc1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="76b-6u-DQd"/>
+                    <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="76b-6u-DQd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mcK-rO-Fsf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
