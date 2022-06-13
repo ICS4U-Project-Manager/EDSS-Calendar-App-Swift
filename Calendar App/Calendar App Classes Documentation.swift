@@ -15,17 +15,14 @@
  
  getName() -> String
      Returns the name of the event.
- 
  setName(_ name:String)
      Sets the name of the event.
  All other getters and setters follow the same format. Also, getGroup returns an empty string if the group is not provided.
- 
  getDuration() -> ICSTime
      Returns the computed duration of the event. Duration has no setter.
  Note that the returned duration is an ICSTime object with the "isCyclic" flag set to false (see ICSTime, below.)
- I
  
- CSDate
+ ICSDate
  
  Class which represents a date.
  init(year:Int,month:Int,day:Int)
@@ -33,18 +30,14 @@
  
  Properties:
  
+ 
  Methods:
  
  getYear() -> Int : Returns the year
- 
  setYear(_ year:Int) : Sets the year to a new value.
- 
  getMonth, getDay, setMonth, and setDay methods also exist, all taking or returning Ints.
- 
  getMonthSTR, setMonthSTR, getDaySTr : Same as above, except that they take or return (as applicable) a string representing the day of the week or the name of the month (as applicable.)
- 
  getText() -> String : Returns the date in a human readable format.
- 
  
  ICSTime
  
@@ -57,7 +50,11 @@
  Methods:
  
  getHour, setHour, getMinute, setMinute, getPeriod, and setPeriod : Same as above.
- 
  getText() -> String : Returns the time in standard human-readable time format.
+ ICSEventSave(_ events:[ICSEvent]) -> [[String:Any]]
+ Returns a list of dictionaries representing the event objects in a format which can be stored as json.
+ ICSEventLoad(_ events:[[String:Any]]) -> [ICSEvent]
+ Converts a list of dictionaries (retrieved from a json file) and converts it into a list of ICSEvent objects for use in the app.
+
  
  */
