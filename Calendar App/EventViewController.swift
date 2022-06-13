@@ -15,18 +15,10 @@ class EventViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     var viewModel = userViewModel()
-    var event : ICSEvent?
+   
     
     override func viewDidLoad() {
         label.text = "user.Title"
-        if let label:String = event?.getName() {
-        classLabel.text = label
-        }
-        else {
-            classLabel.text = "event not found"
-        }
     }
-    @IBOutlet weak var classLabel: UILabel!
-    
 }
 

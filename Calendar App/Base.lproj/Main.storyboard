@@ -29,11 +29,7 @@
                                 <color key="highlightedColor" name="Dark purple"/>
                             </label>
                             <button opaque="NO" contentMode="top" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epx-t5-2el">
-<<<<<<< HEAD
                                 <rect key="frame" x="68.5" y="372" width="238" height="40"/>
-=======
-                                <rect key="frame" x="72.5" y="306.5" width="230" height="54"/>
->>>>>>> main
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="OQ4-LH-UNL"/>
                                     <constraint firstAttribute="height" constant="40" id="uel-xb-5eg"/>
@@ -53,11 +49,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Und-u5-sPe">
-<<<<<<< HEAD
                                 <rect key="frame" x="83" y="318" width="209" height="30"/>
-=======
-                                <rect key="frame" x="86" y="376" width="217" height="50"/>
->>>>>>> main
                                 <color key="backgroundColor" name="Dark purple"/>
                                 <color key="tintColor" name="Dark purple"/>
                                 <constraints>
@@ -581,21 +573,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFK-wB-akW">
-                                <rect key="frame" x="123" y="284" width="146" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mTG-ct-lJI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="uYs-xc-kXh"/>
                     <connections>
-                        <outlet property="classLabel" destination="RFK-wB-akW" id="dt4-vT-9vP"/>
-                        <outlet property="label" destination="RFK-wB-akW" id="4o7-iv-Len"/>
+                        <outlet property="label" destination="irg-nN-rO8" id="hVB-a9-XRv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="py0-2k-fFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -897,7 +881,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="createClass:" destination="ab7-6i-4ps" eventType="touchUpInside" id="eb3-Hw-B0g"/>
-                                            <segue destination="nhi-oA-hEl" kind="show" identifier="GenerateSegue" id="wKL-hv-eQ0"/>
+                                            <segue destination="igK-v4-gdY" kind="unwind" unwindAction="PopUpDismiss:" id="C0p-fQ-qT1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1023,9 +1007,6 @@
             <point key="canvasLocation" x="-647" y="1235"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wKL-hv-eQ0"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Add" width="673" height="672"/>
         <image name="Arrow(Left)-4" width="100" height="100"/>
