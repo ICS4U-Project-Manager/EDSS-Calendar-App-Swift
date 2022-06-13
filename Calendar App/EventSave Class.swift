@@ -5,8 +5,8 @@
 
 import Foundation
 
-func ICSEventSave(_ events:[ICSEvent]) -> [[String:Any]] {
-    var result:[[String:Any]]=[]
+func ICSEventSave(_ events:[ICSEvent]) -> [String:Any] {
+    let result:[String:Any]=[:]
     for event in events {
         let eventDict:[String:Any]
         let name=event.getName()
@@ -27,7 +27,6 @@ func ICSEventSave(_ events:[ICSEvent]) -> [[String:Any]] {
         let endMinute=event.getEndTime().getMinute()
         let endPeriod=event.getEndTime().getPeriod()
         eventDict=["name":name,"description":description,"location":location,"group":group,"startYear":startYear,"startMonth":startMonth,"startDay":startDay,"endYear":endYear,"endMonth":endMonth,"endDay":endDay,"startHour":startHour,"startMinute":startMinute,"startPeriod":startPeriod,"endHour":endHour,"endMinute":endMinute,"endPeriod":endPeriod,"id":id]
-        result.append(eventDict)
     }
     return result
 }

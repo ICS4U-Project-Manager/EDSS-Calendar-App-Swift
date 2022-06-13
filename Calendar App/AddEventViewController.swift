@@ -271,6 +271,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
         let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
         let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
+            add()
+        
         //at end of loop
         //eventIdentification+=1
         performSegue(withIdentifier: "GenerateSegue", sender: event)
