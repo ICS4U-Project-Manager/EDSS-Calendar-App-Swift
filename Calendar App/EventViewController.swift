@@ -26,6 +26,7 @@ class EventViewController: UIViewController {
             classLabel.text = "event not found"
         }
     }
+    
     @IBOutlet weak var classLabel: UILabel!
     
 }

@@ -4,7 +4,7 @@
 //
 //  Created by Zack Liam and Lucas on 2022-05-16.
 //
-
+//most coding was done by jamie and then also holden
 import UIKit
 
 var eventIdentification : Int = 1
