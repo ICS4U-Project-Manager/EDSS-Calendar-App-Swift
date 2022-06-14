@@ -26,6 +26,7 @@
 		C3C60D752850E1A8000D7A3C /* Date Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C60D742850E1A8000D7A3C /* Date Class.swift */; };
 		C3C60D772850E1FC000D7A3C /* Time Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C60D762850E1FC000D7A3C /* Time Class.swift */; };
 		C3C60D792850E2C6000D7A3C /* Calendar App Classes Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C60D782850E2C6000D7A3C /* Calendar App Classes Documentation.swift */; };
+		C3C60D892858D5D8000D7A3C /* Data Helper Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C60D882858D5D8000D7A3C /* Data Helper Functions.swift */; };
 		CE4EEDEC2839DD670087EEA5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEDEB2839DD670087EEA5 /* GoogleSignIn */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CE4EEDEE2839DD670087EEA5 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEDED2839DD670087EEA5 /* GoogleSignInSwift */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CE4EEE272839DEF00087EEA5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE4EEE262839DEF00087EEA5 /* FirebaseAuth */; };
@@ -94,6 +95,7 @@
 		C3C60D742850E1A8000D7A3C /* Date Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Class.swift"; sourceTree = "<group>"; };
 		C3C60D762850E1FC000D7A3C /* Time Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Time Class.swift"; sourceTree = "<group>"; };
 		C3C60D782850E2C6000D7A3C /* Calendar App Classes Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar App Classes Documentation.swift"; sourceTree = "<group>"; };
+		C3C60D882858D5D8000D7A3C /* Data Helper Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Helper Functions.swift"; sourceTree = "<group>"; };
 		CE4EEE3F2839E5750087EEA5 /* Firestore Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore Get.swift"; sourceTree = "<group>"; };
 		CE4EEE412839EA450087EEA5 /* Firestore set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore set.swift"; sourceTree = "<group>"; };
 		CE4EEE45283A0EFC0087EEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				CE62AC10283E6B2800474068 /* Event Class.swift */,
 				C3C60D742850E1A8000D7A3C /* Date Class.swift */,
 				C3C60D762850E1FC000D7A3C /* Time Class.swift */,
+				C3C60D882858D5D8000D7A3C /* Data Helper Functions.swift */,
 				C3C60D782850E2C6000D7A3C /* Calendar App Classes Documentation.swift */,
 				CE4EEE3E2839E5520087EEA5 /* Firebase */,
 				CEB9C3A92837D8C8003EFC7F /* HomeView */,
@@ -419,6 +422,7 @@
 				74D31BB728328DF0001F24DF /* EventViewController.swift in Sources */,
 				74D31BB328328DB2001F24DF /* CalendarViewController.swift in Sources */,
 				74D31BB128328D7C001F24DF /* SettingsViewController.swift in Sources */,
+				C3C60D892858D5D8000D7A3C /* Data Helper Functions.swift in Sources */,
 				74D31BB528328DCD001F24DF /* DayViewController.swift in Sources */,
 				C3C60D772850E1FC000D7A3C /* Time Class.swift in Sources */,
 				CE62AC0F283D1BB900474068 /* Firestore List.swift in Sources */,
