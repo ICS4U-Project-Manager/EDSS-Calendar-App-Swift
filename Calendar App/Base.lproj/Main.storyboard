@@ -540,7 +540,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rsp-0I-SbD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Off white"/>
                     </view>
                     <navigationItem key="navigationItem" id="AZw-YI-4FS" colorLabel="IBBuiltInLabel-Purple"/>
                     <connections>
@@ -575,7 +575,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mTG-ct-lJI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Off white"/>
                     </view>
                     <navigationItem key="navigationItem" id="uYs-xc-kXh"/>
                     <connections>
