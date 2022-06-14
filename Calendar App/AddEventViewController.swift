@@ -7,7 +7,24 @@
 
 import UIKit
 
-var eventIdentification : Int = 1
+public var eventIdentification : Int = 1
+public var whichTextBox : Int = 0
+public var eventTitle : String = ""
+public var allDayEvent : Bool = false
+public var startEventYear : Int = 0
+public var startEventMonth : Int = 0
+public var startEventDay : Int = 0
+public var startEventHour : Int = 0
+public var startEventMinute : Int = 0
+public var startEventPeriod : Int = -1
+public var endEventYear : Int = 0
+public var endEventMonth : Int = 0
+public var endEventDay : Int = 0
+public var endEventHour : Int = 0
+public var endEventMinute : Int = 0
+public var endEventPeriod : Int = -1
+public var eventLocation : String = ""
+public var eventDescription : String = ""
 
 class AddEventViewController: UIViewController, UITextFieldDelegate {
 
@@ -63,25 +80,6 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var startTimePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var endTimePicker: UIDatePicker!
-    
-    
-    var whichTextBox : Int = 0
-    var eventTitle : String = ""
-    var allDayEvent : Bool = false
-    var startEventYear : Int = 0
-    var startEventMonth : Int = 0
-    var startEventDay : Int = 0
-    var startEventHour : Int = 0
-    var startEventMinute : Int = 0
-    var startEventPeriod : Int = -1
-    var endEventYear : Int = 0
-    var endEventMonth : Int = 0
-    var endEventDay : Int = 0
-    var endEventHour : Int = 0
-    var endEventMinute : Int = 0
-    var endEventPeriod : Int = -1
-    var eventLocation : String = ""
-    var eventDescription : String = ""
     
     //FUNCTIONS
     //reading text boxes
@@ -271,6 +269,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
         let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
         let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
+        
+   add()
         
         //at end of loop
         //eventIdentification+=1

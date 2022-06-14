@@ -14,24 +14,30 @@ import FirebaseFirestoreSwift
 import Firebase
 import SwiftUI
 
-
-
 func add(){
-    
-    var viewModel = userViewModel()
-    let event : ICSEvent?
 
-func viewDidLoad() {
-    if let label:String = event?.getName() {
-        print(label)
-    }
-    else {
-        print("event not found")
-    }
+    let startDate = ([startEventMonth,startEventDay,startEventYear,startEventHour,startEventMinute] as? Timestamp)?.dateValue() ?? Date()
+    var startDateF: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy hh:mm"
+        return formatter.string(from: startDate)
     }
     
+    let endDate = ([endEventMonth,endEventDay,endEventYear,endEventHour,endEventMinute] as? Timestamp)?.dateValue() ?? Date()
+    var endDateF: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy hh:mm"
+        return formatter.string(from: endDate)
+    }
+    
+    
+print(startDate)
+    print(startDateF)
+    
+    
+    print(eventTitle)
     let db = Firestore.firestore()
-    db.collection("cities").document("LA").setData([:]) { err in
+    db.collection("Events").document("Date").setData(["name":"\(eventTitle)","endDate": endDate,"startDate":startDateF, "description": "\(eventDescription)", "location": "\(eventLocation)", "group": "group", "idd": 0, ]) { err in
         if let err = err {
             print("Error writing document: \(err)")
         } else {

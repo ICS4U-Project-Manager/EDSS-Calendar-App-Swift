@@ -50,14 +50,24 @@ class EventViewController: UIViewController {
                     formatter.dateFormat = "hh:mm"
                     return formatter.string(from: startDate)
                 }
-                
-                
-                print(idd)
-                print(startDateF)
+                let endDate = (data2["endDate"] as? Timestamp)?.dateValue() ?? Date()
+                var endDateF: String {
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "MMM d, yyyy"
+                    return formatter.string(from: endDate)
+                }
+                var endTimeF: String {
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "hh:mm"
+                    return formatter.string(from: endDate)
+                }
                 
                 self.name.text = name
                 self.startDate.text = startDateF
                 self.startTime.text = startTimeF
+                self.endDate.text = endDateF
+                self.endTime.text = endTimeF
+                self.group.text = group
                 self.descript.text = description
                 
                 
