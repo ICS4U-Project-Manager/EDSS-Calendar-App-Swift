@@ -17,6 +17,19 @@ import SwiftUI
 
 
 func add(){
+    
+    var viewModel = userViewModel()
+    let event : ICSEvent?
+
+func viewDidLoad() {
+    if let label:String = event?.getName() {
+        print(label)
+    }
+    else {
+        print("event not found")
+    }
+    }
+    
     let db = Firestore.firestore()
     db.collection("cities").document("LA").setData([:]) { err in
         if let err = err {
