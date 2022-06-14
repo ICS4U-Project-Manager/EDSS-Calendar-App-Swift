@@ -13,15 +13,14 @@ struct LoginViewSwiftUI: View {
       var body: some View {
           VStack{
               GoogleSignInButton()
-                  .frame(width: 230, height: 50)
-                  .background(Color("Dark purple"))
-                  .padding()
+                  .frame(width: 238, height: 50)
+                  .background(Color("Clear"))
                   .onTapGesture {
                       AuthenticationViewModel().signIn()
                       type.showscreen()
             }
         }
-          .background(Color("Dark purple"))
+          .background(Color("Clear"))
           .onAppear(){
               type.showscreen()
           }
