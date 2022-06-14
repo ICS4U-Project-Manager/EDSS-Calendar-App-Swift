@@ -13,6 +13,6 @@ class DayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dayLabel.text = CalendarHelper().monthString(date: selectedDate)
+        dayLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + dayNumString
     }
 }

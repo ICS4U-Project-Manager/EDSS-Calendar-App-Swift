@@ -9,7 +9,8 @@ import UIKit
 import Foundation
 
 var selectedDate = Date()
-
+var dayNum = Int()
+var dayNumString = String(dayNum)
 
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
@@ -59,6 +60,15 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         monthLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + CalendarHelper().yearString(date: selectedDate)
         collectionView.reloadData()
+    }
+    
+    func findDayClicked(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let firstDayOfMonth1 = CalendarHelper().firstOfMonth(date: selectedDate)
+        let startingSpaces1 = CalendarHelper().weekDay(date: firstDayOfMonth1)
+       
+        dayNum = indexPath.row - startingSpaces1 + 1
+        print (dayNum)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -158,6 +168,5 @@ class CalendarHelper
 class CalendarCell: UICollectionViewCell
 {
     @IBOutlet weak var dayOfMonth: UILabel!
-    @IBOutlet weak var dayButton: UIButton!
     
 }

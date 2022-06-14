@@ -372,27 +372,15 @@
                                                     <color key="textColor" name="Off white"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pD-0d-QTu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain"/>
-                                                    <connections>
-                                                        <segue destination="zgT-GE-pP5" kind="show" id="J2M-0T-xDR"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ASQ-c1-OrX" firstAttribute="centerX" secondItem="F87-X7-XZQ" secondAttribute="centerX" id="1WF-fh-Gc7"/>
                                                 <constraint firstItem="ASQ-c1-OrX" firstAttribute="centerY" secondItem="F87-X7-XZQ" secondAttribute="centerY" multiplier="0.5" id="L1y-Fx-XGs"/>
-                                                <constraint firstItem="7pD-0d-QTu" firstAttribute="leading" secondItem="F87-X7-XZQ" secondAttribute="leading" id="MUx-6U-SLH"/>
-                                                <constraint firstItem="7pD-0d-QTu" firstAttribute="top" secondItem="F87-X7-XZQ" secondAttribute="top" id="P41-qB-PzU"/>
-                                                <constraint firstAttribute="trailing" secondItem="7pD-0d-QTu" secondAttribute="trailing" id="fnM-fu-ceJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="7pD-0d-QTu" secondAttribute="bottom" id="rGR-CZ-knF"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="dayButton" destination="7pD-0d-QTu" id="8AN-WD-z3L"/>
                                             <outlet property="dayOfMonth" destination="ASQ-c1-OrX" id="ptu-fl-4jx"/>
+                                            <segue destination="zgT-GE-pP5" kind="show" id="OWc-XR-Ul2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -511,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgW-Rx-h1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="1234.6326836581711"/>
+            <point key="canvasLocation" x="89" y="1120"/>
         </scene>
         <!--Day -->
         <scene sceneID="Ll2-5D-YIJ">
