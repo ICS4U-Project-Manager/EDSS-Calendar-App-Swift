@@ -40,14 +40,14 @@ struct HomeViewSwiftUI: View {
                             
                             Text(user.Title)
                                 .fontWeight(.bold)
-                                .font(.system(size: 15))
+                                .font(.system(size: 16))
                                 .font(.title)
                             
                             Text(user.Lines)
                                 .fontWeight(.light)
-                                .font(.system(size: 12))
+                                .font(.system(size: 16))
                                 .font(.body)
-                                .frame(width: 300)
+                                .frame(width: 280)
                             }
                         }
                     }
