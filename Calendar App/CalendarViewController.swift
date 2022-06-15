@@ -8,15 +8,17 @@
 import UIKit
 import Foundation
 
+var selectedDate = Date()
+var dayNum = Int()
+var dayNumString = String(dayNum)
+
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    
-    var selectedDate = Date()
-    var dayNum = Int()
-    var totalSquares = [String]()
-    
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    var totalSquares = [String]()
     
     override func viewDidLoad()
     {
@@ -60,13 +62,13 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.reloadData()
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    func findDayClicked(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        let firstOfMonth = CalendarHelper().firstOfMonth(date: selectedDate)
-        let startingSpaces1 = CalendarHelper().weekDay(date: firstOfMonth)
+        let firstDayOfMonth1 = CalendarHelper().firstOfMonth(date: selectedDate)
+        let startingSpaces1 = CalendarHelper().weekDay(date: firstDayOfMonth1)
        
         dayNum = indexPath.row - startingSpaces1 + 1
-        print ("cell \(dayNum) clicked")
+        print (dayNum)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
