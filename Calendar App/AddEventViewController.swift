@@ -44,7 +44,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         createEventButton.layer.borderColor = CGColor(red: 113/255, green: 92/255, blue: 131/255, alpha: 1)
         createEventButton.layer.cornerRadius = 10
         cancelButton.layer.borderWidth = 2
-        cancelButton.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        cancelButton.layer.borderColor = CGColor(red: 219/255, green: 233/255, blue: 229/255, alpha: 1)
         cancelButton.layer.cornerRadius = 10
     //preparing date picker design
         
