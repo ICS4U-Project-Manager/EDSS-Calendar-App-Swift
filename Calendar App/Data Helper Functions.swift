@@ -59,10 +59,21 @@ func ICSEventLoad(_ events:[[String:Any]]) -> [ICSEvent] {
     return result
 }
 
+
 func ICSFilterEvents(groups:[String],events:[ICSEvent]) -> [ICSEvent] {
     var result:[ICSEvent]=[]
     for event in events {
         if groups.contains(event.getGroup()) {
+            result.append(event)
+        }
+    }
+    return result
+}
+
+func ICSEventSearch(term:String,events:[ICSEvent]) -> [ICSEvent] {
+    var result:[ICSEvent]=[]
+    for event in events {
+        if event.getName().contains(term) || event.getDescription().contains(term) || event.getGroup().contains(term) || event.getGroup().contains(term) {
             result.append(event)
         }
     }
