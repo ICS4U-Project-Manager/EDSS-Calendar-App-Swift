@@ -9,10 +9,28 @@ import UIKit
 
 class DayViewController: UIViewController {
     
-    @IBOutlet weak var dayLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        dayLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + dayNumString
+
+            let buttonX = 150
+            let buttonY = 150
+            let buttonWidth = 100
+            let buttonHeight = 50
+
+            let button = UIButton(type: .system)
+            button.setTitle("Click here", for: .normal)
+            button.tintColor = .white
+            button.backgroundColor = .red
+            button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+
+            button.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight)
+
+            self.view.addSubview(button)
+        
     }
+    
+    @objc func buttonClicked(sender : UIButton){
+            print("ok")
+    }
+    
 }

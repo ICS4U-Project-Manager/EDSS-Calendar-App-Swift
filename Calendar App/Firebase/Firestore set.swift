@@ -15,16 +15,23 @@ import Firebase
 import SwiftUI
 
 func add(){
+    
+    
+
+    let startDate = ([startEventMonth,startEventDay,startEventYear,startEventHour,startEventMinute] as? Timestamp)?.dateValue() ?? Date()
+
+    
+    let endDate = ([endEventMonth,endEventDay,endEventYear,endEventHour,endEventMinute] as? Timestamp)?.dateValue() ?? Date()
+
+    
+    print (startDate)
+
     let db = Firestore.firestore()
-db.collection("cities").document("LA").setData([
-    "name": "Los Angeles",
-    "state": "CA",
-    "country": "USA"
-]) { err in
-    if let err = err {
-        print("Error writing document: \(err)")
-    } else {
-        print("Document successfully written!")
+    db.collection("Events").addDocument(data:["name":"\(eventTitle)","endDate": endDate,"startDate":startDate, "description": "\(eventDescription)", "location": "\(eventLocation)", "group": "WRDSB Student", "idd": eventIdentification]) { err in
+        if let err = err {
+            print("Error writing document: \(err)")
+        } else {
+            print("Document successfully written!")
+        }
     }
-}
 }
