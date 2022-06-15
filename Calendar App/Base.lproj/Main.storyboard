@@ -1055,9 +1055,9 @@
                     <connections>
                         <outlet property="descript" destination="5IW-VC-9nb" id="ne7-V4-B57"/>
                         <outlet property="endDate5" destination="eNW-Rv-vxL" id="0J5-ml-25C"/>
-                        <outlet property="group" destination="onD-CH-IgW" id="rQZ-VJ-B8X"/>
-                        <outlet property="location" destination="eLc-DV-a9G" id="hOW-26-MUS"/>
-                        <outlet property="name" destination="2He-80-833" id="2vW-ER-SRT"/>
+                        <outlet property="group5" destination="onD-CH-IgW" id="oeP-OK-u7Q"/>
+                        <outlet property="location5" destination="eLc-DV-a9G" id="tfT-83-XXw"/>
+                        <outlet property="name5" destination="2He-80-833" id="J9H-br-4nh"/>
                         <outlet property="startDate5" destination="lhv-Ya-yzt" id="IqA-GC-M28"/>
                     </connections>
                 </viewController>

@@ -136,9 +136,9 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
                 datePart+=1
             }
         }
-        startEventMonth = Int(month)!
-        startEventDay = Int(day)!
-        startEventYear = 2000 + Int(year)!
+        startEventMonth = Int(month) ?? 0
+        startEventDay = Int(day) ?? 0
+        startEventYear = 2000 + Int(year)! 
     }
     
     @IBAction func getStartTime(_ sender: Any) {

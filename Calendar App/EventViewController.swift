@@ -12,12 +12,12 @@ import FirebaseStorage
 
 class EventViewController: UIViewController {
     
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var name5: UILabel!
     @IBOutlet weak var endDate5: UILabel!
     @IBOutlet weak var startDate5: UILabel!
-    @IBOutlet weak var location: UILabel!
+    @IBOutlet weak var location5: UILabel!
     @IBOutlet weak var descript: UILabel!
-    @IBOutlet weak var group: UILabel!
+    @IBOutlet weak var group5: UILabel!
     
     var db = Firestore.firestore()
     var events = [event]()
@@ -49,11 +49,12 @@ class EventViewController: UIViewController {
                     return formatter.string(from: endDate)
                 }
                 
-                self.name.text = name
-                self.startDate5.text = startDateR
-                self.group.text = group
-                self.descript.text = description
-                self.endDate5.text = endDateR
+                name5.text = name
+                startDate5.text = startDateR
+                location5.text = location
+                group5.text = group
+                descript.text = description
+                endDate5.text = endDateR
                 
                 return event(name: name, description: description, location: location, group: group, idd: idd, startDate: startDate)
             }

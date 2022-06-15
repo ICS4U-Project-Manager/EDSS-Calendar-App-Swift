@@ -12,14 +12,13 @@ class DayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
             let buttonX = 150
             let buttonY = 150
-            let buttonWidth = 100
+            let buttonWidth = 300
             let buttonHeight = 50
 
             let button = UIButton(type: .system)
-            button.setTitle("Click here", for: .normal)
+            button.setTitle("\(selectedDate)", for: .normal)
             button.tintColor = .white
             button.backgroundColor = .red
             button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
