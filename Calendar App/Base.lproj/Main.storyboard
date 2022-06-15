@@ -87,17 +87,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-95-28F">
-                                <rect key="frame" x="22" y="35" width="178" height="57"/>
+                                <rect key="frame" x="22" y="35" width="170" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="fNH-Nn-faC"/>
-                                    <constraint firstAttribute="width" constant="178" id="qQF-uP-9to"/>
+                                    <constraint firstAttribute="height" constant="60" id="fNH-Nn-faC"/>
+                                    <constraint firstAttribute="width" constant="170" id="qQF-uP-9to"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-ry-Va5">
-                                <rect key="frame" x="22" y="129" width="167" height="29"/>
+                                <rect key="frame" x="22" y="132" width="167" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="F8H-bf-tWb"/>
                                     <constraint firstAttribute="width" constant="167" id="nq2-9g-9H7"/>
@@ -107,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gml-6n-Eey">
-                                <rect key="frame" x="22" y="188" width="101" height="29"/>
+                                <rect key="frame" x="22" y="191" width="101" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="E3O-dt-TM7"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="NJv-I9-rMU"/>
@@ -117,7 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tactile Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-79-BnZ">
-                                <rect key="frame" x="22" y="247" width="167" height="29"/>
+                                <rect key="frame" x="22" y="250" width="167" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="d8Q-R9-VsR"/>
                                     <constraint firstAttribute="width" constant="167" id="rLU-OC-mpk"/>
