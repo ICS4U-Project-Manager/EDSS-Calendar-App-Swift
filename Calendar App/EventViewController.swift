@@ -24,7 +24,13 @@ class EventViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        self.db.collection("Events").getDocuments() { [self] (querySnapshot, error) in
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateStyle = .medium
+        dateFormatter2.timeStyle = .none
+        dateFormatter2.locale = Locale.current
+        let dateR = dateFormatter2.string(from: selectedDate)
+        
+        self.db.collection("dateR").getDocuments() { [self] (querySnapshot, error) in
             guard let documents2 = querySnapshot?.documents else {
                 print("No documents")
                 return
