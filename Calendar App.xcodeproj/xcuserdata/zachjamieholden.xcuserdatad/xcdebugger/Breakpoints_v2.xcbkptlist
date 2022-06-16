@@ -14,9 +14,9 @@
             filePath = "Calendar App/AddEventViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,8 +30,13 @@
             filePath = "Calendar App/AddEventViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "283"
             endingLineNumber = "283"
+=======
+            startingLineNumber = "271"
+            endingLineNumber = "271"
+>>>>>>> parent of 423b167 (firebase storing and creating events actually works)
             landmarkName = "createClass(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +51,13 @@
             filePath = "Calendar App/AddEventViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "285"
             endingLineNumber = "285"
+=======
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+>>>>>>> parent of 423b167 (firebase storing and creating events actually works)
             landmarkName = "createClass(_:)"
             landmarkType = "7">
          </BreakpointContent>
