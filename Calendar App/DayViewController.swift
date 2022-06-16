@@ -15,11 +15,15 @@ import FirebaseStorage
 
 class DayViewController: UIViewController {
     
+    @IBOutlet weak var dayLabel: UILabel!
+    
     var db = Firestore.firestore()
     var events = [event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dayLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + dayNumString
         
         let dateFormatter2 = DateFormatter()
         dateFormatter2.dateStyle = .medium

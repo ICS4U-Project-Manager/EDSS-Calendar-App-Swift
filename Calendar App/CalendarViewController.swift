@@ -9,12 +9,12 @@ import UIKit
 import Foundation
 
 var selectedDate = Date()
+var dayNumString = String(dayNum)
 var dayNum = Int()
-var totalSquares = [String]()
-
 
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    var totalSquares = [String]()
    
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -26,6 +26,7 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         setMonthView()
     }
     
+   
     func setCellsView()
     {
         let width = (collectionView.frame.size.width - 2) / 8
@@ -67,6 +68,7 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         let startingSpaces1 = CalendarHelper().weekDay(date: firstDayOfMonth1)
        
         dayNum = indexPath.row - startingSpaces1 + 1
+        dayNumString = String(dayNum)
         print ("cell \(dayNum) clicked")
     }
     
