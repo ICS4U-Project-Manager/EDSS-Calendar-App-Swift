@@ -521,6 +521,9 @@
                         <color key="backgroundColor" name="Off white"/>
                     </view>
                     <navigationItem key="navigationItem" id="AZw-YI-4FS" colorLabel="IBBuiltInLabel-Purple"/>
+                    <connections>
+                        <outlet property="dayLabel" destination="r2j-VR-4PP" id="gCO-Jl-y1g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-y2-LIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
