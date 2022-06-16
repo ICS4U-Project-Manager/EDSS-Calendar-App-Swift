@@ -61,6 +61,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var startTimePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var endTimePicker: UIDatePicker!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     public var eventIdentification : Int = 1
     public var whichTextBox : Int = 0
     public var eventTitle : String = ""
@@ -264,16 +265,29 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
 
     //creating instance of class
     @IBAction func createClass(_ sender: Any) {
-        //these variables need to be var instead of let when event editing is implemented
+        if eventTitle == "" {
+            errorMessageLabel.text = "no event title"
+        }
+        else if eventLocation == "" {
+            errorMessageLabel.text = "no event location"
+        }
+        else if eventDescription == "" {
+            errorMessageLabel.text = "no event description"
+        }
+        else if startEventHour == endEventHour && startEventMinute == endEventMinute && startEventDay == endEventDay && startEventMonth == endEventMonth {
+            errorMessageLabel.text = "event cannot start and end at same time"
+        }
+        else {
         let startEventDate = ICSDate (year : startEventYear , month : startEventMonth , day : startEventDay)
         let startEventTime = ICSTime (hour: startEventHour, minute: startEventMinute, period: startEventPeriod)
         let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
         let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
         let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
+            //pull variables from date and time class and not just variable when apssing to the firestore set
         add(startEventMonth : startEventMonth, startEventDay : startEventDay, startEventYear : startEventYear, startEventHour : startEventHour, startEventMinute : startEventMinute, endEventMonth : endEventMonth, endEventDay : endEventDay, endEventYear : endEventYear, endEventHour : endEventHour, endEventMinute : endEventMinute, event : event)
         eventIdentification+=1
-        
         performSegue(withIdentifier: "GenerateSegue", sender: event)
+        }
     }
 }
 

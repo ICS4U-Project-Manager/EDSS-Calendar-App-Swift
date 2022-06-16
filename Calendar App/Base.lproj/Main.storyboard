@@ -741,6 +741,13 @@
                                                     <action selector="assignEventTitle:" destination="ab7-6i-4ps" eventType="editingChanged" id="S4V-mc-256"/>
                                                 </connections>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-RA-7sd">
+                                                <rect key="frame" x="22" y="7" width="299" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" name="Off white"/>
                                         <constraints>
@@ -852,6 +859,7 @@
                         <outlet property="descriptionTextField" destination="1yo-yF-CpF" id="oCN-lJ-ofP"/>
                         <outlet property="endDatePicker" destination="kmV-gk-kcq" id="FEA-R8-YcU"/>
                         <outlet property="endTimePicker" destination="KtT-Ij-3Y9" id="gSx-qs-bX1"/>
+                        <outlet property="errorMessageLabel" destination="T7D-RA-7sd" id="BJa-NM-9Bj"/>
                         <outlet property="locationTextField" destination="Fag-2r-tof" id="ZRh-r2-ir9"/>
                         <outlet property="startDatePicker" destination="dq7-j2-wxb" id="AEZ-ha-5pr"/>
                         <outlet property="startTimePicker" destination="XuF-Mz-gCm" id="PFo-ph-108"/>
