@@ -8,12 +8,14 @@
 import UIKit
 import Foundation
 
+var selectedDate = Date()
+var dayNum = Int()
+var totalSquares = [String]()
+
+
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    var selectedDate = Date()
-    var dayNum = Int()
-    var totalSquares = [String]()
-    
+   
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -120,7 +122,7 @@ class CalendarHelper
     {
         return calendar.date(byAdding: .month, value: -1, to: date)!
     }
-    
+        
     func monthString(date: Date) -> String
     {
         let dateFormatter = DateFormatter()

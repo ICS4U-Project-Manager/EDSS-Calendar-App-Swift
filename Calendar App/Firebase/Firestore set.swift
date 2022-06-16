@@ -16,18 +16,22 @@ import SwiftUI
 
 func add(){
     
-    
 
     let startDate = ([startEventMonth,startEventDay,startEventYear,startEventHour,startEventMinute] as? Timestamp)?.dateValue() ?? Date()
+    let dateFormatter6 = DateFormatter()
+    dateFormatter6.dateStyle = .medium
+    dateFormatter6.timeStyle = .none
+    dateFormatter6.locale = Locale.current
+    let dateF = dateFormatter6.string(from: startDate)
 
     
     let endDate = ([endEventMonth,endEventDay,endEventYear,endEventHour,endEventMinute] as? Timestamp)?.dateValue() ?? Date()
 
     
-    print (startDate)
+    print (dateF)
 
     let db = Firestore.firestore()
-    db.collection("Events").addDocument(data:["name":"\(eventTitle)","endDate": endDate,"startDate":startDate, "description": "\(eventDescription)", "location": "\(eventLocation)", "group": "WRDSB Student", "idd": eventIdentification]) { err in
+    db.collection("\(dateF)").addDocument(data:["name":"\(eventTitle)","endDate": endDate,"startDate":startDate, "description": "\(eventDescription)", "location": "\(eventLocation)", "group": "WRDSB Student", "idd": 0]) { err in
         if let err = err {
             print("Error writing document: \(err)")
         } else {

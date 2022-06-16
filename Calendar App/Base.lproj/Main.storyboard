@@ -516,15 +516,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-g4-RfE">
-                                <rect key="frame" x="157" y="378" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="w3f-gj-ERT" kind="show" id="8mf-3v-t9h"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rsp-0I-SbD"/>
                         <color key="backgroundColor" name="Off white"/>
@@ -613,6 +604,7 @@
                                                     <constraint firstAttribute="width" constant="208" id="Qzh-wg-OlQ"/>
                                                     <constraint firstAttribute="height" constant="34" id="mMz-mD-cb5"/>
                                                 </constraints>
+                                                <color key="textColor" name="Dark purple"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -636,6 +628,7 @@
                                                     <constraint firstAttribute="width" constant="183" id="1Ba-Ma-NLV"/>
                                                     <constraint firstAttribute="height" constant="34" id="qTA-TP-kPa"/>
                                                 </constraints>
+                                                <color key="textColor" name="Dark purple"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -688,7 +681,7 @@
                                                     <constraint firstAttribute="width" constant="47" id="7dQ-pm-Yez"/>
                                                     <constraint firstAttribute="height" constant="31" id="Bmf-5X-wVD"/>
                                                 </constraints>
-                                                <color key="onTintColor" name="Dark green"/>
+                                                <color key="onTintColor" name="Dark purple"/>
                                                 <color key="thumbTintColor" name="Off white"/>
                                                 <connections>
                                                     <action selector="allDayEventCreated:" destination="ab7-6i-4ps" eventType="valueChanged" id="cWt-kz-azz"/>
@@ -741,6 +734,7 @@
                                                     <constraint firstAttribute="width" constant="246" id="5LJ-ER-jPb"/>
                                                     <constraint firstAttribute="height" constant="34" id="DcQ-SF-6WZ"/>
                                                 </constraints>
+                                                <color key="textColor" name="Dark purple"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -1066,9 +1060,6 @@
             <point key="canvasLocation" x="133.59999999999999" y="2666.7166416791606"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="rKR-g5-HNk"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Add" width="673" height="672"/>
         <image name="Arrow(Left)-4" width="100" height="100"/>
