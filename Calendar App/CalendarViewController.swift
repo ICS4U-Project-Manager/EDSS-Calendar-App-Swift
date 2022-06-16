@@ -160,12 +160,9 @@ class CalendarHelper
         let components = calendar.dateComponents([.weekday], from: date)
         return components.weekday! - 1
     }
-    
 }
-
 
 class CalendarCell: UICollectionViewCell
 {
     @IBOutlet weak var dayOfMonth: UILabel!
-    
 }

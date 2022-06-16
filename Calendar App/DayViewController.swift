@@ -46,6 +46,8 @@ class DayViewController: UIViewController {
                             return
                         }
                         
+                        print("\(document)")
+                        
                         let count = documents2.count
                         self.events = documents2.map { (queryDocumentSnapshot) -> event in
                             let data2 = queryDocumentSnapshot.data()
