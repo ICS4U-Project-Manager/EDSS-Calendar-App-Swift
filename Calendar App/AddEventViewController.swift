@@ -284,7 +284,9 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
         let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
             //pull variables from date and time class and not just variable when apssing to the firestore set
-        add(startEventMonth : startEventMonth, startEventDay : startEventDay, startEventYear : startEventYear, startEventHour : startEventHour, startEventMinute : startEventMinute, endEventMonth : endEventMonth, endEventDay : endEventDay, endEventYear : endEventYear, endEventHour : endEventHour, endEventMinute : endEventMinute, event : event)
+            add(startEventMonth : startEventMonth, startEventDay : startEventDay, startEventYear : startEventYear, startEventHour : startEventHour, startEventMinute : startEventMinute, endEventMonth : endEventMonth, endEventDay : endEventDay, endEventYear : endEventYear, endEventHour : endEventHour, endEventMinute : endEventMinute, event: event)
+            
+            
         eventIdentification+=1
         performSegue(withIdentifier: "GenerateSegue", sender: event)
         }
