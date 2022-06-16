@@ -20,6 +20,7 @@ class DayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
         var classic = CalendarHelper()
         print(classic.yearString)
@@ -86,6 +87,9 @@ class DayViewController: UIViewController {
                 return event(name: name, description: description, location: location, group: group, idd: idd, startDate: startDate)
             }
         }
+=======
+       // dayLabel.text = CalendarHelper().monthString(date: selectedDate)
+>>>>>>> parent of a2632a9 (Revert "Cell clicked function")
     }
     
     @objc func buttonClicked(sender : UIButton){
