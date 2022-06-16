@@ -12,8 +12,8 @@ var selectedDate = Date()
 var dayNum = Int()
 var totalSquares = [String]()
 
-
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+
 {
    
     @IBOutlet weak var monthLabel: UILabel!
@@ -25,6 +25,8 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         setCellsView()
         setMonthView()
     }
+    
+    
     
     func setCellsView()
     {
