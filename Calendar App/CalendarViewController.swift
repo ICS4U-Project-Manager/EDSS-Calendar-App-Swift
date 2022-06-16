@@ -8,7 +8,6 @@
 import UIKit
 import Foundation
 
-<<<<<<< HEAD
 var selectedDate = Date()
 var dayNum = Int()
 var totalSquares = [String]()
@@ -17,15 +16,6 @@ var totalSquares = [String]()
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
    
-=======
-class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-{
-    
-    var selectedDate = Date()
-    var dayNum = Int()
-    var totalSquares = [String]()
-    
->>>>>>> parent of a2632a9 (Revert "Cell clicked function")
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -73,8 +63,8 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        let firstOfMonth = CalendarHelper().firstOfMonth(date: selectedDate)
-        let startingSpaces1 = CalendarHelper().weekDay(date: firstOfMonth)
+        let firstDayOfMonth1 = CalendarHelper().firstOfMonth(date: selectedDate)
+        let startingSpaces1 = CalendarHelper().weekDay(date: firstDayOfMonth1)
        
         dayNum = indexPath.row - startingSpaces1 + 1
         print ("cell \(dayNum) clicked")
