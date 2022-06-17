@@ -13,10 +13,7 @@ import FirebaseStorage
 
 
 
-class DayViewController:
-    UIViewController {
-    
-    
+class DayViewController: UIViewController {
     
     var db = Firestore.firestore()
     var events = [event]()
@@ -101,11 +98,6 @@ class DayViewController:
         }
     }
     
-    @IBAction func eventPressed(_ sender: UIButton) {
-        
-        performSegue(withIdentifier: "dayToEvent", sender: self)
-        
-    }
     
     @objc func buttonClicked(sender : UIButton){
         print("ok")

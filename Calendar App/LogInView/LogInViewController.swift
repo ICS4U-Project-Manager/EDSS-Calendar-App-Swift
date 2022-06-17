@@ -28,8 +28,4 @@ class SigninViewController: UIViewController {
         theContainer2.addSubview(childView.view)
         childView.didMove(toParent: self)
     }
-    
-    func homeSegue(){
-    }
-    
 }
