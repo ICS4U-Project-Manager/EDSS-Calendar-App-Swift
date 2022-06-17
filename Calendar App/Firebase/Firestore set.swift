@@ -34,10 +34,9 @@ func add(startEventMonth : Int, startEventDay : Int, startEventYear : Int, start
     let endDate = ([endEventMonth,endEventDay,endEventYear,endEventHour,endEventMinute] as? Timestamp)?.dateValue() ?? Date()
 
     
-    print (dateT)
-
+    print ("zz\(dateF)")
     let db = Firestore.firestore()
-    db.collection("\(dateT)").addDocument(data:["name":"\(event.getName())","endDate": endDate,"startDate":startDate, "description": "\(event.getDescription())", "location": "\(event.getLocation())", "group": "WRDSB Student", "idd": 0]) { err in
+    db.collection("\(dateF)").addDocument(data:["name":"\(event.getName())","endDate": endDate,"startDate":startDate, "description": "\(event.getDescription())", "location": "\(event.getLocation())", "group": "\(event.getGroup())", "idd": 1]) { err in
         if let err = err {
             print("Error writing document: \(err)")
         } else {

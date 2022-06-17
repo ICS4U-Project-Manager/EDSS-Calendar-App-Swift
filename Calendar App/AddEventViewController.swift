@@ -42,6 +42,9 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         else if whichTextBox == 3 {
             return descriptionTextField.resignFirstResponder()
         }
+        else if whichTextBox == 4 {
+            return groupClubTextField.resignFirstResponder()
+        }
         return false
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -62,9 +65,11 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var endTimePicker: UIDatePicker!
     @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet weak var groupClubTextField: UITextField!
     public var eventIdentification : Int = 1
     public var whichTextBox : Int = 0
     public var eventTitle : String = ""
+    public var group : String = ""
     public var allDayEvent : Bool = false
     public var startEventYear : Int = 0
     public var startEventMonth : Int = 0
@@ -95,6 +100,10 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         eventDescription = descriptionTextField.text!
         whichTextBox = 3
     }
+    @IBAction func assignClub(_ sender: Any) {
+        group = groupClubTextField.text!
+        whichTextBox = 4
+    }
     
     //all day switch
     var switchState : Bool = false
@@ -102,10 +111,20 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         if switchState == false {
             allDayEvent = true
             switchState = true
+            startTimePicker.isHidden = true
+            endTimePicker.isHidden = true
+            startEventHour = 12
+            startEventMinute = 01
+            startEventPeriod = 0
+            endEventHour = 11
+            endEventMinute = 59
+            endEventPeriod = 1
         }
         else if switchState == true{
             allDayEvent = false
             switchState = false
+            startTimePicker.isHidden = false
+            endTimePicker.isHidden = false
         }
     }
     
@@ -154,6 +173,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         var minutesAndPeriod = ""
         var period : Int = -1
         var timePart = 1
+        
+        if switchState == false {
         for element in placeholderTime {
             if timePart == 1 && element != ":" {
                 hours+=String(element)
@@ -181,6 +202,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
                 }
             }
             index+=1
+        }
         }
         startEventHour = Int(hours)!
         startEventMinute = Int(minutes)!
@@ -230,6 +252,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         var minutesAndPeriod = ""
         var period : Int = -1
         var timePart = 1
+        
+        if switchState == false {
         for element in placeholderTime {
             if timePart == 1 && element != ":" {
                 hours+=String(element)
@@ -258,6 +282,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
             }
             index+=1
         }
+        }
         endEventHour = Int(hours)!
         endEventMinute = Int(minutes)!
         endEventPeriod = period
@@ -274,6 +299,9 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         else if eventDescription == "" {
             errorMessageLabel.text = "no event description"
         }
+        else if group == "" {
+            errorMessageLabel.text = "no group attached"
+        }
         else if startEventHour == endEventHour && startEventMinute == endEventMinute && startEventDay == endEventDay && startEventMonth == endEventMonth {
             errorMessageLabel.text = "event cannot start and end at same time"
         }
@@ -282,17 +310,17 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let startEventTime = ICSTime (hour: startEventHour, minute: startEventMinute, period: startEventPeriod)
         let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
         let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
-        let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
+            let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , group : group , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
             
             print("yes it is working")
-            //pull variables from date and time class and not just variable when apssing to the firestore set
-            add(startEventMonth : startEventMonth, startEventDay : startEventDay, startEventYear : startEventYear, startEventHour : startEventHour, startEventMinute : startEventMinute, endEventMonth : endEventMonth, endEventDay : endEventDay, endEventYear : endEventYear, endEventHour : endEventHour, endEventMinute : endEventMinute, event: event)
+            add(startEventMonth : startEventDate.getMonth(), startEventDay : startEventDate.getDay(), startEventYear : startEventDate.getYear(), startEventHour : startEventTime.getHour(), startEventMinute : startEventTime.getMinute(), endEventMonth : endEventDate.getMonth(), endEventDay : endEventDate.getDay(), endEventYear : endEventDate.getYear(), endEventHour : endEventTime.getHour(), endEventMinute : endEventTime.getMinute(), event: event)
             
             
         eventIdentification+=1
         performSegue(withIdentifier: "GenerateSegue", sender: event)
         }
     }
+    
 }
 
 

@@ -749,6 +749,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZ5-Lp-Oh1">
+                                                <rect key="frame" x="138" y="399" width="183" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="assignClub:" destination="ab7-6i-4ps" eventType="editingChanged" id="ZnP-Su-or2"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="Off white"/>
                                         <constraints>
@@ -825,7 +834,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="createClass:" destination="ab7-6i-4ps" eventType="touchUpInside" id="eb3-Hw-B0g"/>
-                                            <segue destination="w3f-gj-ERT" kind="show" identifier="GenerateSegue" id="rKR-g5-HNk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -861,10 +869,12 @@
                         <outlet property="endDatePicker" destination="kmV-gk-kcq" id="FEA-R8-YcU"/>
                         <outlet property="endTimePicker" destination="KtT-Ij-3Y9" id="gSx-qs-bX1"/>
                         <outlet property="errorMessageLabel" destination="T7D-RA-7sd" id="BJa-NM-9Bj"/>
+                        <outlet property="groupClubTextField" destination="TZ5-Lp-Oh1" id="QFb-rO-WTs"/>
                         <outlet property="locationTextField" destination="Fag-2r-tof" id="ZRh-r2-ir9"/>
                         <outlet property="startDatePicker" destination="dq7-j2-wxb" id="AEZ-ha-5pr"/>
                         <outlet property="startTimePicker" destination="XuF-Mz-gCm" id="PFo-ph-108"/>
                         <outlet property="titleTextField" destination="R8U-th-YIE" id="Fxr-It-Vix"/>
+                        <segue destination="w3f-gj-ERT" kind="show" identifier="GenerateSegue" id="bCv-ag-lIo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5K-WO-8op" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
