@@ -20,6 +20,7 @@ class DayViewController: UIViewController {
     
     @IBOutlet weak var dayLabel: UILabel!
     
+    
     var db = Firestore.firestore()
     var events = [event]()
     
@@ -47,13 +48,13 @@ class DayViewController: UIViewController {
         
         super.viewDidLoad()
         
-        print("ds \(selectedDate)")
-        
         dayLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + dayNumString
         
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "MMM dd"
-        let dateR = dateFormatterGet.date(from: "\(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString) ")
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateStyle = .medium
+        dateFormatter2.timeStyle = .none
+        dateFormatter2.locale = Locale.current
+        dateR = dateFormatter2.string(from: selectedDate)
         
         db.collection("\(dateR)").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -63,7 +64,7 @@ class DayViewController: UIViewController {
                 let document = querySnapshot?.documents
                 count3 = document!.count
                 
-                print("cx \(dateR)")
+                print(dateR)
                 print("ee \(count3)")
                 
                 

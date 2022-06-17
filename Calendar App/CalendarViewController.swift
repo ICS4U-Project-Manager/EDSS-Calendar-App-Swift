@@ -11,7 +11,6 @@ import Foundation
 var selectedDate = Date()
 var dayNumString = String(dayNum)
 var dayNum = Int()
-var YearNumString = Date()
 
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
@@ -137,7 +136,6 @@ class CalendarHelper
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy"
-        let YearNumString = dateFormatter.string(from: date)
         return dateFormatter.string(from: date)
     }
     
