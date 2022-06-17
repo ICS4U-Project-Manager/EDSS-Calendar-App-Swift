@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,6 +73,7 @@
                     <navigationItem key="navigationItem" id="G87-VZ-GlC"/>
                     <connections>
                         <outlet property="theContainer2" destination="Und-u5-sPe" id="Vnw-gR-EvU"/>
+                        <segue destination="YV5-Vr-Ag2" kind="show" identifier="FirstSegue" id="Vhi-yJ-zB0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOS-Z0-bxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -498,7 +500,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-VR-4PP">
-                                <rect key="frame" x="88" y="44" width="204" height="36"/>
+                                <rect key="frame" x="47" y="44" width="204" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -514,6 +516,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-y2-LIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <menu title="Inline Menu" id="9AY-zi-kJE">
+                    <menuOptions key="menuOptions" displayInline="YES"/>
+                    <children>
+                        <command title="Item 1" id="e9L-nW-vC0"/>
+                        <command title="Item 2" id="Z2J-By-EoP"/>
+                    </children>
+                </menu>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="1946.176911544228"/>
         </scene>
@@ -522,7 +531,7 @@
             <objects>
                 <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YV5-Vr-Ag2" userLabel="Home" customClass="HomeViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0b3-A9-yn9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u3M-DW-XaM">
@@ -536,6 +545,7 @@
                         <color key="tintColor" red="0.58466583490000001" green="0.78444093469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="PHq-HO-Buu"/>
+                    <navigationItem key="navigationItem" id="cZu-nL-WHE"/>
                     <connections>
                         <outlet property="theContainer" destination="u3M-DW-XaM" id="AEb-4q-bWs"/>
                     </connections>
@@ -1059,6 +1069,9 @@
             <point key="canvasLocation" x="133.59999999999999" y="2666.7166416791606"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vhi-yJ-zB0"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Add" width="673" height="672"/>
         <image name="Arrow(Left)-4" width="100" height="100"/>

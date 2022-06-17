@@ -28,4 +28,9 @@ class SigninViewController: UIViewController {
         theContainer2.addSubview(childView.view)
         childView.didMove(toParent: self)
     }
+    @IBAction func butonClicked(_ sender: Any){
+                self.performSegue (withIdentifier: "FirstSegue", sender: self)
+            }
 }
+
+

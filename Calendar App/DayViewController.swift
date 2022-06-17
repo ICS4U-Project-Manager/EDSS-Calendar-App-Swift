@@ -20,11 +20,25 @@ class DayViewController: UIViewController {
     
     @IBOutlet weak var dayLabel: UILabel!
     
-
+    
     var db = Firestore.firestore()
     var events = [event]()
     
     override func viewDidLoad() {
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 50, y: 166)
+        label.textColor = .black
+        label.textAlignment = .center
+        label.text = "Start Time - End Time"
+        self.view.addSubview(label)
+        
+        let label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label2.center = CGPoint(x: 275, y: 166)
+        label2.textAlignment = .center
+        label2.textColor = .black
+        label2.text = "Event Title"
+        self.view.addSubview(label2)
         
         dateR = ""
         titlename = ""
@@ -56,7 +70,7 @@ class DayViewController: UIViewController {
                 
                 print ("rr \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
                 
-                var YAxis = 300
+                var YAxis = 250
                 
                 for i in 0..<count3 {
                     call()
@@ -74,9 +88,9 @@ class DayViewController: UIViewController {
                                     
                                     num += 1
                                     
-                                    let buttonX = 100
+                                    let buttonX = 160
                                     let buttonY = YAxis
-                                    let buttonWidth = 300
+                                    let buttonWidth = 400
                                     let buttonHeight = 50
                                     
                                     let button = UIButton(type: .system)
@@ -97,9 +111,13 @@ class DayViewController: UIViewController {
                 }
             }
         }
+        
+        func butonClicked(_ sender: Any){
+                    self.performSegue (withIdentifier: "FirstSegue", sender: self)
+                }
     }
     
-    
+
     
     @objc func buttonClicked(sender : UIButton){
         for i in 0..<count3 {
@@ -123,10 +141,12 @@ func Calling(){
             let document = querySnapshot?.documents[num]
             titlename = document!.data()["name"] as! String
             print("\(titlename)")
-            
+
         }
     }
 }
+    
+
 
 
 
