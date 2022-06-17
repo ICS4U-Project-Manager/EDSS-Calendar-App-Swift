@@ -16,7 +16,7 @@ import SwiftUI
 
 func add(startEventMonth : Int, startEventDay : Int, startEventYear : Int, startEventHour : Int, startEventMinute : Int, endEventMonth : Int, endEventDay : Int, endEventYear : Int, endEventHour : Int, endEventMinute : Int, event : ICSEvent){
     
-    print("yes it is working")
+  
 
     let startDate = ([startEventMonth,startEventDay,startEventYear,startEventHour,startEventMinute] as? Timestamp)?.dateValue() ?? Date()
     let dateFormatter6 = DateFormatter()
@@ -35,6 +35,7 @@ func add(startEventMonth : Int, startEventDay : Int, startEventYear : Int, start
         if let err = err {
             print("Error writing document: \(err)")
         } else {
+            selectedDate = startDate
             print("Document successfully written!")
         }
     }

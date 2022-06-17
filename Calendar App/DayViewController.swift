@@ -12,28 +12,35 @@ import FirebaseCore
 import FirebaseStorage
 
 var num = 0
+var dateR : String = ""
 public var titlename : String = ""
+var count3 : Int = 0
 
 class DayViewController: UIViewController {
     
     @IBOutlet weak var dayLabel: UILabel!
     
+
     var db = Firestore.firestore()
     var events = [event]()
     
     override func viewDidLoad() {
         
+        dateR = ""
+        titlename = ""
+        count3 = 0
+        num = 0
         print (num)
         
         super.viewDidLoad()
-                
-                dayLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + dayNumString
-                
-                let dateFormatter2 = DateFormatter()
-                dateFormatter2.dateStyle = .medium
-                dateFormatter2.timeStyle = .none
-                dateFormatter2.locale = Locale.current
-                let dateR = dateFormatter2.string(from: selectedDate)
+        
+        dayLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + dayNumString
+        
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateStyle = .medium
+        dateFormatter2.timeStyle = .none
+        dateFormatter2.locale = Locale.current
+        dateR = dateFormatter2.string(from: selectedDate)
         
         db.collection("\(dateR)").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -41,7 +48,7 @@ class DayViewController: UIViewController {
             } else {
                 print("No error getting documents")
                 let document = querySnapshot?.documents
-                let count3 = document!.count
+                count3 = document!.count
                 
                 print(dateR)
                 print("ee \(count3)")
@@ -50,7 +57,7 @@ class DayViewController: UIViewController {
                 print ("rr \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
                 
                 var YAxis = 300
-
+                
                 for i in 0..<count3 {
                     call()
                     func call(){
@@ -60,8 +67,6 @@ class DayViewController: UIViewController {
                             } else {
                                 print("No error getting documents")
                                 let document = querySnapshot!.documents[num]
-                                print("\(document.data()["name"] as! String)")
-                                
                                 
                                 build()
                                 
@@ -84,7 +89,8 @@ class DayViewController: UIViewController {
                                     self.view.addSubview(button)
                                     
                                     YAxis -= 75
-                                
+                                    
+                                }
                             }
                         }
                     }
@@ -92,37 +98,35 @@ class DayViewController: UIViewController {
             }
         }
     }
-}
-
-
-
-@objc func buttonClicked(sender : UIButton){
-    switch (sender.tag){
-    case 0:
-        db.collection("June 16 2022").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                let document = querySnapshot!.documents[num]
-                print("\(document.data()["name"] as! String)")
+    
+    
+    
+    @objc func buttonClicked(sender : UIButton){
+        for i in 0..<count3 {
+            switch (sender.tag){
+            case i:
+                num = i
+                Calling()
+            default:
+                print("nothing worked")
             }
         }
-        print("\(titlename)")
-    case 1:
-        print("\(titlename)")
-    case 2:
-        print("\(titlename)")
-    case 3:
-        print("\(titlename)")
-    case 4:
-        print("\(titlename)")
-    default:
-        print("\(titlename)")
     }
 }
+
+func Calling(){
+    let db = Firestore.firestore()
+    db.collection("\(dateR)").getDocuments() { (querySnapshot, err) in
+        if let err = err {
+            print("Error getting documents: \(err)")
+        } else {
+            let document = querySnapshot?.documents[num]
+            titlename = document!.data()["name"] as! String
+            print("\(titlename)")
+            
+        }
+    }
 }
-
-
 
 
 

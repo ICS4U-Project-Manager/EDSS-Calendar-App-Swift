@@ -283,6 +283,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
         let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
         let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
+            
+            print("yes it is working")
             //pull variables from date and time class and not just variable when apssing to the firestore set
             add(startEventMonth : startEventMonth, startEventDay : startEventDay, startEventYear : startEventYear, startEventHour : startEventHour, startEventMinute : startEventMinute, endEventMonth : endEventMonth, endEventDay : endEventDay, endEventYear : endEventYear, endEventHour : endEventHour, endEventMinute : endEventMinute, event: event)
             
