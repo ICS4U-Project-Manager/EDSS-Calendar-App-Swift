@@ -34,6 +34,9 @@ class SigninViewController: UIViewController {
     @IBAction func butonClicked(_ sender: Any){
                 self.performSegue (withIdentifier: "FirstSegue", sender: self)
             }
+    @IBAction func logOut(_ sender: UIStoryboardSegue) {
+        
+    }
 }
 
 
