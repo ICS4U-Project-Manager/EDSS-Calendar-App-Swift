@@ -25,7 +25,7 @@ class EventViewController: UIViewController {
     override func viewDidLoad() {
         
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatterGet.dateFormat = "MMM dd"
         let dateZ = dateFormatterGet.date(from: "\(selectedDate), 2022")
         
         print ("cc \(dateZ)")

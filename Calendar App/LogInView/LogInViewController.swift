@@ -11,6 +11,9 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var theContainer2: UIView!
 
     func showscreen()  {
+        
+        EventDay()
+        
         if fire == true {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 
