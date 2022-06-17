@@ -24,15 +24,13 @@ class EventViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        let dateFormatter2 = DateFormatter()
-        dateFormatter2.dateStyle = .medium
-        dateFormatter2.timeStyle = .none
-        dateFormatter2.locale = Locale.current
-        let dateR = dateFormatter2.string(from: selectedDate)
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateZ = dateFormatterGet.date(from: "\(selectedDate), 2022")
         
-        print (dateR)
+        print ("cc \(dateZ)")
         
-        self.db.collection("\(dateR)").getDocuments() { [self] (querySnapshot, error) in guard let documents2 = querySnapshot?.documents else {
+        self.db.collection("\(dateZ)").getDocuments() { [self] (querySnapshot, error) in guard let documents2 = querySnapshot?.documents else {
                 print("No documents")
                 return
             }
