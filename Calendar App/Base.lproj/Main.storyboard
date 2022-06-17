@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,6 +73,7 @@
                     <navigationItem key="navigationItem" id="G87-VZ-GlC"/>
                     <connections>
                         <outlet property="theContainer2" destination="Und-u5-sPe" id="Vnw-gR-EvU"/>
+                        <segue destination="YV5-Vr-Ag2" kind="show" identifier="FirstSegue" id="Vhi-yJ-zB0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOS-Z0-bxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,7 +98,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-ry-Va5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-ry-Va5">
                                 <rect key="frame" x="22" y="132" width="167" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="F8H-bf-tWb"/>
@@ -106,21 +108,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gml-6n-Eey">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gml-6n-Eey">
                                 <rect key="frame" x="22" y="191" width="101" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="E3O-dt-TM7"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="NJv-I9-rMU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tactile Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-79-BnZ">
-                                <rect key="frame" x="22" y="250" width="167" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="d8Q-R9-VsR"/>
-                                    <constraint firstAttribute="width" constant="167" id="rLU-OC-mpk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -150,11 +142,9 @@
                             <constraint firstItem="pAe-fg-gpR" firstAttribute="centerX" secondItem="SPW-4v-BzZ" secondAttribute="centerX" id="AGh-tC-cAY"/>
                             <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="35" id="Bb8-79-bAV"/>
                             <constraint firstItem="JX7-ry-Va5" firstAttribute="top" secondItem="bTk-95-28F" secondAttribute="bottom" constant="37" id="Bqu-pb-3Az"/>
-                            <constraint firstItem="rEp-79-BnZ" firstAttribute="top" secondItem="gml-6n-Eey" secondAttribute="bottom" constant="30" id="QUB-Zp-y95"/>
                             <constraint firstItem="MgY-9p-qQX" firstAttribute="bottom" secondItem="pAe-fg-gpR" secondAttribute="bottom" constant="112" id="Z1T-1M-z9j"/>
                             <constraint firstItem="JX7-ry-Va5" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="j8G-Fg-Nxf"/>
                             <constraint firstItem="gml-6n-Eey" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="m95-3G-DOi"/>
-                            <constraint firstItem="rEp-79-BnZ" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="sl4-lz-0JC"/>
                             <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="was-zE-hKx"/>
                         </constraints>
                     </view>
@@ -510,7 +500,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-VR-4PP">
-                                <rect key="frame" x="88" y="44" width="204" height="36"/>
+                                <rect key="frame" x="47" y="44" width="204" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -521,8 +511,18 @@
                         <color key="backgroundColor" name="Off white"/>
                     </view>
                     <navigationItem key="navigationItem" id="AZw-YI-4FS" colorLabel="IBBuiltInLabel-Purple"/>
+                    <connections>
+                        <outlet property="dayLabel" destination="r2j-VR-4PP" id="gCO-Jl-y1g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-y2-LIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <menu title="Inline Menu" id="9AY-zi-kJE">
+                    <menuOptions key="menuOptions" displayInline="YES"/>
+                    <children>
+                        <command title="Item 1" id="e9L-nW-vC0"/>
+                        <command title="Item 2" id="Z2J-By-EoP"/>
+                    </children>
+                </menu>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="1946.176911544228"/>
         </scene>
@@ -531,7 +531,7 @@
             <objects>
                 <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YV5-Vr-Ag2" userLabel="Home" customClass="HomeViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0b3-A9-yn9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u3M-DW-XaM">
@@ -545,6 +545,7 @@
                         <color key="tintColor" red="0.58466583490000001" green="0.78444093469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="PHq-HO-Buu"/>
+                    <navigationItem key="navigationItem" id="cZu-nL-WHE"/>
                     <connections>
                         <outlet property="theContainer" destination="u3M-DW-XaM" id="AEb-4q-bWs"/>
                     </connections>
@@ -741,6 +742,13 @@
                                                     <action selector="assignEventTitle:" destination="ab7-6i-4ps" eventType="editingChanged" id="S4V-mc-256"/>
                                                 </connections>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-RA-7sd">
+                                                <rect key="frame" x="22" y="7" width="299" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" name="Off white"/>
                                         <constraints>
@@ -852,6 +860,7 @@
                         <outlet property="descriptionTextField" destination="1yo-yF-CpF" id="oCN-lJ-ofP"/>
                         <outlet property="endDatePicker" destination="kmV-gk-kcq" id="FEA-R8-YcU"/>
                         <outlet property="endTimePicker" destination="KtT-Ij-3Y9" id="gSx-qs-bX1"/>
+                        <outlet property="errorMessageLabel" destination="T7D-RA-7sd" id="BJa-NM-9Bj"/>
                         <outlet property="locationTextField" destination="Fag-2r-tof" id="ZRh-r2-ir9"/>
                         <outlet property="startDatePicker" destination="dq7-j2-wxb" id="AEZ-ha-5pr"/>
                         <outlet property="startTimePicker" destination="XuF-Mz-gCm" id="PFo-ph-108"/>
@@ -1060,6 +1069,9 @@
             <point key="canvasLocation" x="133.59999999999999" y="2666.7166416791606"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vhi-yJ-zB0"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Add" width="673" height="672"/>
         <image name="Arrow(Left)-4" width="100" height="100"/>

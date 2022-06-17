@@ -30,8 +30,9 @@ class EventViewController: UIViewController {
         dateFormatter2.locale = Locale.current
         let dateR = dateFormatter2.string(from: selectedDate)
         
-        self.db.collection("dateR").getDocuments() { [self] (querySnapshot, error) in
-            guard let documents2 = querySnapshot?.documents else {
+        print (dateR)
+        
+        self.db.collection("\(dateR)").getDocuments() { [self] (querySnapshot, error) in guard let documents2 = querySnapshot?.documents else {
                 print("No documents")
                 return
             }

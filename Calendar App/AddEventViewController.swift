@@ -7,25 +7,6 @@
 
 import UIKit
 
-public var eventIdentification : Int = 1
-public var whichTextBox : Int = 0
-public var eventTitle : String = ""
-public var allDayEvent : Bool = false
-public var startEventYear : Int = 0
-public var startEventMonth : Int = 0
-public var startEventDay : Int = 0
-public var startEventHour : Int = 0
-public var startEventMinute : Int = 0
-public var startEventPeriod : Int = -1
-public var endEventYear : Int = 0
-public var endEventMonth : Int = 0
-public var endEventDay : Int = 0
-public var endEventHour : Int = 0
-public var endEventMinute : Int = 0
-public var endEventPeriod : Int = -1
-public var eventLocation : String = ""
-public var eventDescription : String = ""
-
 class AddEventViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
@@ -80,6 +61,25 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var startTimePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var endTimePicker: UIDatePicker!
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    public var eventIdentification : Int = 1
+    public var whichTextBox : Int = 0
+    public var eventTitle : String = ""
+    public var allDayEvent : Bool = false
+    public var startEventYear : Int = 0
+    public var startEventMonth : Int = 0
+    public var startEventDay : Int = 0
+    public var startEventHour : Int = 0
+    public var startEventMinute : Int = 0
+    public var startEventPeriod : Int = -1
+    public var endEventYear : Int = 0
+    public var endEventMonth : Int = 0
+    public var endEventDay : Int = 0
+    public var endEventHour : Int = 0
+    public var endEventMinute : Int = 0
+    public var endEventPeriod : Int = -1
+    public var eventLocation : String = ""
+    public var eventDescription : String = ""
     
     //FUNCTIONS
     //reading text boxes
@@ -265,18 +265,33 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
 
     //creating instance of class
     @IBAction func createClass(_ sender: Any) {
-        //these variables need to be var instead of let when event editing is implemented
+        if eventTitle == "" {
+            errorMessageLabel.text = "no event title"
+        }
+        else if eventLocation == "" {
+            errorMessageLabel.text = "no event location"
+        }
+        else if eventDescription == "" {
+            errorMessageLabel.text = "no event description"
+        }
+        else if startEventHour == endEventHour && startEventMinute == endEventMinute && startEventDay == endEventDay && startEventMonth == endEventMonth {
+            errorMessageLabel.text = "event cannot start and end at same time"
+        }
+        else {
         let startEventDate = ICSDate (year : startEventYear , month : startEventMonth , day : startEventDay)
         let startEventTime = ICSTime (hour: startEventHour, minute: startEventMinute, period: startEventPeriod)
         let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
         let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
         let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
-        
-   add()
-        
-        //at end of loop
-        //eventIdentification+=1
+            
+            print("yes it is working")
+            //pull variables from date and time class and not just variable when apssing to the firestore set
+            add(startEventMonth : startEventMonth, startEventDay : startEventDay, startEventYear : startEventYear, startEventHour : startEventHour, startEventMinute : startEventMinute, endEventMonth : endEventMonth, endEventDay : endEventDay, endEventYear : endEventYear, endEventHour : endEventHour, endEventMinute : endEventMinute, event: event)
+            
+            
+        eventIdentification+=1
         performSegue(withIdentifier: "GenerateSegue", sender: event)
+        }
     }
 }
 

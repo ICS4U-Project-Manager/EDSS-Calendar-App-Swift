@@ -11,96 +11,142 @@ import FirebaseFirestore
 import FirebaseCore
 import FirebaseStorage
 
-
+var num = 0
+var dateR : String = ""
+public var titlename : String = ""
+var count3 : Int = 0
 
 class DayViewController: UIViewController {
+    
+    @IBOutlet weak var dayLabel: UILabel!
+    
     
     var db = Firestore.firestore()
     var events = [event]()
     
     override func viewDidLoad() {
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 50, y: 166)
+        label.textColor = .black
+        label.textAlignment = .center
+        label.text = "Start Time - End Time"
+        self.view.addSubview(label)
+        
+        let label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label2.center = CGPoint(x: 275, y: 166)
+        label2.textAlignment = .center
+        label2.textColor = .black
+        label2.text = "Event Title"
+        self.view.addSubview(label2)
+        
+        dateR = ""
+        titlename = ""
+        count3 = 0
+        num = 0
+        print (num)
+        
         super.viewDidLoad()
+        
+        dayLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + dayNumString
         
         let dateFormatter2 = DateFormatter()
         dateFormatter2.dateStyle = .medium
         dateFormatter2.timeStyle = .none
         dateFormatter2.locale = Locale.current
-        let dateR = dateFormatter2.string(from: selectedDate)
+        dateR = dateFormatter2.string(from: selectedDate)
         
         db.collection("\(dateR)").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    print("\(document.data()["name"] as! String)")
-                    
-                    
-                    print ("rr \(dateR)")
-                    
-                    
-                    
-                    self.db.collection("\(dateR)").getDocuments() { [self] (querySnapshot, error) in
-                        guard let documents2 = querySnapshot?.documents else {
-                            print("No documents")
-                            return
-                        }
-                        
-                        let count = documents2.count
-                        self.events = documents2.map { (queryDocumentSnapshot) -> event in
-                            let data2 = queryDocumentSnapshot.data()
-                            let name=data2["name"]! as! String
-                            let description=data2["description"]! as? String ?? ""
-                            let location=data2["location"]! as? String ?? ""
-                            let group=data2["group"]! as? String ?? ""
-                            let idd=data2["idd"]! as? Int ?? 0
-                            let startDate = (data2["startDate"] as? Timestamp)?.dateValue() ?? Date()
-                            var startDateR: String {
-                                let formatter = DateFormatter()
-                                formatter.dateFormat = "EEEE, MMM d, yyyy hh:mm"
-                                return formatter.string(from: startDate)
-                            }
-                            let endDate = (data2["endDate"] as? Timestamp)?.dateValue() ?? Date()
-                            var endDateR: String {
-                                let formatter = DateFormatter()
-                                formatter.dateFormat = "EEEE, MMM d, yyyy hh:mm"
-                                return formatter.string(from: endDate)
-                            }
-                            
-                            var YAxis = 300
-                            
-                            build()
-                            build()
-                            build()
-                            
-                            func build() {
-                                let buttonX = 100
-                                let buttonY = YAxis
-                                let buttonWidth = 300
-                                let buttonHeight = 50
+                print("No error getting documents")
+                let document = querySnapshot?.documents
+                count3 = document!.count
+                
+                print(dateR)
+                print("ee \(count3)")
+                
+                
+                print ("rr \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
+                
+                var YAxis = 250
+                
+                for i in 0..<count3 {
+                    call()
+                    func call(){
+                        self.db.collection("\(dateR)").getDocuments() { (querySnapshot, err) in
+                            if let err = err {
+                                print("Error getting documents: \(err)")
+                            } else {
+                                print("No error getting documents")
+                                let document = querySnapshot!.documents[num]
                                 
-                                let button = UIButton(type: .system)
-                                button.setTitle("\(document.data()["name"])", for: .normal)
-                                button.tintColor = .white
-                                button.backgroundColor = .red
-                                button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-                                button.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight)
-                                self.view.addSubview(button)
+                                build()
                                 
-                                YAxis -= 75
+                                func build() {
+                                    
+                                    num += 1
+                                    
+                                    let buttonX = 160
+                                    let buttonY = YAxis
+                                    let buttonWidth = 400
+                                    let buttonHeight = 50
+                                    
+                                    let button = UIButton(type: .system)
+                                    button.setTitle("\(document.data()["name"] as! String)", for: .normal)
+                                    button.tintColor = .white
+                                    button.backgroundColor = .red
+                                    button.addTarget(self, action: #selector(self.buttonClicked), for: .touchUpInside)
+                                    button.tag = i
+                                    button.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight)
+                                    self.view.addSubview(button)
+                                    
+                                    YAxis -= 75
+                                    
+                                }
                             }
-                            
-                            return event(name: name, description: description, location: location, group: group, idd: idd, startDate: startDate)
                         }
                     }
                 }
             }
         }
+        
+        func butonClicked(_ sender: Any){
+                    self.performSegue (withIdentifier: "FirstSegue", sender: self)
+                }
     }
     
+
     
     @objc func buttonClicked(sender : UIButton){
-        print("ok")
+        for i in 0..<count3 {
+            switch (sender.tag){
+            case i:
+                num = i
+                Calling()
+            default:
+                print("nothing worked")
+            }
+        }
     }
-    
 }
+
+func Calling(){
+    let db = Firestore.firestore()
+    db.collection("\(dateR)").getDocuments() { (querySnapshot, err) in
+        if let err = err {
+            print("Error getting documents: \(err)")
+        } else {
+            let document = querySnapshot?.documents[num]
+            titlename = document!.data()["name"] as! String
+            print("\(titlename)")
+
+        }
+    }
+}
+    
+
+
+
+

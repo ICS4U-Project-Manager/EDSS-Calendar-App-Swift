@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import GoogleSignIn
 
+
 var fire = false
 
 class AuthenticationViewModel: ObservableObject {
@@ -19,7 +20,7 @@ class AuthenticationViewModel: ObservableObject {
       
   }
   
-  @Published var state: SignInState = .signedOut
+    @Published var state: SignInState = .signedOut
   
   func signIn() {
     // 1
@@ -64,6 +65,7 @@ class AuthenticationViewModel: ObservableObject {
       } else {
           var fire = true
         state = .signedIn
+          
       }
     }
   }
@@ -78,6 +80,7 @@ class AuthenticationViewModel: ObservableObject {
       
         fire = false
       state = .signedOut
+        
     } catch {
       print(error.localizedDescription)
     }
