@@ -134,6 +134,16 @@
                                     <segue destination="JGv-0x-75V" kind="unwind" unwindAction="LogOutUnwind:" id="QEQ-O0-xxv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNDER CONSTRUCTION" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMG-2j-7IP">
+                                <rect key="frame" x="17.5" y="274.5" width="340" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="M0l-pG-Go4"/>
+                                    <constraint firstAttribute="height" constant="118" id="n4c-HC-DJg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" name="Vibrant purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MgY-9p-qQX"/>
                         <color key="backgroundColor" name="Off white"/>
@@ -142,9 +152,11 @@
                             <constraint firstItem="pAe-fg-gpR" firstAttribute="centerX" secondItem="SPW-4v-BzZ" secondAttribute="centerX" id="AGh-tC-cAY"/>
                             <constraint firstItem="bTk-95-28F" firstAttribute="top" secondItem="MgY-9p-qQX" secondAttribute="top" constant="35" id="Bb8-79-bAV"/>
                             <constraint firstItem="JX7-ry-Va5" firstAttribute="top" secondItem="bTk-95-28F" secondAttribute="bottom" constant="37" id="Bqu-pb-3Az"/>
+                            <constraint firstItem="BMG-2j-7IP" firstAttribute="centerY" secondItem="SPW-4v-BzZ" secondAttribute="centerY" id="RIK-nC-R0P"/>
                             <constraint firstItem="MgY-9p-qQX" firstAttribute="bottom" secondItem="pAe-fg-gpR" secondAttribute="bottom" constant="112" id="Z1T-1M-z9j"/>
                             <constraint firstItem="JX7-ry-Va5" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="j8G-Fg-Nxf"/>
                             <constraint firstItem="gml-6n-Eey" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="m95-3G-DOi"/>
+                            <constraint firstItem="BMG-2j-7IP" firstAttribute="centerX" secondItem="SPW-4v-BzZ" secondAttribute="centerX" id="sE5-JB-7nY"/>
                             <constraint firstItem="bTk-95-28F" firstAttribute="leading" secondItem="MgY-9p-qQX" secondAttribute="leading" constant="22" id="was-zE-hKx"/>
                         </constraints>
                     </view>
@@ -251,11 +263,23 @@
                                     <constraint firstAttribute="width" constant="375" id="tgO-I6-G7f"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNDER CONSTRUCTION" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI3-jn-yqw">
+                                <rect key="frame" x="17.5" y="240" width="340" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="OzL-CO-8MW"/>
+                                    <constraint firstAttribute="height" constant="118" id="Rp8-YQ-q0S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" name="Vibrant purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lLg-LC-bwk"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LI3-jn-yqw" firstAttribute="centerX" secondItem="neo-O8-Kzc" secondAttribute="centerX" id="6lo-Zb-8MC"/>
                             <constraint firstItem="lPp-E8-TIy" firstAttribute="centerX" secondItem="neo-O8-Kzc" secondAttribute="centerX" id="HZd-tP-xVU"/>
+                            <constraint firstItem="lLg-LC-bwk" firstAttribute="bottom" secondItem="LI3-jn-yqw" secondAttribute="bottom" constant="260" id="PRr-nu-eZh"/>
                             <constraint firstItem="lPp-E8-TIy" firstAttribute="top" secondItem="neo-O8-Kzc" secondAttribute="topMargin" constant="-29" id="jab-H7-qbf"/>
                         </constraints>
                     </view>
