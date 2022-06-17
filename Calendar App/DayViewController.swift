@@ -129,12 +129,7 @@ class DayViewController: UIViewController {
             }
         }
     }
-    @IBAction func dayToEvent(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToEvent", sender: self)
-    }
 }
-
-
 
 func Calling(){
     let db = Firestore.firestore()
