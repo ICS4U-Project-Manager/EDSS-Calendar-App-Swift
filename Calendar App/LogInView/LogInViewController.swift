@@ -11,6 +11,7 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var theContainer2: UIView!
 
     func showscreen()  {
+        print("\(fire)")
         
         EventDay()
         
@@ -24,6 +25,8 @@ class SigninViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("\(fire)")
 
         let childView = UIHostingController(rootView: LoginViewSwiftUI() )
         addChild(childView)
@@ -31,9 +34,7 @@ class SigninViewController: UIViewController {
         theContainer2.addSubview(childView.view)
         childView.didMove(toParent: self)
     }
-    @IBAction func butonClicked(_ sender: Any){
-                self.performSegue (withIdentifier: "FirstSegue", sender: self)
-            }
+   
 }
 
 

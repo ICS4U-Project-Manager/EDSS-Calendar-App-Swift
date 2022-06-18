@@ -24,13 +24,11 @@ class EventViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "MMM dd"
-        let dateZ = dateFormatterGet.date(from: "\(selectedDate)")
+        print("gd \(titlename)")
         
-        print ("cc \(dateZ)")
+        print ("cc \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
         
-        self.db.collection("\(dateZ)").getDocuments() { [self] (querySnapshot, error) in guard let documents2 = querySnapshot?.documents else {
+        self.db.collection("\(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)").whereField("name", isEqualTo: "\(titlename)").getDocuments() { [self] (querySnapshot, error) in guard let documents2 = querySnapshot?.documents else {
                 print("No documents")
                 return
             }

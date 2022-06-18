@@ -22,6 +22,7 @@ struct LoginViewSwiftUI: View {
         }
           .background(Color("Clear"))
           .onAppear(){
+              AuthenticationViewModel().signOut()
               type.showscreen()
           }
           
