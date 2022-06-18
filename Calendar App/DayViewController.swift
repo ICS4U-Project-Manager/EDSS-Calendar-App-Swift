@@ -55,7 +55,7 @@ class DayViewController: UIViewController {
         dateFormatterGet.dateFormat = "MMM dd"
         let dateR = dateFormatterGet.date(from: "\(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString) ")
         
-        db.collection("\(dateR)").getDocuments() { (querySnapshot, err) in
+        db.collection("\(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -63,7 +63,7 @@ class DayViewController: UIViewController {
                 let document = querySnapshot?.documents
                 count3 = document!.count
                 
-                print("cx \(dateR)")
+                print("cx \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
                 print("ee \(count3)")
                 
                 
@@ -74,7 +74,7 @@ class DayViewController: UIViewController {
                 for i in 0..<count3 {
                     call()
                     func call(){
-                        self.db.collection("\(dateR)").getDocuments() { (querySnapshot, err) in
+                        self.db.collection("\(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)").getDocuments() { (querySnapshot, err) in
                             if let err = err {
                                 print("Error getting documents: \(err)")
                             } else {

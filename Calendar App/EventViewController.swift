@@ -26,7 +26,7 @@ class EventViewController: UIViewController {
         
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "MMM dd"
-        let dateZ = dateFormatterGet.date(from: "\(selectedDate), 2022")
+        let dateZ = dateFormatterGet.date(from: "\(selectedDate)")
         
         print ("cc \(dateZ)")
         

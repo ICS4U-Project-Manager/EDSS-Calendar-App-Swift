@@ -25,18 +25,16 @@ func add(startEventMonth : Int, startEventDay : Int, startEventYear : Int, start
     dateFormatter6.locale = Locale.current
     let dateF = dateFormatter6.string(from: startDate)
     
-    let dateFormatter7 = DateFormatter()
-    dateFormatter7.dateFormat = "MMM dd"
-    dateFormatter7.timeStyle = .none
-    dateFormatter7.locale = Locale.current
-    let dateT = dateFormatter7.string(from: startDate)
+    let dateFormatterGet = DateFormatter()
+    dateFormatterGet.dateFormat = "MMMdd"
+    let dateP = dateFormatterGet.date(from: "\(startDate)")
 
     let endDate = ([endEventMonth,endEventDay,endEventYear,endEventHour,endEventMinute] as? Timestamp)?.dateValue() ?? Date()
 
     
-    print ("zz\(dateF)")
+    print ("zz\(dateP)")
     let db = Firestore.firestore()
-    db.collection("\(dateF)").addDocument(data:["name":"\(event.getName())","endDate": endDate,"startDate":startDate, "description": "\(event.getDescription())", "location": "\(event.getLocation())", "group": "\(event.getGroup())", "idd": 1]) { err in
+    db.collection("\(dateP)").addDocument(data:["name":"\(event.getName())","endDate": endDate,"startDate":startDate, "description": "\(event.getDescription())", "location": "\(event.getLocation())", "group": "\(event.getGroup())", "idd": 1]) { err in
         if let err = err {
             print("Error writing document: \(err)")
         } else {
