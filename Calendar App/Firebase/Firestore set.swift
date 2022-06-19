@@ -16,28 +16,20 @@ import SwiftUI
 
 func add(startEventMonth : Int, startEventDay : Int, startEventYear : Int, startEventHour : Int, startEventMinute : Int, endEventMonth : Int, endEventDay : Int, endEventYear : Int, endEventHour : Int, endEventMinute : Int, event : ICSEvent){
     
-  
-
-    let startDate = ([startEventMonth,startEventDay,startEventYear,startEventHour,startEventMinute] as? Timestamp)?.dateValue() ?? Date()
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd"
-    let dateZ = dateFormatter.string(from: selectedDate)
+    print("the \(date9)")
+    print("gfugih \(GetStartDate)")
+    print("jghgf \(GetStartTime)")
     
-    let dateFormatter2 = DateFormatter()
-    dateFormatter2.dateFormat = "MMM"
-    let dateX = dateFormatter2.string(from: selectedDate)
-
-    let endDate = ([endEventMonth,endEventDay,endEventYear,endEventHour,endEventMinute] as? Timestamp)?.dateValue() ?? Date()
-
+    
     titlename = ("\(event.getName())")
     print ("titlename: \(event.getName())")
-    print ("zz\(dateX) \(dateZ)")
+    
     let db = Firestore.firestore()
-    db.collection("\(dateX) \(dateZ)").addDocument(data:["name":"\(event.getName())","endDate": endDate,"startDate":startDate, "description": "\(event.getDescription())", "location": "\(event.getLocation())", "group": "\(event.getGroup())", "idd": 1]) { err in
+    db.collection("ghj").addDocument(data:["name":"\(event.getName())","endDate": Date(),"startDate":Date(), "description": "\(event.getDescription())", "location": "\(event.getLocation())", "group": "\(event.getGroup())", "idd": 1]) { err in
         if let err = err {
             print("Error writing document: \(err)")
         } else {
-            selectedDate = startDate
+            selectedDate = Date()
             print("Document successfully written!")
         }
     }

@@ -111,33 +111,30 @@ class DayViewController: UIViewController {
             }
         }
         
-       
+        
     }
     
-
+    
     
     @objc func buttonClicked(sender : UIButton){
         for i in 0..<count3 {
             switch (sender.tag){
             case i:
                 num = i
-                let dateFormatterGet = DateFormatter()
-                dateFormatterGet.dateFormat = "MMM dd"
-                let dateR = dateFormatterGet.date(from: "\(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString) ")
-
+                
                 print("fd \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
                 let db = Firestore.firestore()
                 db.collection("\(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        let document = querySnapshot?.documents[num]
-                        titlename = document!.data()["name"] as! String
-                                    
-                    }
+                    let document = querySnapshot?.documents[num]
+                    titlename = document!.data()["name"] as! String
+                    print("hg \(titlename)")
+                    titlename = document!.data()["name"] as! String
+                    print("hg2 \(titlename)")
+                    call()
                 }
-                print("hg \(titlename)")
+                func call(){
                 performSegue (withIdentifier: "Firebase", sender: self)
+                }
             default:
                 print("nothing worked")
             }
@@ -145,7 +142,7 @@ class DayViewController: UIViewController {
     }
 }
 
-   
+
 
 
 

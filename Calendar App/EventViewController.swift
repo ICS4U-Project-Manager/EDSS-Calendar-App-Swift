@@ -24,7 +24,9 @@ class EventViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        print("gd \(titlename)")
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "MMM dd"
+        let dateZ = dateFormatterGet.date(from: "\(selectedDate)")
         
         print ("cc \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
         
@@ -64,7 +66,6 @@ class EventViewController: UIViewController {
         }
     }
 }
-
 
 struct event: Identifiable {
     var id: String = UUID().uuidString

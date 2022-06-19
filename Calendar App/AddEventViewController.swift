@@ -7,13 +7,17 @@
 
 import UIKit
 
-class AddEventViewController: UIViewController, UITextFieldDelegate {
+var GetStartDate = Date()
+var GetStartTime = Date()
+var date9 = Date()
 
+class AddEventViewController: UIViewController, UITextFieldDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-    
+        
         //Preparing keyboard exit
         self.titleTextField.delegate = self
         self.locationTextField.delegate = self
@@ -27,17 +31,17 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         cancelButton.layer.borderWidth = 2
         cancelButton.layer.borderColor = CGColor(red: 219/255, green: 233/255, blue: 229/255, alpha: 1)
         cancelButton.layer.cornerRadius = 10
-    //preparing date picker design
+        //preparing date picker design
         
     }
     
     //Keyboard Dissapear Functions
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if whichTextBox == 1 {
-        return titleTextField.resignFirstResponder()
+            return titleTextField.resignFirstResponder()
         }
         else if whichTextBox == 2 {
-           return locationTextField.resignFirstResponder()
+            return locationTextField.resignFirstResponder()
         }
         else if whichTextBox == 3 {
             return descriptionTextField.resignFirstResponder()
@@ -131,11 +135,12 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     //getting start time and date
     @IBAction func getStartDate(_ sender: Any) {
         //initializing date format
-        let getDate = startDatePicker.date
+        GetStartDate = startDatePicker.date
         var placeholderDate : String = ""
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        placeholderDate = formatter.string(from: getDate)
+        formatter.timeZone = TimeZone(abbreviation: "EST")
+        formatter.dateFormat = "MMM dd, YYYY"
+        placeholderDate = formatter.string(from: GetStartDate)
         //reading date formatted string
         var month : String = ""
         var day : String = ""
@@ -155,19 +160,20 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
                 datePart+=1
             }
         }
-        startEventMonth = Int(month)!
-        startEventDay = Int(day)!
+        startEventMonth = (Int(month))!
+        startEventDay = (Int(day))!
         startEventYear = 2000 + (Int(year)!)
         
-
+        
     }
     
     @IBAction func getStartTime(_ sender: Any) {
-        let getTime = startTimePicker.date
+        GetStartTime = startTimePicker.date
         var placeholderTime : String = ""
         let formatter = DateFormatter()
-        formatter.timeStyle = .short
-        placeholderTime = formatter.string(from: getTime)
+        formatter.timeZone = TimeZone(abbreviation: "EST")
+        formatter.dateFormat = "hh:mm"
+        placeholderTime = formatter.string(from: GetStartTime)
         var hours : String = ""
         var minutes : String = ""
         var minutesAndPeriod = ""
@@ -175,37 +181,37 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         var timePart = 1
         
         if switchState == false {
-        for element in placeholderTime {
-            if timePart == 1 && element != ":" {
-                hours+=String(element)
-            }
-            else if timePart == 2 && element != ":" {
-                minutesAndPeriod+=String(element)
-            }
-            else if element == ":" && timePart > 0 {
-                timePart+=1
-            }
-        }
-        var index : Int = 0
-        for element in minutesAndPeriod {
-            if index < 2 {
-                minutes+=String(element)
-            }
-            else if index > 2 {
-                if element == "A" {
-                    period = 0
-                    break
+            for element in placeholderTime {
+                if timePart == 1 && element != ":" {
+                    hours+=String(element)
                 }
-                else {
-                    period = 1
-                    break
+                else if timePart == 2 && element != ":" {
+                    minutesAndPeriod+=String(element)
+                }
+                else if element == ":" && timePart > 0 {
+                    timePart+=1
                 }
             }
-            index+=1
+            var index : Int = 0
+            for element in minutesAndPeriod {
+                if index < 2 {
+                    minutes+=String(element)
+                }
+                else if index > 2 {
+                    if element == "A" {
+                        period = 0
+                        break
+                    }
+                    else {
+                        period = 1
+                        break
+                    }
+                }
+                index+=1
+            }
         }
-        }
-        startEventHour = Int(hours)!
-        startEventMinute = Int(minutes)!
+        startEventHour = (Int(hours))!
+        startEventMinute = (Int(minutes))!
         startEventPeriod = period
     }
     
@@ -215,13 +221,18 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         let getDate = endDatePicker.date
         var placeholderDate : String = ""
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
+        formatter.timeZone = TimeZone(abbreviation: "EST")
+        formatter.dateFormat = "MMM dd, YYYY"
         placeholderDate = formatter.string(from: getDate)
         //reading date formatted string
+        
         var month : String = ""
         var day : String = ""
         var year : String = ""
         var datePart = 1
+        print (month)
+        print (day)
+        print (year)
         for element in placeholderDate {
             if datePart == 1 && element != "/" {
                 month+=String(element)
@@ -236,16 +247,17 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
                 datePart+=1
             }
         }
-        endEventMonth = Int(month)!
-        endEventDay = Int(day)!
-        endEventYear = 2000 + Int(year)!
+        endEventMonth = (Int(month))!
+        endEventDay = (Int(day))!
+        endEventYear = 2000 + (Int(year))!
     }
     
     @IBAction func getEndTime(_ sender: Any) {
         let getTime = endTimePicker.date
         var placeholderTime : String = ""
         let formatter = DateFormatter()
-        formatter.timeStyle = .short
+        formatter.timeZone = TimeZone(abbreviation: "EST")
+        formatter.dateFormat = "hh:mm"
         placeholderTime = formatter.string(from: getTime)
         var hours : String = ""
         var minutes : String = ""
@@ -254,40 +266,40 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         var timePart = 1
         
         if switchState == false {
-        for element in placeholderTime {
-            if timePart == 1 && element != ":" {
-                hours+=String(element)
-            }
-            else if timePart == 2 && element != ":" {
-                minutesAndPeriod+=String(element)
-            }
-            else if element == ":" && timePart > 0 {
-                timePart+=1
-            }
-        }
-        var index : Int = 0
-        for element in minutesAndPeriod {
-            if index < 2 {
-                minutes+=String(element)
-            }
-            else if index > 2 {
-                if element == "A" {
-                    period = 0
-                    break
+            for element in placeholderTime {
+                if timePart == 1 && element != ":" {
+                    hours+=String(element)
                 }
-                else {
-                    period = 1
-                    break
+                else if timePart == 2 && element != ":" {
+                    minutesAndPeriod+=String(element)
+                }
+                else if element == ":" && timePart > 0 {
+                    timePart+=1
                 }
             }
-            index+=1
+            var index : Int = 0
+            for element in minutesAndPeriod {
+                if index < 2 {
+                    minutes+=String(element)
+                }
+                else if index > 2 {
+                    if element == "A" {
+                        period = 0
+                        break
+                    }
+                    else {
+                        period = 1
+                        break
+                    }
+                }
+                index+=1
+            }
         }
-        }
-        endEventHour = Int(hours)!
-        endEventMinute = Int(minutes)!
+        endEventHour = (Int(hours))!
+        endEventMinute = (Int(minutes))!
         endEventPeriod = period
     }
-
+    
     //creating instance of class
     @IBAction func createClass(_ sender: Any) {
         if eventTitle == "" {
@@ -306,18 +318,80 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
             errorMessageLabel.text = "event cannot start and end at same time"
         }
         else {
-        let startEventDate = ICSDate (year : startEventYear , month : startEventMonth , day : startEventDay)
-        let startEventTime = ICSTime (hour: startEventHour, minute: startEventMinute, period: startEventPeriod)
-        let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
-        let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
+            let startEventDate = ICSDate (year : startEventYear , month : startEventMonth , day : startEventDay)
+            let startEventTime = ICSTime (hour: startEventHour, minute: startEventMinute, period: startEventPeriod)
+            let endEventDate = ICSDate (year : endEventYear , month : endEventMonth , day : endEventDay)
+            let endEventTime = ICSTime (hour: endEventHour, minute: endEventMinute, period: endEventPeriod)
             let event = ICSEvent (name : eventTitle , description: eventDescription , location: eventLocation , group : group , startDate: startEventDate , endDate : endEventDate, startTime : startEventTime , endTime : endEventTime , id : eventIdentification)
+            
+            print("")
+            print("Start")
+            print(startEventHour)
+            print(endEventHour)
+            print(startEventMinute)
+            print(endEventMinute)
+            print(startEventDay)
+            print(endEventDay)
+            print(startEventMonth)
+            print(endEventMonth)
+            print(startEventYear)
+            print(endEventYear)
+            print("lg \(endDatePicker)")
+            print("lx \(startDatePicker)")
+            print("lg \(endTimePicker)")
+            print("lx \(startTimePicker)")
+            print("end")
+            
+            if startEventHour == 0 {
+                let startEventHour = Calendar.current.component(.hour, from: Date())
+            }
+            else if endEventHour == 0 {
+                let startEventHour = Calendar.current.component(.hour, from: Date())
+            }
+            else if startEventMinute == 0 {
+                let startEventHour = Calendar.current.component(.minute, from: Date())
+            }
+            else if endEventMinute == 0 {
+                let startEventHour = Calendar.current.component(.minute, from: Date())
+            }
+            else if startEventDay == 0 {
+                let startEventHour = Calendar.current.component(.day, from: Date())
+            }
+            else if startEventDay == 0 {
+                let startEventHour = Calendar.current.component(.day, from: Date())
+            }
+            else if startEventYear == 0 {
+                let startEventHour = Calendar.current.component(.year, from: Date())
+            }
+            else if endEventYear == 0 {
+                let startEventHour = Calendar.current.component(.year, from: Date())
+            }
+            
+            print("")
+            print("Start2")
+            print(startEventHour)
+            print(endEventHour)
+            print(startEventMinute)
+            print(endEventMinute)
+            print(startEventDay)
+            print(endEventDay)
+            print(startEventMonth)
+            print(endEventMonth)
+            print(startEventYear)
+            print(endEventYear)
+            print("lg \(endDatePicker)")
+            print("lx \(startDatePicker)")
+            print("lg \(endTimePicker)")
+            print("lx \(startTimePicker)")
+            print("end2")
+
             
             print("yes it is working")
             add(startEventMonth : startEventDate.getMonth(), startEventDay : startEventDate.getDay(), startEventYear : startEventDate.getYear(), startEventHour : startEventTime.getHour(), startEventMinute : startEventTime.getMinute(), endEventMonth : endEventDate.getMonth(), endEventDay : endEventDate.getDay(), endEventYear : endEventDate.getYear(), endEventHour : endEventTime.getHour(), endEventMinute : endEventTime.getMinute(), event: event)
             
             
-        eventIdentification+=1
-        performSegue(withIdentifier: "GenerateSegue", sender: event)
+            eventIdentification+=1
+            performSegue(withIdentifier: "GenerateSegue", sender: event)
         }
     }
     
