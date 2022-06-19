@@ -27,6 +27,7 @@ class EventViewController: UIViewController {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "MMM dd"
         let dateZ = dateFormatterGet.date(from: "\(selectedDate)")
+   
         
         print ("cc \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
         
@@ -53,6 +54,8 @@ class EventViewController: UIViewController {
                     formatter.dateFormat = "EEEE, MMM d, yyyy hh:mm"
                     return formatter.string(from: endDate)
                 }
+                
+                
                 
                 name5.text = name
                 startDate5.text = startDateR
