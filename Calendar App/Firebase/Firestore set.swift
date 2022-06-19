@@ -29,7 +29,7 @@ func add(startEventMonth : Int, startEventDay : Int, startEventYear : Int, start
         "endDate": selectedDate6,
         "startDate":selectedDate4,
         "description": "\(event.getDescription())",
-        "location": g"\(event.getLocation())",
+        "location": "\(event.getLocation())",
         "group": "\(event.getGroup())",
         "idd": 1]) { err in
         if let err = err {

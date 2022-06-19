@@ -148,7 +148,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         print("Selected value \(selectedDate3)")
     }
  
-    @IBAction func EndDateAndTime(_ sender: UIDatePicker) {
+    @IBAction func EndDateAndTime(_ sender2: UIDatePicker) {
     
     let dateFormatter2: DateFormatter = DateFormatter()
         
@@ -156,8 +156,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         dateFormatter2.dateFormat = "MMM dd, yyyy hh:mm"
         
         // Apply date format
-        selectedDate7 = dateFormatter2.string(from: sender.date)
-        selectedDate6 = sender.date
+        selectedDate7 = dateFormatter2.string(from: sender2.date)
+        selectedDate6 = sender2.date
         print("Selected value \(selectedDate7)")
     }
     
