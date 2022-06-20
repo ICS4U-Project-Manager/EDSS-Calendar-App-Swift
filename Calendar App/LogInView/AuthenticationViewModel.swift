@@ -87,16 +87,20 @@ class AuthenticationViewModel: ObservableObject {
         print("vbnm5")
         // 3
         Auth.auth().signIn(with: credential) { [unowned self] (_, error) in
+            func call(){
+                
+            }
             print("vbnm6")
             if let error = error {print("vbnm7")
                 print(error.localizedDescription)
             } else {print("vbnm8")
+        fire = true
                 
                 print("signed in")
                 state = .signedIn
                 print ("workde2.0")
                 self.buttonClicked()
-                
+               
             }
         }
     }
@@ -108,14 +112,18 @@ class AuthenticationViewModel: ObservableObject {
         do {
             // 2
             try Auth.auth().signOut()
-            
+           
             fire = false
             state = .signedOut
             
+            
         } catch {
             print(error.localizedDescription)
+            }
         }
+    
     }
 
-}
+
+
 

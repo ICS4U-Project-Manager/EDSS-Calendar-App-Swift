@@ -10,10 +10,13 @@ import SwiftUI
 class SigninViewController: UIViewController {
     @IBOutlet weak var theContainer2: UIView!
 
+    @IBOutlet weak var Pass: UIButton!
+   
+
+    
     func showscreen()  {
-        print("\(fire)")
         
-        EventDay()
+        
         
         if fire == true {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
@@ -26,7 +29,6 @@ class SigninViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("\(fire)")
 
         let childView = UIHostingController(rootView: LoginViewSwiftUI() )
         addChild(childView)
@@ -35,6 +37,8 @@ class SigninViewController: UIViewController {
         childView.didMove(toParent: self)
     }
    
+
+
 }
 
 

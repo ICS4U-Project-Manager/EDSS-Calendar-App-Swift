@@ -165,20 +165,25 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     //creating instance of class
     @IBAction func createClass(_ sender: Any) {
         if eventTitle == "" {
+            errorMessageLabel.textColor = UIColor.red
             errorMessageLabel.text = "no event title"
         }
         else if eventLocation == "" {
+            errorMessageLabel.textColor = UIColor.red
             errorMessageLabel.text = "no event location"
         }
         else if eventDescription == "" {
+            errorMessageLabel.textColor = UIColor.red
             errorMessageLabel.text = "no event description"
         }
         else if group == "" {
+            errorMessageLabel.textColor = UIColor.red
             errorMessageLabel.text = "no group attached"
         }
-       // else if startEventHour == endEventHour && startEventMinute == endEventMinute && startEventDay == endEventDay && startEventMonth == endEventMonth {
-           // errorMessageLabel.text = "event cannot start and end at same time"
-        //}
+     //  else if selectedDate7 == selectedDate3 {
+       //    errorMessageLabel.textColor = UIColor.red
+        //   errorMessageLabel.text = "event cannot start and end at same time"
+       // }
         else {
             let startEventDate = ICSDate (year : startEventYear , month : startEventMonth , day : startEventDay)
             let startEventTime = ICSTime (hour: startEventHour, minute: startEventMinute, period: startEventPeriod)

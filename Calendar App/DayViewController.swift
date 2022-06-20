@@ -25,18 +25,20 @@ class DayViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        label.center = CGPoint(x: 50, y: 166)
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        label.center = CGPoint(x: 100, y: 140)
         label.textColor = .black
         label.textAlignment = .center
         label.text = "Start Time - End Time"
-        self.view.addSubview(label)
+       
         
         let label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        label2.center = CGPoint(x: 275, y: 166)
+        label2.center = CGPoint(x: 275, y: 140)
         label2.textAlignment = .center
         label2.textColor = .black
         label2.text = "Event Title"
+        
+        self.view.addSubview(label)
         self.view.addSubview(label2)
         
         dateR = ""
@@ -50,6 +52,8 @@ class DayViewController: UIViewController {
         print("ds \(selectedDate)")
         
         dayLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + dayNumString
+        dayLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
+
         
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "MMM dd"
@@ -69,7 +73,7 @@ class DayViewController: UIViewController {
                 
                 print ("rr \(CalendarHelper().monthString(date: selectedDate) + " " + dayNumString)")
                 
-                var YAxis = 250
+                var YAxis = 300
                 
                 for i in 0..<count3 {
                     call()
@@ -81,21 +85,35 @@ class DayViewController: UIViewController {
                                 print("No error getting documents")
                                 let document = querySnapshot!.documents[num]
                                 
+                                let startDate = (document.data()["startDate"] as? Timestamp)?.dateValue() ?? Date()
+                                var startDatew: String {
+                                    let formatter = DateFormatter()
+                                    formatter.dateFormat = "MMM d hh:mm"
+                                    return formatter.string(from: startDate)
+                                }
+                                let endDate = (document.data()["startDate"] as? Timestamp)?.dateValue() ?? Date()
+                                var endDatew: String {
+                                    let formatter = DateFormatter()
+                                    formatter.dateFormat = "MMM d hh:mm"
+                                    return formatter.string(from: endDate)
+                                }
+                            
+                                
                                 build()
                                 
                                 func build() {
                                     
                                     num += 1
                                     
-                                    let buttonX = 160
+                                    let buttonX = 0
                                     let buttonY = YAxis
-                                    let buttonWidth = 400
+                                    let buttonWidth = 375
                                     let buttonHeight = 50
                                     
                                     let button = UIButton(type: .system)
-                                    button.setTitle("\(document.data()["name"] as! String)", for: .normal)
+                                    button.setTitle("\(startDatew) ... \(endDatew) ........ \(document.data()["name"] as! String)   ", for: .normal)
                                     button.tintColor = .white
-                                    button.backgroundColor = .red
+                                    button.backgroundColor = UIColor(named: "Dark green")
                                     button.addTarget(self, action: #selector(self.buttonClicked), for: .touchUpInside)
                                     button.tag = i
                                     button.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight)
